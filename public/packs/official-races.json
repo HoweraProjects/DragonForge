@@ -31,8 +31,7 @@
    "look": {
     "skin": "#5a8fb8"
    },
-   "packLabel": "DMG",
-   "untranslated": false
+   "packLabel": "DMG"
   },
   {
    "id": "pk-human-mark-of-sentinel-phb",
@@ -325,7 +324,7 @@
   },
   {
    "id": "pk-human-innistrad-gavony-psi",
-   "name": "人類 (依尼翠)（Gavony）",
+   "name": "人類 (依尼翠)（加沃尼）",
    "en": "Human (Innistrad) (Gavony)",
    "group": "人類 (依尼翠)",
    "size": "中型",
@@ -349,15 +348,46 @@
      "desc": "Your ability scores each increase by 1."
     }
    ],
-   "blurb": "出自 PSI p.8",
+   "blurb": "出自 PSI p.8（特性說明為英文原文）",
    "color": "#b388ff",
    "look": {},
    "packLabel": "PSI",
-   "untranslated": false
+   "untranslated": true
+  },
+  {
+   "id": "pk-human-innistrad-nephalia-psi",
+   "name": "人類 (依尼翠)（涅法利亞）",
+   "en": "Human (Innistrad) (Nephalia)",
+   "group": "人類 (依尼翠)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "int": 1,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、任選 1 種",
+   "skills": [],
+   "skillChoice": {
+    "count": 4,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "Breadth of Knowledge",
+     "desc": "You gain proficiency in any combination of four skills or with four tools of your choice."
+    }
+   ],
+   "blurb": "出自 PSI p.8（特性說明為英文原文）",
+   "color": "#ff5a6e",
+   "look": {},
+   "packLabel": "PSI",
+   "untranslated": true
   },
   {
    "id": "pk-human-innistrad-kessig-psi",
-   "name": "人類 (依尼翠)（Kessig）",
+   "name": "人類 (依尼翠)（凱斯格）",
    "en": "Human (Innistrad) (Kessig)",
    "group": "人類 (依尼翠)",
    "size": "中型",
@@ -391,46 +421,15 @@
      "desc": "When you make a melee attack against a creature, you don't provoke opportunity attacks from that creature for the rest of your turn, whether you hit or not."
     }
    ],
-   "blurb": "出自 PSI p.8",
+   "blurb": "出自 PSI p.8（特性說明為英文原文）",
    "color": "#ff7ad9",
    "look": {},
    "packLabel": "PSI",
-   "untranslated": false
-  },
-  {
-   "id": "pk-human-innistrad-nephalia-psi",
-   "name": "人類 (依尼翠)（Nephalia）",
-   "en": "Human (Innistrad) (Nephalia)",
-   "group": "人類 (依尼翠)",
-   "size": "中型",
-   "speed": 30,
-   "darkvision": 0,
-   "asi": {
-    "int": 1,
-    "cha": 1
-   },
-   "asiChoice": null,
-   "languages": "通用語、任選 1 種",
-   "skills": [],
-   "skillChoice": {
-    "count": 4,
-    "list": "any"
-   },
-   "traits": [
-    {
-     "name": "Breadth of Knowledge",
-     "desc": "You gain proficiency in any combination of four skills or with four tools of your choice."
-    }
-   ],
-   "blurb": "出自 PSI p.8",
-   "color": "#ff5a6e",
-   "look": {},
-   "packLabel": "PSI",
-   "untranslated": false
+   "untranslated": true
   },
   {
    "id": "pk-human-innistrad-stensia-psi",
-   "name": "人類 (依尼翠)（Stensia）",
+   "name": "人類 (依尼翠)（斯坦西亞）",
    "en": "Human (Innistrad) (Stensia)",
    "group": "人類 (依尼翠)",
    "size": "中型",
@@ -456,11 +455,11 @@
      "desc": "Your hit point maximum increases by 2, and it increases by 2 every time you gain a level."
     }
    ],
-   "blurb": "出自 PSI p.8",
+   "blurb": "出自 PSI p.8（特性說明為英文原文）",
    "color": "#e9c46a",
    "look": {},
    "packLabel": "PSI",
-   "untranslated": false
+   "untranslated": true
   },
   {
    "id": "pk-human-amonkhet-psa",
@@ -495,8 +494,7 @@
    "blurb": "出自 PSA p.14",
    "color": "#5ad1ff",
    "look": {},
-   "packLabel": "PSA",
-   "untranslated": false
+   "packLabel": "PSA"
   },
   {
    "id": "pk-hobgoblin-vgm",
@@ -535,8 +533,7 @@
     "ears": 0.8,
     "height": 0.62
    },
-   "packLabel": "VGM",
-   "untranslated": false
+   "packLabel": "VGM"
   },
   {
    "id": "pk-genasi-earth-eepc",
@@ -726,8 +723,7 @@
    "blurb": "出自 VGM p.109",
    "color": "#ffd166",
    "look": {},
-   "packLabel": "VGM",
-   "untranslated": false
+   "packLabel": "VGM"
   },
   {
    "id": "pk-centaur-ggr",
@@ -776,8 +772,7 @@
     "height": 1.15,
     "build": 0.9
    },
-   "packLabel": "GGR",
-   "untranslated": false
+   "packLabel": "GGR"
   },
   {
    "id": "pk-dhampir-vrgr",
@@ -823,8 +818,7 @@
    "look": {
     "skin": "#d8dde0"
    },
-   "packLabel": "VRGR",
-   "untranslated": false
+   "packLabel": "VRGR"
   },
   {
    "id": "pk-halfling-mark-of-hospitality-phb",
@@ -1394,8 +1388,7 @@
     "tusks": true,
     "skin": "#7f9c6a"
    },
-   "packLabel": "ERLW",
-   "untranslated": false
+   "packLabel": "ERLW"
   },
   {
    "id": "pk-grimlock-dmg",
@@ -1430,8 +1423,7 @@
    "blurb": "出自 DMG p.282",
    "color": "#ff7ad9",
    "look": {},
-   "packLabel": "DMG",
-   "untranslated": false
+   "packLabel": "DMG"
   },
   {
    "id": "pk-gith-githyanki-mtf",
@@ -1549,8 +1541,7 @@
     "ears": 0.8,
     "height": 0.62
    },
-   "packLabel": "VGM",
-   "untranslated": false
+   "packLabel": "VGM"
   },
   {
    "id": "pk-minotaur-ggr",
@@ -1596,8 +1587,7 @@
     "build": 0.9,
     "height": 1.12
    },
-   "packLabel": "GGR",
-   "untranslated": false
+   "packLabel": "GGR"
   },
   {
    "id": "pk-minotaur-amonkhet-psa",
@@ -1642,8 +1632,7 @@
     "build": 0.9,
     "height": 1.12
    },
-   "packLabel": "PSA",
-   "untranslated": false
+   "packLabel": "PSA"
   },
   {
    "id": "pk-custom-lineage-tce",
@@ -1678,12 +1667,49 @@
    "blurb": "出自 TCE p.8",
    "color": "#ff5a6e",
    "look": {},
-   "packLabel": "TCE",
-   "untranslated": false
+   "packLabel": "TCE"
+  },
+  {
+   "id": "pk-aven-ibis-headed-psa",
+   "name": "艾文（朱鷺首）",
+   "en": "Aven (Ibis-Headed)",
+   "group": "艾文",
+   "size": "中型",
+   "speed": 25,
+   "darkvision": 0,
+   "asi": {
+    "dex": 2,
+    "int": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "飛行 30 呎"
+    },
+    {
+     "name": "飛行",
+     "desc": "你擁有30尺的飛行速度。你不能在穿着中甲或重甲時使用你的飛行速度。（如果你的戰役使用了負重的變體規則，則你不能在你負載時使用你的飛行速度。）"
+    },
+    {
+     "name": "Kefnet's Blessing",
+     "desc": "You can add half your proficiency bonus, rounded down, to any Intelligence check you make that doesn't already include your proficiency bonus."
+    }
+   ],
+   "blurb": "出自 PSA p.16（特性說明為英文原文）",
+   "color": "#e9c46a",
+   "look": {
+    "wings": "feather"
+   },
+   "packLabel": "PSA",
+   "untranslated": true
   },
   {
    "id": "pk-aven-hawk-headed-psa",
-   "name": "艾文（Hawk-Headed）",
+   "name": "艾文（鷹首）",
    "en": "Aven (Hawk-Headed)",
    "group": "艾文",
    "size": "中型",
@@ -1713,51 +1739,13 @@
      "desc": "You have proficiency in the 察覺 skill. In addition, attacking at long range doesn't impose disadvantage on your ranged weapon attack rolls."
     }
    ],
-   "blurb": "出自 PSA p.16",
+   "blurb": "出自 PSA p.16（特性說明為英文原文）",
    "color": "#ff5a6e",
    "look": {
     "wings": "feather"
    },
    "packLabel": "PSA",
-   "untranslated": false
-  },
-  {
-   "id": "pk-aven-ibis-headed-psa",
-   "name": "艾文（Ibis-Headed）",
-   "en": "Aven (Ibis-Headed)",
-   "group": "艾文",
-   "size": "中型",
-   "speed": 25,
-   "darkvision": 0,
-   "asi": {
-    "dex": 2,
-    "int": 1
-   },
-   "asiChoice": null,
-   "languages": "通用語、其他",
-   "skills": [],
-   "skillChoice": null,
-   "traits": [
-    {
-     "name": "移動方式",
-     "desc": "飛行 30 呎"
-    },
-    {
-     "name": "飛行",
-     "desc": "你擁有30尺的飛行速度。你不能在穿着中甲或重甲時使用你的飛行速度。（如果你的戰役使用了負重的變體規則，則你不能在你負載時使用你的飛行速度。）"
-    },
-    {
-     "name": "Kefnet's Blessing",
-     "desc": "You can add half your proficiency bonus, rounded down, to any Intelligence check you make that doesn't already include your proficiency bonus."
-    }
-   ],
-   "blurb": "出自 PSA p.16",
-   "color": "#e9c46a",
-   "look": {
-    "wings": "feather"
-   },
-   "packLabel": "PSA",
-   "untranslated": false
+   "untranslated": true
   },
   {
    "id": "pk-hexblood-vrgr",
@@ -1796,8 +1784,7 @@
     "earType": "elf",
     "ears": 0.6
    },
-   "packLabel": "VRGR",
-   "untranslated": false
+   "packLabel": "VRGR"
   },
   {
    "id": "pk-bullywug-dmg",
@@ -1840,8 +1827,7 @@
    "blurb": "出自 DMG p.282",
    "color": "#9be36d",
    "look": {},
-   "packLabel": "DMG",
-   "untranslated": false
+   "packLabel": "DMG"
   },
   {
    "id": "pk-gnome-deep-phb",
@@ -2041,8 +2027,7 @@
    "blurb": "出自 GGR p.20",
    "color": "#ff5a6e",
    "look": {},
-   "packLabel": "GGR",
-   "untranslated": false
+   "packLabel": "GGR"
   },
   {
    "id": "pk-kobold-vgm",
@@ -2085,8 +2070,7 @@
     "height": 0.6,
     "skin": "#a0522d"
    },
-   "packLabel": "VGM",
-   "untranslated": false
+   "packLabel": "VGM"
   },
   {
    "id": "pk-aasimar-dmg",
@@ -2123,8 +2107,7 @@
    "look": {
     "wings": "feather"
    },
-   "packLabel": "DMG",
-   "untranslated": false
+   "packLabel": "DMG"
   },
   {
    "id": "pk-aasimar-scourge-vgm",
@@ -2299,8 +2282,7 @@
    "look": {
     "wings": "feather"
    },
-   "packLabel": "EEPC",
-   "untranslated": false
+   "packLabel": "EEPC"
   },
   {
    "id": "pk-khenra-psa",
@@ -2331,8 +2313,7 @@
    "blurb": "出自 PSA p.17",
    "color": "#9be36d",
    "look": {},
-   "packLabel": "PSA",
-   "untranslated": false
+   "packLabel": "PSA"
   },
   {
    "id": "pk-reborn-vrgr",
@@ -2366,8 +2347,7 @@
    "look": {
     "skin": "#d8dde0"
    },
-   "packLabel": "VRGR",
-   "untranslated": false
+   "packLabel": "VRGR"
   },
   {
    "id": "pk-grung-oga",
@@ -2423,8 +2403,7 @@
     "height": 0.62,
     "skin": "#4aa36a"
    },
-   "packLabel": "OGA",
-   "untranslated": false
+   "packLabel": "OGA"
   },
   {
    "id": "pk-naga-psa",
@@ -2463,8 +2442,7 @@
    "blurb": "出自 PSA p.21",
    "color": "#5ad1ff",
    "look": {},
-   "packLabel": "PSA",
-   "untranslated": false
+   "packLabel": "PSA"
   },
   {
    "id": "pk-yuan-ti-pureblood-vgm",
@@ -2505,8 +2483,7 @@
    "look": {
     "skin": "#6f9a5f"
    },
-   "packLabel": "VGM",
-   "untranslated": false
+   "packLabel": "VGM"
   },
   {
    "id": "pk-gnoll-dmg",
@@ -2541,8 +2518,7 @@
    "blurb": "出自 DMG p.282",
    "color": "#e9c46a",
    "look": {},
-   "packLabel": "DMG",
-   "untranslated": false
+   "packLabel": "DMG"
   },
   {
    "id": "pk-kuo-toa-dmg",
@@ -2586,8 +2562,7 @@
    "blurb": "出自 DMG p.282",
    "color": "#ff5a6e",
    "look": {},
-   "packLabel": "DMG",
-   "untranslated": false
+   "packLabel": "DMG"
   },
   {
    "id": "pk-triton-vgm",
@@ -2637,8 +2612,7 @@
    "look": {
     "skin": "#5a8fb8"
    },
-   "packLabel": "VGM",
-   "untranslated": false
+   "packLabel": "VGM"
   },
   {
    "id": "pk-tiefling-baalzebul-phb",
@@ -3260,8 +3234,7 @@
     "ears": 0.4,
     "tail": "cat"
    },
-   "packLabel": "VGM",
-   "untranslated": false
+   "packLabel": "VGM"
   },
   {
    "id": "pk-loxodon-ggr",
@@ -3307,8 +3280,7 @@
     "height": 1.15,
     "build": 0.9
    },
-   "packLabel": "GGR",
-   "untranslated": false
+   "packLabel": "GGR"
   },
   {
    "id": "pk-firbolg-vgm",
@@ -3352,8 +3324,7 @@
     "height": 1.15,
     "build": 0.9
    },
-   "packLabel": "VGM",
-   "untranslated": false
+   "packLabel": "VGM"
   },
   {
    "id": "pk-dwarf-mountain-phb",
@@ -3582,8 +3553,7 @@
     "build": 0.9,
     "skin": "#9a9a9e"
    },
-   "packLabel": "VGM",
-   "untranslated": false
+   "packLabel": "VGM"
   },
   {
    "id": "pk-bugbear-vgm",
@@ -3634,8 +3604,7 @@
     "height": 1.15,
     "build": 0.9
    },
-   "packLabel": "VGM",
-   "untranslated": false
+   "packLabel": "VGM"
   },
   {
    "id": "pk-elf-wood-phb",
@@ -4031,7 +4000,7 @@
   },
   {
    "id": "pk-elf-kaladesh-bishatar-and-tirahar-psk",
-   "name": "精靈 (卡拉德許)（Bishatar and Tirahar）",
+   "name": "精靈 (卡拉德許)（比沙塔與提拉哈）",
    "en": "Elf (Kaladesh) (Bishatar and Tirahar)",
    "group": "精靈 (卡拉德許)",
    "size": "中型",
@@ -4077,18 +4046,18 @@
      "desc": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
     }
    ],
-   "blurb": "出自 PSK p.21",
+   "blurb": "出自 PSK p.21（特性說明為英文原文）",
    "color": "#b388ff",
    "look": {
     "earType": "elf",
     "ears": 0.6
    },
    "packLabel": "PSK",
-   "untranslated": false
+   "untranslated": true
   },
   {
    "id": "pk-elf-kaladesh-vadahar-psk",
-   "name": "精靈 (卡拉德許)（Vadahar）",
+   "name": "精靈 (卡拉德許)（瓦達哈）",
    "en": "Elf (Kaladesh) (Vadahar)",
    "group": "精靈 (卡拉德許)",
    "size": "中型",
@@ -4134,18 +4103,18 @@
      "desc": "You can speak, read, and write one extra language of your choosing."
     }
    ],
-   "blurb": "出自 PSK p.21",
+   "blurb": "出自 PSK p.21（特性說明為英文原文）",
    "color": "#ff7ad9",
    "look": {
     "earType": "elf",
     "ears": 0.6
    },
    "packLabel": "PSK",
-   "untranslated": false
+   "untranslated": true
   },
   {
    "id": "pk-elf-zendikar-joraga-nation-psz",
-   "name": "精靈 (贊迪卡)（Joraga Nation）",
+   "name": "精靈 (贊迪卡)（約拉加族）",
    "en": "Elf (Zendikar) (Joraga Nation)",
    "group": "精靈 (贊迪卡)",
    "size": "中型",
@@ -4187,18 +4156,64 @@
      "desc": "Your ground speed increases to 35 feet."
     }
    ],
-   "blurb": "出自 PSZ p.19",
+   "blurb": "出自 PSZ p.19（特性說明為英文原文）",
    "color": "#ff5a6e",
    "look": {
     "earType": "elf",
     "ears": 0.6
    },
    "packLabel": "PSZ",
-   "untranslated": false
+   "untranslated": true
+  },
+  {
+   "id": "pk-elf-zendikar-tajuru-nation-psz",
+   "name": "精靈 (贊迪卡)（塔居魯族）",
+   "en": "Elf (Zendikar) (Tajuru Nation)",
+   "group": "精靈 (贊迪卡)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "wis": 2,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、精靈語",
+   "skills": [],
+   "skillChoice": {
+    "count": 2,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "習慣了微光森林與夜空，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "敏銳感官",
+     "desc": "你熟練於察覺技能。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "Skill Versatility",
+     "desc": "You have proficiency with any combination of two other skills or tools of your choice."
+    }
+   ],
+   "blurb": "出自 PSZ p.18（特性說明為英文原文）",
+   "color": "#ff9a5a",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "PSZ",
+   "untranslated": true
   },
   {
    "id": "pk-elf-zendikar-mul-daya-nation-psz",
-   "name": "精靈 (贊迪卡)（Mul Daya Nation）",
+   "name": "精靈 (贊迪卡)（穆戴亞族）",
    "en": "Elf (Zendikar) (Mul Daya Nation)",
    "group": "精靈 (贊迪卡)",
    "size": "中型",
@@ -4240,60 +4255,14 @@
      "desc": "You have proficiency with the longsword, shortsword, shortbow, and longbow."
     }
    ],
-   "blurb": "出自 PSZ p.19",
+   "blurb": "出自 PSZ p.19（特性說明為英文原文）",
    "color": "#e9c46a",
    "look": {
     "earType": "elf",
     "ears": 0.6
    },
    "packLabel": "PSZ",
-   "untranslated": false
-  },
-  {
-   "id": "pk-elf-zendikar-tajuru-nation-psz",
-   "name": "精靈 (贊迪卡)（Tajuru Nation）",
-   "en": "Elf (Zendikar) (Tajuru Nation)",
-   "group": "精靈 (贊迪卡)",
-   "size": "中型",
-   "speed": 30,
-   "darkvision": 60,
-   "asi": {
-    "wis": 2,
-    "cha": 1
-   },
-   "asiChoice": null,
-   "languages": "通用語、精靈語",
-   "skills": [],
-   "skillChoice": {
-    "count": 2,
-    "list": "any"
-   },
-   "traits": [
-    {
-     "name": "黑暗視覺",
-     "desc": "習慣了微光森林與夜空，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
-    },
-    {
-     "name": "敏銳感官",
-     "desc": "你熟練於察覺技能。"
-    },
-    {
-     "name": "精類血統",
-     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
-    },
-    {
-     "name": "Skill Versatility",
-     "desc": "You have proficiency with any combination of two other skills or tools of your choice."
-    }
-   ],
-   "blurb": "出自 PSZ p.18",
-   "color": "#ff9a5a",
-   "look": {
-    "earType": "elf",
-    "ears": 0.6
-   },
-   "packLabel": "PSZ",
-   "untranslated": false
+   "untranslated": true
   },
   {
    "id": "pk-vedalken-ggr",
@@ -4335,8 +4304,7 @@
     "ears": 0.6,
     "skin": "#5a8fb8"
    },
-   "packLabel": "GGR",
-   "untranslated": false
+   "packLabel": "GGR"
   },
   {
    "id": "pk-lizardfolk-vgm",
@@ -4397,8 +4365,7 @@
     "tail": "dragon",
     "skin": "#5f8a5a"
    },
-   "packLabel": "VGM",
-   "untranslated": false
+   "packLabel": "VGM"
   },
   {
    "id": "pk-skeleton-dmg",
@@ -4436,8 +4403,7 @@
    "look": {
     "skin": "#d8dde0"
    },
-   "packLabel": "DMG",
-   "untranslated": false
+   "packLabel": "DMG"
   },
   {
    "id": "pk-troglodyte-dmg",
@@ -4485,8 +4451,7 @@
     "tail": "dragon",
     "skin": "#5f8a5a"
    },
-   "packLabel": "DMG",
-   "untranslated": false
+   "packLabel": "DMG"
   },
   {
    "id": "pk-dragonborn-ravenite-phb",
@@ -4634,8 +4599,7 @@
    "blurb": "出自 TTP p.3",
    "color": "#ff7ad9",
    "look": {},
-   "packLabel": "TTP",
-   "untranslated": false
+   "packLabel": "TTP"
   },
   {
    "id": "pk-zombie-dmg",
@@ -4675,8 +4639,7 @@
    "look": {
     "skin": "#d8dde0"
    },
-   "packLabel": "DMG",
-   "untranslated": false
+   "packLabel": "DMG"
   },
   {
    "id": "pk-siren-psx",
@@ -4710,8 +4673,7 @@
    "blurb": "出自 PSX p.17",
    "color": "#e9c46a",
    "look": {},
-   "packLabel": "PSX",
-   "untranslated": false
+   "packLabel": "PSX"
   },
   {
    "id": "pk-orc-vgm",
@@ -4756,13 +4718,12 @@
     "tusks": true,
     "skin": "#7f9c6a"
    },
-   "packLabel": "VGM",
-   "untranslated": false
+   "packLabel": "VGM"
   },
   {
    "id": "pk-aetherborn-psk",
-   "name": "Aetherborn",
-   "en": "",
+   "name": "以太生族",
+   "en": "Aetherborn",
    "group": "Aetherborn",
    "size": "中型",
    "speed": 30,
@@ -4800,7 +4761,7 @@
      "desc": "An unknown aetherborn, desperately seeking a means to extend their short life, discovered a process of transformation that prolonged their existence—by giving them the ability to feed on the life essence of other beings. Since then, other aetherborn have learned and carried out this monstrous transformation, and aetherborn with this \"gift\" have become a small minority among an already small population. A gifted aetherborn has the ability to drain the life essence of other beings. Similar to the way heat is transferred from a warm object to a cold one, a gifted aetherborn need only touch another living being with a clawed hand to draw life essence out, fueling their own continued existence while draining strength and vitality from their victim. For many aetherborn, living as they do for indulgence and instant gratification, the concepts of \"want\" and \"need\" are virtually synonymous. But Aetherborn with this gift understand what it is to truly need, for they develop a hunger for life essence that far exceeds any desires they might have felt before their transformation. A gifted aetherborn who abstains from this feeding deteriorates even more rapidly than other aetherborn, while enduring unspeakable agony caused by the deprivation of life energy. At the DM's option, an aetherborn character can research methods of achieving this dark \"gift.\" The process is similar to inventing and manufacturing a rare magic item (see \"Inventing and Manufacturing Devices\" earlier in this document). But rather than aether, the process requires a variety of rare unguents and unusual ingredients that make up the cost of researching and undergoing the transformation. An aetherborn with this gift gains the Drain Life ability: a natural attack that deals 1d6 necrotic damage and restores the same number of hit points to the aetherborn. However, if the aetherborn goes for 7 days without dealing this damage, their hit point maximum is reduced by 1d6 per week. This reduction can't be removed until the aetherborn has used their Drain Life ability and completed a long rest."
     }
    ],
-   "blurb": "出自 PSK p.17（原站未翻譯）",
+   "blurb": "出自 PSK p.17（特性說明為英文原文）",
    "color": "#ff7ad9",
    "look": {},
    "packLabel": "PSK",
@@ -4808,8 +4769,8 @@
   },
   {
    "id": "pk-aven-psd",
-   "name": "Aven",
-   "en": "",
+   "name": "艾文",
+   "en": "Aven",
    "group": "Aven",
    "size": "中型",
    "speed": 25,
@@ -4838,7 +4799,7 @@
      "desc": "You have proficiency in the 察覺 skill. In addition, attacking at long range doesn't impose disadvantage on your ranged weapon attack rolls."
     }
    ],
-   "blurb": "出自 PSD p.6（原站未翻譯）",
+   "blurb": "出自 PSD p.6（特性說明為英文原文）",
    "color": "#ff9a5a",
    "look": {},
    "packLabel": "PSD",
@@ -4846,8 +4807,8 @@
   },
   {
    "id": "pk-changeling-erlw",
-   "name": "Changeling",
-   "en": "",
+   "name": "變形者",
+   "en": "Changeling",
    "group": "Changeling",
    "size": "中型",
    "speed": 30,
@@ -4878,7 +4839,7 @@
      "desc": "You gain proficiency with two of the following skills of your choice: 欺瞞, 洞悉, 威嚇, and 說服."
     }
    ],
-   "blurb": "出自 ERLW p.17（原站未翻譯）",
+   "blurb": "出自 ERLW p.17（特性說明為英文原文）",
    "color": "#ff7ad9",
    "look": {},
    "packLabel": "ERLW",
@@ -4886,8 +4847,8 @@
   },
   {
    "id": "pk-dwarf-kaladesh-psk",
-   "name": "Dwarf (Kaladesh)",
-   "en": "",
+   "name": "矮人（卡拉德許）",
+   "en": "Dwarf (Kaladesh)",
    "group": "Dwarf (Kaladesh)",
    "size": "中型",
    "speed": 25,
@@ -4922,7 +4883,7 @@
      "desc": "You gain proficiency with two kinds of artisan's tools of your choice. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies. In addition, whenever you make an Intelligence（歷史）check related to the origin of any architectural construction (including buildings, public works such as canals and aqueducts, and the massive cogwork that underlies much of the construction of Ghirapur), you are considered proficient in the 歷史 skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
     }
    ],
-   "blurb": "出自 PSK p.19（原站未翻譯）",
+   "blurb": "出自 PSK p.19（特性說明為英文原文）",
    "color": "#b388ff",
    "look": {},
    "packLabel": "PSK",
@@ -4930,8 +4891,8 @@
   },
   {
    "id": "pk-goblin-ixalan-psx",
-   "name": "Goblin (Ixalan)",
-   "en": "",
+   "name": "地精（依夏蘭）",
+   "en": "Goblin (Ixalan)",
    "group": "Goblin (Ixalan)",
    "size": "小型",
    "speed": 25,
@@ -4957,16 +4918,16 @@
      "desc": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
     }
    ],
-   "blurb": "出自 PSX p.16（原站未翻譯）",
+   "blurb": "出自 PSX p.16（特性說明為英文原文）",
    "color": "#7dffcf",
    "look": {},
    "packLabel": "PSX",
    "untranslated": true
   },
   {
-   "id": "pk-grotag-tribe-psz",
-   "name": "Goblin (Zendikar)（Grotag Tribe）",
-   "en": "(Grotag Tribe)",
+   "id": "pk-goblin-zendikar-grotag-tribe-psz",
+   "name": "地精（贊迪卡）（格羅塔部族）",
+   "en": "Goblin (Zendikar) (Grotag Tribe)",
    "group": "Goblin (Zendikar)",
    "size": "小型",
    "speed": 25,
@@ -4994,51 +4955,16 @@
      "desc": "You have proficiency in the 馴獸 skill."
     }
    ],
-   "blurb": "出自 PSZ p.17（原站未翻譯）",
+   "blurb": "出自 PSZ p.17（特性說明為英文原文）",
    "color": "#ffd166",
    "look": {},
    "packLabel": "PSZ",
    "untranslated": true
   },
   {
-   "id": "pk-lavastep-tribe-psz",
-   "name": "Goblin (Zendikar)（Lavastep Tribe）",
-   "en": "(Lavastep Tribe)",
-   "group": "Goblin (Zendikar)",
-   "size": "小型",
-   "speed": 25,
-   "darkvision": 60,
-   "asi": {
-    "con": 2
-   },
-   "asiChoice": null,
-   "languages": "通用語、地精語",
-   "skills": [],
-   "skillChoice": null,
-   "traits": [
-    {
-     "name": "Darkvision",
-     "desc": "Thanks to your heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
-    },
-    {
-     "name": "Grit",
-     "desc": "You have resistance to fire damage and psychic damage. In addition, when you are wearing no armor, your AC is equal to 11 + your Dexterity modifier."
-    },
-    {
-     "name": "Lavastep Grit",
-     "desc": "You have advantage on Dexterity（隱匿）checks made to hide in rocky or subterranean environments."
-    }
-   ],
-   "blurb": "出自 PSZ p.17（原站未翻譯）",
-   "color": "#9be36d",
-   "look": {},
-   "packLabel": "PSZ",
-   "untranslated": true
-  },
-  {
-   "id": "pk-tuktuk-tribe-psz",
-   "name": "Goblin (Zendikar)（Tuktuk Tribe）",
-   "en": "(Tuktuk Tribe)",
+   "id": "pk-goblin-zendikar-tuktuk-tribe-psz",
+   "name": "地精（贊迪卡）（圖圖部族）",
+   "en": "Goblin (Zendikar) (Tuktuk Tribe)",
    "group": "Goblin (Zendikar)",
    "size": "小型",
    "speed": 25,
@@ -5064,16 +4990,51 @@
      "desc": "You have proficiency with 盜賊工具."
     }
    ],
-   "blurb": "出自 PSZ p.17（原站未翻譯）",
+   "blurb": "出自 PSZ p.17（特性說明為英文原文）",
    "color": "#5ad1ff",
    "look": {},
    "packLabel": "PSZ",
    "untranslated": true
   },
   {
+   "id": "pk-goblin-zendikar-lavastep-tribe-psz",
+   "name": "地精（贊迪卡）（熔步部族）",
+   "en": "Goblin (Zendikar) (Lavastep Tribe)",
+   "group": "Goblin (Zendikar)",
+   "size": "小型",
+   "speed": 25,
+   "darkvision": 60,
+   "asi": {
+    "con": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、地精語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Darkvision",
+     "desc": "Thanks to your heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Grit",
+     "desc": "You have resistance to fire damage and psychic damage. In addition, when you are wearing no armor, your AC is equal to 11 + your Dexterity modifier."
+    },
+    {
+     "name": "Lavastep Grit",
+     "desc": "You have advantage on Dexterity（隱匿）checks made to hide in rocky or subterranean environments."
+    }
+   ],
+   "blurb": "出自 PSZ p.17（特性說明為英文原文）",
+   "color": "#9be36d",
+   "look": {},
+   "packLabel": "PSZ",
+   "untranslated": true
+  },
+  {
    "id": "pk-human-ixalan-psx",
-   "name": "Human (Ixalan)",
-   "en": "",
+   "name": "人類（依夏蘭）",
+   "en": "Human (Ixalan)",
    "group": "Human (Ixalan)",
    "size": "中型",
    "speed": 30,
@@ -5091,7 +5052,7 @@
    "skills": [],
    "skillChoice": null,
    "traits": [],
-   "blurb": "出自 PSX p.11（原站未翻譯）",
+   "blurb": "出自 PSX p.11（特性說明為英文原文）",
    "color": "#ff9a5a",
    "look": {},
    "packLabel": "PSX",
@@ -5099,7 +5060,7 @@
   },
   {
    "id": "pk-human-psz",
-   "name": "Human (Zendikar)",
+   "name": "人類（贊迪卡）",
    "en": "Human",
    "group": "Human (Zendikar)",
    "size": "中型",
@@ -5118,7 +5079,7 @@
    "skills": [],
    "skillChoice": null,
    "traits": [],
-   "blurb": "出自 PSZ p.9（原站未翻譯）",
+   "blurb": "出自 PSZ p.9（特性說明為英文原文）",
    "color": "#7dffcf",
    "look": {},
    "packLabel": "PSZ",
@@ -5126,8 +5087,8 @@
   },
   {
    "id": "pk-kalashtar-erlw",
-   "name": "Kalashtar",
-   "en": "",
+   "name": "卡拉什塔爾",
+   "en": "Kalashtar",
    "group": "Kalashtar",
    "size": "中型",
    "speed": 30,
@@ -5158,7 +5119,7 @@
      "desc": "Kalashtar sleep, but they don't connect to the plane of dreams as other creatures do. Instead, their minds draw from the memories of their otherworldly spirit while they sleep. As such, you are immune to spells and other magical effects that require you to dream, like 託夢術, but not to spells and other magical effects that put you to sleep, like 睡眠術."
     }
    ],
-   "blurb": "出自 ERLW p.29（原站未翻譯）",
+   "blurb": "出自 ERLW p.29（特性說明為英文原文）",
    "color": "#ff9a5a",
    "look": {},
    "packLabel": "ERLW",
@@ -5166,8 +5127,8 @@
   },
   {
    "id": "pk-kor-psz",
-   "name": "Kor",
-   "en": "",
+   "name": "寇族",
+   "en": "Kor",
    "group": "Kor",
    "size": "中型",
    "speed": 30,
@@ -5205,7 +5166,7 @@
      "desc": "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll."
     }
    ],
-   "blurb": "出自 PSZ p.10（原站未翻譯）",
+   "blurb": "出自 PSZ p.10（特性說明為英文原文）",
    "color": "#ff7ad9",
    "look": {},
    "packLabel": "PSZ",
@@ -5213,8 +5174,8 @@
   },
   {
    "id": "pk-leonin-mot",
-   "name": "Leonin",
-   "en": "",
+   "name": "獅族",
+   "en": "Leonin",
    "group": "Leonin",
    "size": "中型",
    "speed": 35,
@@ -5248,7 +5209,7 @@
      "desc": "As a bonus action, you can let out an especially menacing roar. Creatures of your choice within 10 feet of you that can hear you must succeed on a Wisdom saving throw or become 恐懼 of you until the end of your next turn. The DC of the save equals 8 + your proficiency bonus + your Constitution modifier. Once you use this trait, you can't use it again until you finish a short or long rest."
     }
    ],
-   "blurb": "出自 MOT p.20（原站未翻譯）",
+   "blurb": "出自 MOT p.20（特性說明為英文原文）",
    "color": "#e9c46a",
    "look": {},
    "packLabel": "MOT",
@@ -5256,8 +5217,8 @@
   },
   {
    "id": "pk-locathah-lr",
-   "name": "Locathah",
-   "en": "",
+   "name": "洛卡薩魚人",
+   "en": "Locathah",
    "group": "Locathah",
    "size": "中型",
    "speed": 30,
@@ -5299,16 +5260,60 @@
      "desc": "You can speak, read, and write Aquan and Common."
     }
    ],
-   "blurb": "出自 LR p.24（原站未翻譯）",
+   "blurb": "出自 LR p.24（特性說明為英文原文）",
    "color": "#ffd166",
    "look": {},
    "packLabel": "LR",
    "untranslated": true
   },
   {
-   "id": "pk-blue-psx",
-   "name": "Merfolk (Ixalan)（Blue）",
-   "en": "(Blue)",
+   "id": "pk-merfolk-ixalan-green-psx",
+   "name": "人魚（依夏蘭）（綠）",
+   "en": "Merfolk (Ixalan) (Green)",
+   "group": "Merfolk (Ixalan)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "cha": 1,
+    "wis": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他、任選 1 種",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "游泳 30 呎"
+    },
+    {
+     "name": "Amphibious",
+     "desc": "You can breathe air and water."
+    },
+    {
+     "name": "Swimming",
+     "desc": "You have a swimming speed of 30 feet."
+    },
+    {
+     "name": "Cantrip",
+     "desc": "You know one cantrip of your choice from the druid spell list. Wisdom is your spellcasting ability for it."
+    },
+    {
+     "name": "Mask of the Wild",
+     "desc": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+    }
+   ],
+   "blurb": "出自 PSX p.12（特性說明為英文原文）",
+   "color": "#ff7ad9",
+   "look": {},
+   "packLabel": "PSX",
+   "untranslated": true
+  },
+  {
+   "id": "pk-merfolk-ixalan-blue-psx",
+   "name": "人魚（依夏蘭）（藍）",
+   "en": "Merfolk (Ixalan) (Blue)",
    "group": "Merfolk (Ixalan)",
    "size": "中型",
    "speed": 30,
@@ -5346,107 +5351,16 @@
      "desc": "You gain proficiency in the 歷史 and 自然 skills."
     }
    ],
-   "blurb": "出自 PSX p.12（原站未翻譯）",
+   "blurb": "出自 PSX p.12（特性說明為英文原文）",
    "color": "#b388ff",
    "look": {},
    "packLabel": "PSX",
    "untranslated": true
   },
   {
-   "id": "pk-green-psx",
-   "name": "Merfolk (Ixalan)（Green）",
-   "en": "(Green)",
-   "group": "Merfolk (Ixalan)",
-   "size": "中型",
-   "speed": 30,
-   "darkvision": 0,
-   "asi": {
-    "cha": 1,
-    "wis": 2
-   },
-   "asiChoice": null,
-   "languages": "通用語、其他、任選 1 種",
-   "skills": [],
-   "skillChoice": null,
-   "traits": [
-    {
-     "name": "移動方式",
-     "desc": "游泳 30 呎"
-    },
-    {
-     "name": "Amphibious",
-     "desc": "You can breathe air and water."
-    },
-    {
-     "name": "Swimming",
-     "desc": "You have a swimming speed of 30 feet."
-    },
-    {
-     "name": "Cantrip",
-     "desc": "You know one cantrip of your choice from the druid spell list. Wisdom is your spellcasting ability for it."
-    },
-    {
-     "name": "Mask of the Wild",
-     "desc": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
-    }
-   ],
-   "blurb": "出自 PSX p.12（原站未翻譯）",
-   "color": "#ff7ad9",
-   "look": {},
-   "packLabel": "PSX",
-   "untranslated": true
-  },
-  {
-   "id": "pk-cosi-creed-psz",
-   "name": "Merfolk (Zendikar)（Cosi Creed）",
-   "en": "(Cosi Creed)",
-   "group": "Merfolk (Zendikar)",
-   "size": "中型",
-   "speed": 30,
-   "darkvision": 0,
-   "asi": {
-    "cha": 3,
-    "int": 1
-   },
-   "asiChoice": null,
-   "languages": "通用語、其他、任選 1 種",
-   "skills": [
-    "sleight",
-    "stealth"
-   ],
-   "skillChoice": null,
-   "traits": [
-    {
-     "name": "移動方式",
-     "desc": "游泳 30 呎"
-    },
-    {
-     "name": "Amphibious",
-     "desc": "You can breathe air and water."
-    },
-    {
-     "name": "Swimming",
-     "desc": "You have a swimming speed of 30 feet."
-    },
-    {
-     "name": "Cantrip",
-     "desc": "You know one cantrip of your choice from the bard spell list. Charisma is your spellcasting ability for it."
-    },
-    {
-     "name": "Creed of the Trickster",
-     "desc": "You have proficiency in the 巧手 and 隱匿 skills."
-    }
-   ],
-   "blurb": "出自 PSZ p.13（原站未翻譯）",
-   "color": "#ff5a6e",
-   "look": {},
-   "packLabel": "PSZ",
-   "untranslated": true
-  },
-  {
-   "id": "pk-emeria-creed-psz",
-   "name": "Merfolk (Zendikar)（Emeria Creed）",
-   "en": "(Emeria Creed)",
+   "id": "pk-merfolk-zendikar-emeria-creed-psz",
+   "name": "人魚（贊迪卡）（艾梅莉亞信條）",
+   "en": "Merfolk (Zendikar) (Emeria Creed)",
    "group": "Merfolk (Zendikar)",
    "size": "中型",
    "speed": 30,
@@ -5484,16 +5398,63 @@
      "desc": "You have proficiency in the 欺瞞 and 說服 skills."
     }
    ],
-   "blurb": "出自 PSZ p.13（原站未翻譯）",
+   "blurb": "出自 PSZ p.13（特性說明為英文原文）",
    "color": "#e9c46a",
    "look": {},
    "packLabel": "PSZ",
    "untranslated": true
   },
   {
-   "id": "pk-ula-creed-psz",
-   "name": "Merfolk (Zendikar)（Ula Creed）",
-   "en": "(Ula Creed)",
+   "id": "pk-merfolk-zendikar-cosi-creed-psz",
+   "name": "人魚（贊迪卡）（科西信條）",
+   "en": "Merfolk (Zendikar) (Cosi Creed)",
+   "group": "Merfolk (Zendikar)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "cha": 3,
+    "int": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他、任選 1 種",
+   "skills": [
+    "sleight",
+    "stealth"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "游泳 30 呎"
+    },
+    {
+     "name": "Amphibious",
+     "desc": "You can breathe air and water."
+    },
+    {
+     "name": "Swimming",
+     "desc": "You have a swimming speed of 30 feet."
+    },
+    {
+     "name": "Cantrip",
+     "desc": "You know one cantrip of your choice from the bard spell list. Charisma is your spellcasting ability for it."
+    },
+    {
+     "name": "Creed of the Trickster",
+     "desc": "You have proficiency in the 巧手 and 隱匿 skills."
+    }
+   ],
+   "blurb": "出自 PSZ p.13（特性說明為英文原文）",
+   "color": "#ff5a6e",
+   "look": {},
+   "packLabel": "PSZ",
+   "untranslated": true
+  },
+  {
+   "id": "pk-merfolk-zendikar-ula-creed-psz",
+   "name": "人魚（贊迪卡）（烏拉信條）",
+   "en": "Merfolk (Zendikar) (Ula Creed)",
    "group": "Merfolk (Zendikar)",
    "size": "中型",
    "speed": 30,
@@ -5530,7 +5491,7 @@
      "desc": "You have proficiency with 領航工具 and in the 生存 skill."
     }
    ],
-   "blurb": "出自 PSZ p.13（原站未翻譯）",
+   "blurb": "出自 PSZ p.13（特性說明為英文原文）",
    "color": "#ff9a5a",
    "look": {},
    "packLabel": "PSZ",
@@ -5538,8 +5499,8 @@
   },
   {
    "id": "pk-orc-ixalan-psx",
-   "name": "Orc (Ixalan)",
-   "en": "",
+   "name": "獸人（依夏蘭）",
+   "en": "Orc (Ixalan)",
    "group": "Orc (Ixalan)",
    "size": "中型",
    "speed": 30,
@@ -5572,7 +5533,7 @@
      "desc": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
     }
    ],
-   "blurb": "出自 PSX p.15（原站未翻譯）",
+   "blurb": "出自 PSX p.15（特性說明為英文原文）",
    "color": "#ff9a5a",
    "look": {},
    "packLabel": "PSX",
@@ -5580,8 +5541,8 @@
   },
   {
    "id": "pk-satyr-mot",
-   "name": "Satyr",
-   "en": "",
+   "name": "薩提爾",
+   "en": "Satyr",
    "group": "Satyr",
    "size": "中型",
    "speed": 35,
@@ -5619,154 +5580,16 @@
      "desc": "You have proficiency in the 表演 and 說服 skills, and you have proficiency with one musical instrument of your choice."
     }
    ],
-   "blurb": "出自 MOT p.24（原站未翻譯）",
+   "blurb": "出自 MOT p.24（特性說明為英文原文）",
    "color": "#ffd166",
    "look": {},
    "packLabel": "MOT",
    "untranslated": true
   },
   {
-   "id": "pk-beasthide-erlw",
-   "name": "Shifter（Beasthide）",
-   "en": "(Beasthide)",
-   "group": "Shifter",
-   "size": "中型",
-   "speed": 30,
-   "darkvision": 60,
-   "asi": {
-    "con": 2,
-    "str": 1
-   },
-   "asiChoice": null,
-   "languages": "通用語",
-   "skills": [
-    "athletics"
-   ],
-   "skillChoice": null,
-   "traits": [
-    {
-     "name": "Speed",
-     "desc": "Your base walking speed is 30 feet."
-    },
-    {
-     "name": "Darkvision",
-     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
-    },
-    {
-     "name": "Shifting",
-     "desc": "As a bonus action, you can assume a more bestial appearance. This transformation lasts for 1 minute, until you die, or until you revert to your normal appearance as a bonus action. When you shift, you gain temporary hit points equal to your level + your Constitution modifier (minimum of 1 temporary hit point). You also gain additional benefits that depend on your shifter subrace, described below. Once you shift, you can't do so again until you finish a short or long rest."
-    },
-    {
-     "name": "Natural Athlete",
-     "desc": "You have proficiency in the 運動 skill."
-    },
-    {
-     "name": "Shifting Feature",
-     "desc": "Whenever you shift, you gain 1d6 additional temporary hit points. While shifted, you have a +1 bonus to your Armor Class."
-    }
-   ],
-   "blurb": "出自 ERLW p.34（原站未翻譯）",
-   "color": "#9be36d",
-   "look": {},
-   "packLabel": "ERLW",
-   "untranslated": true
-  },
-  {
-   "id": "pk-longtooth-erlw",
-   "name": "Shifter（Longtooth）",
-   "en": "(Longtooth)",
-   "group": "Shifter",
-   "size": "中型",
-   "speed": 30,
-   "darkvision": 60,
-   "asi": {
-    "str": 2,
-    "dex": 1
-   },
-   "asiChoice": null,
-   "languages": "通用語",
-   "skills": [
-    "intimidation"
-   ],
-   "skillChoice": null,
-   "traits": [
-    {
-     "name": "Speed",
-     "desc": "Your base walking speed is 30 feet."
-    },
-    {
-     "name": "Darkvision",
-     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
-    },
-    {
-     "name": "Shifting",
-     "desc": "As a bonus action, you can assume a more bestial appearance. This transformation lasts for 1 minute, until you die, or until you revert to your normal appearance as a bonus action. When you shift, you gain temporary hit points equal to your level + your Constitution modifier (minimum of 1 temporary hit point). You also gain additional benefits that depend on your shifter subrace, described below. Once you shift, you can't do so again until you finish a short or long rest."
-    },
-    {
-     "name": "Fierce",
-     "desc": "You have proficiency in the 威嚇 skill."
-    },
-    {
-     "name": "Shifting Feature",
-     "desc": "While shifted, you can use your elongated fangs to make an unarmed strike as a bonus action. If you hit with your fangs, you can deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike."
-    }
-   ],
-   "blurb": "出自 ERLW p.34（原站未翻譯）",
-   "color": "#5ad1ff",
-   "look": {},
-   "packLabel": "ERLW",
-   "untranslated": true
-  },
-  {
-   "id": "pk-swiftstride-erlw",
-   "name": "Shifter（Swiftstride）",
-   "en": "(Swiftstride)",
-   "group": "Shifter",
-   "size": "中型",
-   "speed": 30,
-   "darkvision": 60,
-   "asi": {
-    "dex": 2,
-    "cha": 1
-   },
-   "asiChoice": null,
-   "languages": "通用語",
-   "skills": [
-    "acrobatics"
-   ],
-   "skillChoice": null,
-   "traits": [
-    {
-     "name": "Speed",
-     "desc": "Your base walking speed is 30 feet."
-    },
-    {
-     "name": "Darkvision",
-     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
-    },
-    {
-     "name": "Shifting",
-     "desc": "As a bonus action, you can assume a more bestial appearance. This transformation lasts for 1 minute, until you die, or until you revert to your normal appearance as a bonus action. When you shift, you gain temporary hit points equal to your level + your Constitution modifier (minimum of 1 temporary hit point). You also gain additional benefits that depend on your shifter subrace, described below. Once you shift, you can't do so again until you finish a short or long rest."
-    },
-    {
-     "name": "Graceful",
-     "desc": "You have proficiency in the 體操 skill."
-    },
-    {
-     "name": "Shifting Feature",
-     "desc": "While shifted, your walking speed increases by 10 feet. Additionally, you can move up to 10 feet as a reaction when a creature ends its turn within 5 feet of you. This reactive movement doesn't provoke opportunity attacks."
-    }
-   ],
-   "blurb": "出自 ERLW p.34（原站未翻譯）",
-   "color": "#b388ff",
-   "look": {},
-   "packLabel": "ERLW",
-   "untranslated": true
-  },
-  {
-   "id": "pk-wildhunt-erlw",
-   "name": "Shifter（Wildhunt）",
-   "en": "(Wildhunt)",
+   "id": "pk-shifter-wildhunt-erlw",
+   "name": "獸化人（狂獵）",
+   "en": "Shifter (Wildhunt)",
    "group": "Shifter",
    "size": "中型",
    "speed": 30,
@@ -5803,16 +5626,154 @@
      "desc": "While shifted, you have advantage on Wisdom checks, and no creature within 30 feet of you can make an attack roll with advantage against you, unless you're 無力."
     }
    ],
-   "blurb": "出自 ERLW p.34（原站未翻譯）",
+   "blurb": "出自 ERLW p.34（特性說明為英文原文）",
    "color": "#ff7ad9",
    "look": {},
    "packLabel": "ERLW",
    "untranslated": true
   },
   {
+   "id": "pk-shifter-swiftstride-erlw",
+   "name": "獸化人（迅步）",
+   "en": "Shifter (Swiftstride)",
+   "group": "Shifter",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "dex": 2,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語",
+   "skills": [
+    "acrobatics"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Speed",
+     "desc": "Your base walking speed is 30 feet."
+    },
+    {
+     "name": "Darkvision",
+     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Shifting",
+     "desc": "As a bonus action, you can assume a more bestial appearance. This transformation lasts for 1 minute, until you die, or until you revert to your normal appearance as a bonus action. When you shift, you gain temporary hit points equal to your level + your Constitution modifier (minimum of 1 temporary hit point). You also gain additional benefits that depend on your shifter subrace, described below. Once you shift, you can't do so again until you finish a short or long rest."
+    },
+    {
+     "name": "Graceful",
+     "desc": "You have proficiency in the 體操 skill."
+    },
+    {
+     "name": "Shifting Feature",
+     "desc": "While shifted, your walking speed increases by 10 feet. Additionally, you can move up to 10 feet as a reaction when a creature ends its turn within 5 feet of you. This reactive movement doesn't provoke opportunity attacks."
+    }
+   ],
+   "blurb": "出自 ERLW p.34（特性說明為英文原文）",
+   "color": "#b388ff",
+   "look": {},
+   "packLabel": "ERLW",
+   "untranslated": true
+  },
+  {
+   "id": "pk-shifter-longtooth-erlw",
+   "name": "獸化人（長牙）",
+   "en": "Shifter (Longtooth)",
+   "group": "Shifter",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "str": 2,
+    "dex": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語",
+   "skills": [
+    "intimidation"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Speed",
+     "desc": "Your base walking speed is 30 feet."
+    },
+    {
+     "name": "Darkvision",
+     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Shifting",
+     "desc": "As a bonus action, you can assume a more bestial appearance. This transformation lasts for 1 minute, until you die, or until you revert to your normal appearance as a bonus action. When you shift, you gain temporary hit points equal to your level + your Constitution modifier (minimum of 1 temporary hit point). You also gain additional benefits that depend on your shifter subrace, described below. Once you shift, you can't do so again until you finish a short or long rest."
+    },
+    {
+     "name": "Fierce",
+     "desc": "You have proficiency in the 威嚇 skill."
+    },
+    {
+     "name": "Shifting Feature",
+     "desc": "While shifted, you can use your elongated fangs to make an unarmed strike as a bonus action. If you hit with your fangs, you can deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike."
+    }
+   ],
+   "blurb": "出自 ERLW p.34（特性說明為英文原文）",
+   "color": "#5ad1ff",
+   "look": {},
+   "packLabel": "ERLW",
+   "untranslated": true
+  },
+  {
+   "id": "pk-shifter-beasthide-erlw",
+   "name": "獸化人（獸皮）",
+   "en": "Shifter (Beasthide)",
+   "group": "Shifter",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "con": 2,
+    "str": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語",
+   "skills": [
+    "athletics"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Speed",
+     "desc": "Your base walking speed is 30 feet."
+    },
+    {
+     "name": "Darkvision",
+     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Shifting",
+     "desc": "As a bonus action, you can assume a more bestial appearance. This transformation lasts for 1 minute, until you die, or until you revert to your normal appearance as a bonus action. When you shift, you gain temporary hit points equal to your level + your Constitution modifier (minimum of 1 temporary hit point). You also gain additional benefits that depend on your shifter subrace, described below. Once you shift, you can't do so again until you finish a short or long rest."
+    },
+    {
+     "name": "Natural Athlete",
+     "desc": "You have proficiency in the 運動 skill."
+    },
+    {
+     "name": "Shifting Feature",
+     "desc": "Whenever you shift, you gain 1d6 additional temporary hit points. While shifted, you have a +1 bonus to your Armor Class."
+    }
+   ],
+   "blurb": "出自 ERLW p.34（特性說明為英文原文）",
+   "color": "#9be36d",
+   "look": {},
+   "packLabel": "ERLW",
+   "untranslated": true
+  },
+  {
    "id": "pk-vampire-ixalan-psx",
-   "name": "Vampire (Ixalan)",
-   "en": "",
+   "name": "吸血鬼（依夏蘭）",
+   "en": "Vampire (Ixalan)",
    "group": "Vampire (Ixalan)",
    "size": "中型",
    "speed": 30,
@@ -5843,7 +5804,7 @@
      "desc": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
     }
    ],
-   "blurb": "出自 PSX p.14（原站未翻譯）",
+   "blurb": "出自 PSX p.14（特性說明為英文原文）",
    "color": "#7dffcf",
    "look": {},
    "packLabel": "PSX",
@@ -5851,8 +5812,8 @@
   },
   {
    "id": "pk-vampire-zendikar-psz",
-   "name": "Vampire (Zendikar)",
-   "en": "",
+   "name": "吸血鬼（贊迪卡）",
+   "en": "Vampire (Zendikar)",
    "group": "Vampire (Zendikar)",
    "size": "中型",
    "speed": 30,
@@ -5879,7 +5840,7 @@
      "desc": "You have resistance to necrotic damage."
     }
    ],
-   "blurb": "出自 PSZ p.14（原站未翻譯）",
+   "blurb": "出自 PSZ p.14（特性說明為英文原文）",
    "color": "#ffd166",
    "look": {},
    "packLabel": "PSZ",
@@ -5887,8 +5848,8 @@
   },
   {
    "id": "pk-verdan-ai",
-   "name": "Verdan",
-   "en": "",
+   "name": "維丹",
+   "en": "Verdan",
    "group": "Verdan",
    "size": "V",
    "speed": 30,
@@ -5925,7 +5886,7 @@
      "desc": "You speak, read, and write Common, Goblin, and one additional language of your choice. This language typically has some connection to one of the areas or cultures that has been part of your life."
     }
    ],
-   "blurb": "出自 AI p.72（原站未翻譯）",
+   "blurb": "出自 AI p.72（特性說明為英文原文）",
    "color": "#b388ff",
    "look": {},
    "packLabel": "AI",
@@ -5933,8 +5894,8 @@
   },
   {
    "id": "pk-warforged-erlw",
-   "name": "Warforged",
-   "en": "",
+   "name": "機關人",
+   "en": "Warforged",
    "group": "Warforged",
    "size": "中型",
    "speed": 30,
@@ -5973,7 +5934,7 @@
      "desc": "You gain one skill proficiency and one tool proficiency of your choice."
     }
    ],
-   "blurb": "出自 ERLW p.35（原站未翻譯）",
+   "blurb": "出自 ERLW p.35（特性說明為英文原文）",
    "color": "#ff7ad9",
    "look": {},
    "packLabel": "ERLW",

@@ -97,7 +97,7 @@ function spellForm() {
 
 function packView() {
   const packRaces = custom.races.filter((x) => x.packLabel).length;
-  return `${packRaces ? `<div class="note" style="display:flex;align-items:center;gap:10px">已匯入擴充包種族 ${packRaces} 個（在種族頁可用「擴充包」篩選）。<button class="toggle" data-w="clearPack" style="margin-left:auto">移除擴充包種族</button></div>` : ''}
+  return `${packRaces ? `<div class="note" style="display:flex;align-items:center;gap:10px">已匯入擴充包種族 ${packRaces} 個（在種族頁可用「擴充包」篩選）。<button class="toggle" data-w="loadOfficial" style="margin-left:auto">更新擴充包</button><button class="toggle" data-w="clearPack">移除擴充包種族</button></div>` : ''}
   ${packRaces ? '' : `<div class="detail" style="margin:0 0 16px"><h3>官方種族擴充包</h3><p class="muted" style="font-size:13px">PHB、VGM、MTF、ERLW、EGW、GGR、MOT、VRGR 等書的 135 個種族與亞種（資料參考 5etools 中文版）。</p><button class="big-btn gold" data-w="loadOfficial">載入擴充包種族</button></div>`}
   <div class="grid c2" style="gap:16px">
     <div class="detail"><h3>匯出內容包</h3><p class="muted" style="font-size:13px">目前有 ${custom.races.filter((x) => !x.packLabel).length} 個自訂種族、${custom.spells.length} 道自訂法術。匯出後傳給團員，對方匯入即可使用相同的自訂內容。</p>
@@ -195,6 +195,7 @@ function bind(box) {
 export async function loadOfficialPack() {
   try {
     const p = await fetch(`${import.meta.env.BASE_URL}packs/official-races.json`).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+    custom.races = custom.races.filter((x) => !x.packLabel); // 更新時先清掉舊版擴充包
     mergePack(p, { silentRender: true });
   } catch { toast('擴充包載入失敗'); sfx.error(); }
 }

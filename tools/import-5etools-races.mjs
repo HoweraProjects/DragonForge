@@ -14,6 +14,18 @@ const SKILLS = ['acrobatics', 'animal', 'arcana', 'athletics', 'deception', 'his
 const LANG = { common: '通用語', elvish: '精靈語', dwarvish: '矮人語', giant: '巨人語', gnomish: '侏儒語', goblin: '地精語', halfling: '半身人語', orc: '獸人語', abyssal: '深淵語', celestial: '天界語', draconic: '龍語', infernal: '煉獄語', primordial: '原初語', sylvan: '木族語', undercommon: '地底通用語', aquan: '水族語', auran: '風族語' };
 const SKIP_TRAITS = new Set(['Age', 'Alignment', 'Size', 'Languages', 'Speed', 'Creature Type']);
 
+// 原站沒翻譯的名稱：補上中文（只翻名稱，特性說明維持原文）
+const NAME_ZH = {
+  Aetherborn: '以太生族', Aven: '艾文', Changeling: '變形者', 'Dwarf (Kaladesh)': '矮人（卡拉德許）', 'Goblin (Ixalan)': '地精（依夏蘭）',
+  'Goblin (Zendikar)': '地精（贊迪卡）', 'Human (Ixalan)': '人類（依夏蘭）', 'Human (Zendikar)': '人類（贊迪卡）', Kalashtar: '卡拉什塔爾', Kor: '寇族',
+  Leonin: '獅族', Locathah: '洛卡薩魚人', 'Merfolk (Ixalan)': '人魚（依夏蘭）', 'Merfolk (Zendikar)': '人魚（贊迪卡）', 'Orc (Ixalan)': '獸人（依夏蘭）',
+  Satyr: '薩提爾', Shifter: '獸化人', 'Vampire (Ixalan)': '吸血鬼（依夏蘭）', 'Vampire (Zendikar)': '吸血鬼（贊迪卡）', Verdan: '維丹', Warforged: '機關人',
+  'Grotag Tribe': '格羅塔部族', 'Lavastep Tribe': '熔步部族', 'Tuktuk Tribe': '圖圖部族', Blue: '藍', Green: '綠', 'Cosi Creed': '科西信條', 'Emeria Creed': '艾梅莉亞信條', 'Ula Creed': '烏拉信條',
+  Beasthide: '獸皮', Longtooth: '長牙', Swiftstride: '迅步', Wildhunt: '狂獵', 'Hawk-Headed': '鷹首', 'Ibis-Headed': '朱鷺首',
+  'Bishatar and Tirahar': '比沙塔與提拉哈', Vadahar: '瓦達哈', 'Joraga Nation': '約拉加族', 'Mul Daya Nation': '穆戴亞族', 'Tajuru Nation': '塔居魯族',
+  Gavony: '加沃尼', Kessig: '凱斯格', Nephalia: '涅法利亞', Stensia: '斯坦西亞',
+};
+const zh = (n) => NAME_ZH[n] || n;
 const byKey = new Map(all.map((r) => [`${r.name}|${r.source}`, r]));
 const byEng = new Map(all.map((r) => [`${r.ENG_name || r.name}|${r.source}`, r]));
 
@@ -118,8 +130,8 @@ for (const raw of all) {
   for (const [sr, r] of list) {
     const subEn = sr?.ENG_name || sr?.name || '';
     if (BUILTIN.has(`${base.ENG_name}|${base.source}|${subEn.split(' ')[0] || ''}`)) continue;
-    const name = sr?.name ? `${base.name}（${sr.name}）` : base.name;
-    const en = `${base.ENG_name || ''}${subEn ? ` (${subEn})` : ''}`.trim();
+    const name = sr?.name ? `${zh(base.name)}（${zh(sr.name)}）` : zh(base.name);
+    const en = `${base.ENG_name || (hasCJK(base.name) ? '' : base.name)}${subEn ? ` (${subEn})` : ''}`.trim();
     const src = sr?.source || raw.source;
     const key = (en || name).toLowerCase().replace(/\s+/g, ' ');
 
@@ -144,8 +156,8 @@ for (const raw of all) {
       id: `pk-${(en || name).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-${raw.source.toLowerCase()}`,
       name, en, group: base.name, size: (r.size || ['M']).map((s) => SIZE[s] || s).join('或'),
       speed: sp.walk, darkvision: r.darkvision || 0, asi, asiChoice, languages: langs,
-      skills, skillChoice, traits, blurb: `出自 ${sr?.source || raw.source}${(sr?.page || raw.page) ? ` p.${sr?.page || raw.page}` : ''}${hasCJK(name) ? '' : '（原站未翻譯）'}`,
-      color: COLORS[candidates.length % COLORS.length], look, packLabel: src, untranslated: !hasCJK(name),
+      skills, skillChoice, traits, blurb: `出自 ${sr?.source || raw.source}${(sr?.page || raw.page) ? ` p.${sr?.page || raw.page}` : ''}${hasCJK(base.name) && (!sr?.name || hasCJK(sr.name)) ? '' : '（特性說明為英文原文）'}`,
+      color: COLORS[candidates.length % COLORS.length], look, packLabel: src, untranslated: !hasCJK(base.name) || (sr?.name && !hasCJK(sr.name)),
     } });
   }
 }
