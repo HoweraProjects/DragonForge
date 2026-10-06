@@ -17,8 +17,11 @@ export const VRM_MODELS = [
   { id: 'hair_male', name: '短髮少年', tag: '男' },
   { id: 'base_male', name: '素體・男', tag: '男' },
 ];
-const modelUrl = (id) => `${import.meta.env.BASE_URL}models/${id}.vrm`;
-export const modelThumb = (id) => `${import.meta.env.BASE_URL}models/${id}.jpg`;
+// 模型走 jsDelivr CDN（比 GitHub Pages 快很多）；tag 固定版本，模型更新時記得改 tag
+const MODEL_CDN = 'https://cdn.jsdelivr.net/gh/HoweraProjects/DragonForge@models-v1/public/models/';
+const LOCAL = `${import.meta.env.BASE_URL}models/`;
+const modelBase = import.meta.env.DEV ? LOCAL : MODEL_CDN;
+export const modelThumb = (id) => `${modelBase}${id}.jpg`;
 
 const loader = new GLTFLoader();
 loader.register((parser) => new VRMLoaderPlugin(parser));
@@ -27,7 +30,8 @@ const bufferCache = new Map();
 async function fetchModel(id, onProgress) {
   if (!bufferCache.has(id)) {
     bufferCache.set(id, (async () => {
-      const res = await fetch(modelUrl(id));
+      let res = await fetch(`${modelBase}${id}.vrm`).catch(() => null);
+      if (!res?.ok) res = await fetch(`${LOCAL}${id}.vrm`); // CDN 失敗時退回同站
       if (!res.ok) throw new Error(`模型載入失敗：${id}`);
       const total = Number(res.headers.get('content-length')) || 0;
       if (!res.body || !total) return res.arrayBuffer();
