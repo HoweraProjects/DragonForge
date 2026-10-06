@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>龍鑄 DragonForge</title>
+  <meta name="description" content="D&D 5e 3D 角色鍛造所：捏臉、種族、職業、法術，一站完成。" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M32 4 58 20v24L32 60 6 44V20z' fill='%2307060f' stroke='%235ad1ff' stroke-width='4'/><text x='32' y='42' font-size='26' text-anchor='middle' fill='%23e9c46a' font-family='serif'>20</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="app">
+    <div id="viewport"><canvas id="stage"></canvas></div>
+    <div id="scanlines"></div>
+
+    <header id="topbar">
+      <div class="brand">
+        <svg viewBox="0 0 64 64" class="brand-mark"><path d="M32 3 59 19v26L32 61 5 45V19z" /><path d="M32 3v58M5 19l54 26M59 19 5 45" /></svg>
+        <div><div class="brand-zh">龍鑄</div><div class="brand-en">DRAGONFORGE</div></div>
+      </div>
+      <label class="name-field"><span>角色名稱</span><input id="charName" maxlength="40" placeholder="為你的冒險者命名…" autocomplete="off" /></label>
+      <div class="top-actions">
+        <button class="ghost-btn" data-top="workshop" title="自訂種族與法術"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg><span>工坊</span></button>
+        <button class="ghost-btn" data-top="roster" title="角色庫"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg><span>角色庫</span></button>
+        <button class="ghost-btn" data-top="new" title="新角色"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span>新角色</span></button>
+        <button class="ghost-btn icon-only" data-top="mute" title="音效"><svg viewBox="0 0 24 24" id="muteIcon"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 8a5 5 0 0 1 0 8M19 5a9 9 0 0 1 0 14" class="wave"/></svg></button>
+      </div>
+    </header>
+
+    <nav id="steps"></nav>
+
+    <section id="panel">
+      <div class="panel-head">
+        <div class="panel-en" id="panelEn"></div>
+        <div class="panel-title"><span class="panel-idx" id="panelIdx"></span><h2 id="panelTitle"></h2></div>
+        <div class="panel-sub" id="panelSub"></div>
+      </div>
+      <div class="panel-body" id="panelBody"></div>
+      <div class="panel-foot">
+        <button class="nav-btn" id="prevBtn"><span>‹</span> 上一步</button>
+        <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+        <button class="nav-btn primary" id="nextBtn">下一步 <span>›</span></button>
+      </div>
+    </section>
+
+    <aside id="hud"></aside>
+
+    <div id="camctl">
+      <button data-cam="full" title="全身">全身</button>
+      <button data-cam="upper" title="上半身">半身</button>
+      <button data-cam="face" title="臉部特寫">臉部</button>
+      <button data-cam="back" title="背面">背面</button>
+      <button data-cam="pose" title="擺個姿勢">✦</button>
+    </div>
+
+    <div id="intro">
+      <div class="intro-rune"></div>
+      <div class="intro-inner">
+        <div class="intro-kicker">DUNGEONS &amp; DRAGONS 5E · CHARACTER FORGE</div>
+        <h1 class="intro-title"><span>龍</span><span>鑄</span></h1>
+        <div class="intro-en">DRAGONFORGE</div>
+        <p class="intro-desc">捏臉 · 種族 · 職業 · 法術 —— 鍛造屬於你的傳奇</p>
+        <button class="intro-start" id="startBtn"><span>點擊開始鍛造</span></button>
+        <div class="intro-foot">規則內容依據 SRD 5.1（CC-BY-4.0）　·　3D 模型：VRoid Project 官方樣本模型</div>
+      </div>
+    </div>
+
+    <div id="modal" hidden><div class="modal-backdrop" data-close></div><div class="modal-box" id="modalBox"></div></div>
+    <div id="toasts"></div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
