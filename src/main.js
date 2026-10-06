@@ -7,7 +7,7 @@ import {
   ABILITIES, SKILLS, CLASSES, BACKGROUNDS, POINT_COST, STANDARD_ARRAY,
 } from './state.js';
 import { SCHOOLS, ALIGNMENTS } from './data/rules.js';
-import { openWorkshop } from './workshop.js';
+import { openWorkshop, loadOfficialPack } from './workshop.js';
 import { renderCard, extractFromPng, setCustomResolver } from './card.js';
 import { VRM_MODELS, modelThumb, preloadModel } from './scene/vrmAvatar.js';
 
@@ -178,6 +178,7 @@ const RENDER = {
       h += `<div style="display:flex;gap:6px;margin-bottom:8px"><input class="inp" placeholder="搜尋種族（中文或英文）…" data-input="rq" value="${esc(raceFilter.q)}" style="flex:1" /></div>
         <div class="spell-filters">${[['all', '全部'], ['core', '核心 SRD'], ['pack', '擴充包'], ['custom', '自訂']].filter(([k]) => k === 'all' || counts[k]).map(([k, n]) => `<button class="toggle ${raceFilter.src === k ? 'on' : ''}" data-act="raceSrc" data-id="${k}">${n} ${counts[k]}</button>`).join('')}</div>`;
     }
+    if (!counts.pack) h += `<div class="note" style="display:flex;align-items:center;gap:10px">想要更多官方種族？<button class="toggle" data-act="loadPack" style="margin-left:auto">載入擴充包（135 種）</button></div>`;
     h += `<div class="grid c3">`;
     for (const x of races) {
       const c = hexRgb(x.color || RACE_COLORS[x.id] || '#ff7ad9');
@@ -663,6 +664,7 @@ const ACT = {
   spell(el, ev) { toggleSpell('spells', el, ev, derive().magic.spells); },
   raceCantrip(el, ev) { toggleSpell('raceCantrips', el, ev, getRace(state.raceId).bonusCantrip.count); },
   preview(el, ev) { ev.stopPropagation(); stage.castSpell(el.dataset.color); sfx.cast(); },
+  async loadPack(el) { el.disabled = true; el.textContent = '載入中…'; await loadOfficialPack(); raceFilter.src = 'pack'; renderPanel(); },
   raceSrc(el) { raceFilter.src = el.dataset.id; sfx.click(); renderPanel(); },
   sfLv(el) { spellFilter.lv = Number(el.dataset.id); sfx.click(); renderPanel(); },
   lookTab(el) { lookTab = el.dataset.id; sfx.click(); stage.focus(lookCam()); renderPanel(); },

@@ -98,6 +98,7 @@ function spellForm() {
 function packView() {
   const packRaces = custom.races.filter((x) => x.packLabel).length;
   return `${packRaces ? `<div class="note" style="display:flex;align-items:center;gap:10px">已匯入擴充包種族 ${packRaces} 個（在種族頁可用「擴充包」篩選）。<button class="toggle" data-w="clearPack" style="margin-left:auto">移除擴充包種族</button></div>` : ''}
+  ${packRaces ? '' : `<div class="detail" style="margin:0 0 16px"><h3>官方種族擴充包</h3><p class="muted" style="font-size:13px">PHB、VGM、MTF、ERLW、EGW、GGR、MOT、VRGR 等書的 135 個種族與亞種（資料參考 5etools 中文版）。</p><button class="big-btn gold" data-w="loadOfficial">載入擴充包種族</button></div>`}
   <div class="grid c2" style="gap:16px">
     <div class="detail"><h3>匯出內容包</h3><p class="muted" style="font-size:13px">目前有 ${custom.races.filter((x) => !x.packLabel).length} 個自訂種族、${custom.spells.length} 道自訂法術。匯出後傳給團員，對方匯入即可使用相同的自訂內容。</p>
       <button class="big-btn" data-w="exportPack">下載內容包 JSON</button>
@@ -180,6 +181,7 @@ function bind(box) {
       if (key === 'spells') update((s) => { s.spells = s.spells.filter((x) => x !== b.dataset.id); s.cantrips = s.cantrips.filter((x) => x !== b.dataset.id); });
       saveCustom(); sfx.click(); render();
     }
+    if (w === 'loadOfficial') { b.disabled = true; b.textContent = '載入中…'; await loadOfficialPack(); render(); }
     if (w === 'clearPack') { if (!b.dataset.armed) { b.dataset.armed = '1'; b.textContent = '再按一次確認'; return; } custom.races = custom.races.filter((x) => !x.packLabel); if (custom.races.every((x) => x.id !== state.raceId) && state.raceId.startsWith('pk-')) update((st) => { st.raceId = 'human'; }); saveCustom(); toast('已移除擴充包種族'); render(); }
     if (w === 'exportPack') downloadJSON('dndforge-homebrew-pack.json', { type: 'dndforge-pack', version: 1, races: custom.races, spells: custom.spells });
     if (w === 'copyPack') { const code = await encodeShare({ races: custom.races, spells: custom.spells }); try { await navigator.clipboard.writeText(code); toast('分享碼已複製'); } catch { box.querySelector('#packCode').value = code; toast('請手動複製下方分享碼'); } }
@@ -190,11 +192,18 @@ function bind(box) {
   if (pf) pf.onchange = async (e) => { try { mergePack(JSON.parse(await e.target.files[0].text())); } catch { toast('檔案格式錯誤'); sfx.error(); } };
 }
 
-function mergePack(p) {
+export async function loadOfficialPack() {
+  try {
+    const p = await fetch(`${import.meta.env.BASE_URL}packs/official-races.json`).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+    mergePack(p, { silentRender: true });
+  } catch { toast('擴充包載入失敗'); sfx.error(); }
+}
+
+function mergePack(p, { silentRender = false } = {}) {
   let n = 0;
   for (const r of p.races || p.customRaces || []) { const i = custom.races.findIndex((x) => x.id === r.id); if (i >= 0) custom.races[i] = r; else custom.races.push(r); n++; }
   for (const s of p.spells || p.customSpells || []) { const i = custom.spells.findIndex((x) => x.id === s.id); if (i >= 0) custom.spells[i] = s; else custom.spells.push(s); n++; }
-  saveCustom(); sfx.forge(); toast(`已匯入 ${n} 項自訂內容`); render();
+  saveCustom(); sfx.forge(); toast(`已匯入 ${n} 項內容`); if (!silentRender) render();
 }
 
 export { closeModal };

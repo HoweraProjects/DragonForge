@@ -1,0 +1,5984 @@
+{
+ "type": "dndforge-pack",
+ "version": 1,
+ "name": "官方種族擴充（團內私用）",
+ "races": [
+  {
+   "id": "pk-merfolk-dmg",
+   "name": "人魚",
+   "en": "Merfolk",
+   "group": "人魚",
+   "size": "中型",
+   "speed": 10,
+   "darkvision": 0,
+   "asi": {},
+   "asiChoice": null,
+   "languages": "通用語、原初語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "游泳 40 呎"
+    },
+    {
+     "name": "兩棲",
+     "desc": "你可以在空氣和水中呼吸。"
+    }
+   ],
+   "blurb": "出自 DMG p.282",
+   "color": "#5ad1ff",
+   "look": {
+    "skin": "#5a8fb8"
+   },
+   "packLabel": "DMG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-human-mark-of-sentinel-phb",
+   "name": "人類（守護龍紋）",
+   "en": "Human (Mark of Sentinel)",
+   "group": "人類",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "con": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、任選 1 種",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "哨兵直覺",
+     "desc": "當你進行感知（洞悉）或感知（察覺）檢定時，你能擲一個d4，並把結果加到屬性檢定的結果上。"
+    },
+    {
+     "name": "哨兵之盾",
+     "desc": "你能夠通過此特性施展護盾術，在完成一次長休後，你能再次施展此法術。感知是你在施展這些法術時的關鍵屬性。"
+    },
+    {
+     "name": "警覺衛士",
+     "desc": "當距離你5尺內的可見生物被攻擊命中時，你能以一個反應動作與該生物交換位置，同時你代替該生物被擊中。這麼做後，你將無法再次使用此特性，直到完成一次長休。"
+    },
+    {
+     "name": "龍紋法術",
+     "desc": "如果你擁有施法或契約魔法職業能力，守護龍紋表中的法術將加入你施法職業的法術列表中。 1st：強迫決鬥, 虔誠護盾；2nd：守護聯結, 誠實之域；3rd：反制法術, 防護能量；4th：防死護咒, 虔誠守衛；5th：畢格比之掌"
+    }
+   ],
+   "blurb": "出自 ERLW p.48",
+   "color": "#ffd166",
+   "look": {},
+   "packLabel": "ERLW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-human-mark-of-handling-phb",
+   "name": "人類（畜牧龍紋）",
+   "en": "Human (Mark of Handling)",
+   "group": "人類",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "wis": 2
+   },
+   "asiChoice": {
+    "count": 1,
+    "amount": 1,
+    "exclude": [
+     "wis"
+    ]
+   },
+   "languages": "通用語、任選 1 種",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "野性直覺",
+     "desc": "當你進行感知（馴獸）或智力（自然）檢定時，你能擲一個d4，並把結果加到屬性檢定的結果上。"
+    },
+    {
+     "name": "原始鏈接",
+     "desc": "你能夠通過此特性施展化獸爲友和動物交談術，且無需材料成分。一旦你使用此特性施展了前述法術，你將無法再次使用此特性，直到完成一次長休。感知是你在施展這些法術時的關鍵屬性。"
+    },
+    {
+     "name": "它們不過是大了點",
+     "desc": "你施展化獸爲友或動物交談術時可以指定野獸或怪獸爲目標，前提是目標智力爲3或以下。"
+    },
+    {
+     "name": "龍紋法術",
+     "desc": "如果你擁有施法或契約魔法職業能力，畜牧龍紋表中的法術將加入你施法職業的法術列表中。 1st：化獸爲友, 動物交談術；2nd：野獸知覺, 安定心神；3rd：希望信標, 召喚動物；4th：生命靈光, 支配野獸；5th：啓蒙術"
+    }
+   ],
+   "blurb": "出自 ERLW p.42",
+   "color": "#e9c46a",
+   "look": {},
+   "packLabel": "ERLW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-human-mark-of-finding-phb",
+   "name": "人類（探索龍紋）",
+   "en": "Human (Mark of Finding)",
+   "group": "人類",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "con": 1,
+    "wis": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、地精語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "你在黑暗和微光光照中有着超出常人的視力。在微光光照下，你身邊60尺內可以視爲等同於明亮光照。而在黑暗中，該範圍內可視爲等同於微光光照。你無法在黑暗中分辨顏色，只能看到有灰度的黑白畫面。"
+    },
+    {
+     "name": "獵人直覺",
+     "desc": "龍紋讓你的感官變得敏銳，並能幫助你找到獵物。當你進行感知（察覺）或感知（生存）檢定時，你能擲一個d4，並把結果加到屬性檢定的結果上。"
+    },
+    {
+     "name": "尋者魔法",
+     "desc": "你能通過此特性施展獵人印記法術。從第3級起，你還能施展物品定位術。一旦你使用此特性施展了前述法術，你將無法再次使用此特性，直到完成一次長休。感知是你在施展這些法術時的關鍵屬性。"
+    },
+    {
+     "name": "龍紋法術",
+     "desc": "如果你擁有施法或契約魔法職業能力，探索龍紋表中的法術將加入你施法職業的法術列表中。 1st：妖火術, 大步奔行；2nd：動植物定位術, 物品定位術；3rd：銳眼術, 植物交談術；4th：預言術, 生物定位術；5th：問道自然"
+    }
+   ],
+   "blurb": "出自 ERLW p.41",
+   "color": "#ff5a6e",
+   "look": {},
+   "packLabel": "ERLW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-human-mark-of-passage-phb",
+   "name": "人類（通行龍紋）",
+   "en": "Human (Mark of Passage)",
+   "group": "人類",
+   "size": "中型",
+   "speed": 35,
+   "darkvision": 0,
+   "asi": {
+    "dex": 2
+   },
+   "asiChoice": {
+    "count": 1,
+    "amount": 1,
+    "exclude": [
+     "dex"
+    ]
+   },
+   "languages": "通用語、任選 1 種",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "郵差之速",
+     "desc": "你的基礎步行速度爲35尺。"
+    },
+    {
+     "name": "運動直覺",
+     "desc": "當你進行敏捷（體操）檢定或者爲了操作或維護陸運載具而進行屬性檢定時，你能擲一個d4，並把結果加到屬性檢定的結果上。"
+    },
+    {
+     "name": "魔法通道",
+     "desc": "你能夠通過此特性施展迷蹤步。一旦你使用此特性施展了前述法術，你將無法再次使用此特性，直到完成一次長休。敏捷是你在施展這些法術時的關鍵屬性。"
+    },
+    {
+     "name": "龍紋法術",
+     "desc": "如果你擁有施法或契約魔法職業能力，通行龍紋表中的法術將加入你施法職業的法術列表中。 1st：腳底抹油, 跳躍術；2nd：迷蹤步, 行蹤無跡；3rd：閃現術, 魅影駒；4th：次元門, 行動自如術；5th：傳送法陣"
+    }
+   ],
+   "blurb": "出自 ERLW p.46",
+   "color": "#7dffcf",
+   "look": {},
+   "packLabel": "ERLW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-human-keldon-phb",
+   "name": "人類（凱爾頓）",
+   "en": "Human (Keldon)",
+   "group": "人類",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "str": 2,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [
+    "athletics"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Natural Athlete",
+     "desc": "You have proficiency in the 運動 skill."
+    },
+    {
+     "name": "Keldon Resilience",
+     "desc": "You have proficiency in Strength saving throws."
+    },
+    {
+     "name": "Icehaven Born",
+     "desc": "You are naturally adapted to cold climates, as described in chapter 5 of the Dungeon Master's Guide."
+    }
+   ],
+   "blurb": "出自 PSD p.19",
+   "color": "#ff7ad9",
+   "look": {},
+   "packLabel": "PSD",
+   "untranslated": false
+  },
+  {
+   "id": "pk-human-mark-of-making-phb",
+   "name": "人類（創造龍紋）",
+   "en": "Human (Mark of Making)",
+   "group": "人類",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "int": 2
+   },
+   "asiChoice": {
+    "count": 1,
+    "amount": 1,
+    "exclude": [
+     "int"
+    ]
+   },
+   "languages": "通用語、任選 1 種",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "工匠直覺",
+     "desc": "當你進行奧祕檢定或用工匠工具進行屬性檢定時，你能擲一個d4，並把結果加到屬性檢定的結果上。"
+    },
+    {
+     "name": "匠師天賦",
+     "desc": "你選擇一種工匠工具，獲得其熟練。"
+    },
+    {
+     "name": "魔力製造",
+     "desc": "你習得戲法修復術。同時，你能夠通過此特性施展魔化武器，當你這麼做時，該法術持續1小時，無需專注。一旦你使用此特性施展了前述法術，你將無法再次使用此特性，直到完成一次長休。智力是你在施展這些法術時的關鍵屬性。"
+    },
+    {
+     "name": "龍紋法術",
+     "desc": "如果你擁有施法或契約魔法職業能力，創造龍紋表中的法術將加入你施法職業的法術列表中。 1st：鑑定術, 譚森浮碟術；2nd：不滅明焰, 魔化武器；3rd：召喚箭幕, 元素武器；4th：鬼斧神工, 塑石術；5th：造物術"
+    }
+   ],
+   "blurb": "出自 ERLW p.45",
+   "color": "#ff9a5a",
+   "look": {},
+   "packLabel": "ERLW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-human-variant-phb",
+   "name": "人類（變體）",
+   "en": "Human (Variant)",
+   "group": "人類",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {},
+   "asiChoice": {
+    "count": 2,
+    "amount": 1,
+    "exclude": []
+   },
+   "languages": "通用語、任選 1 種",
+   "skills": [],
+   "skillChoice": {
+    "count": 1,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "Skills",
+     "desc": "You gain proficiency in one skill of your choice."
+    },
+    {
+     "name": "Feat",
+     "desc": "You gain one feat of your choice."
+    }
+   ],
+   "blurb": "出自 PHB p.31",
+   "color": "#9be36d",
+   "look": {},
+   "packLabel": "PHB",
+   "untranslated": false
+  },
+  {
+   "id": "pk-human-innistrad-gavony-psi",
+   "name": "人類 (依尼翠)（Gavony）",
+   "en": "Human (Innistrad) (Gavony)",
+   "group": "人類 (依尼翠)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "str": 1,
+    "dex": 1,
+    "con": 1,
+    "int": 1,
+    "wis": 1,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、任選 1 種",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Ability Score Increase",
+     "desc": "Your ability scores each increase by 1."
+    }
+   ],
+   "blurb": "出自 PSI p.8",
+   "color": "#b388ff",
+   "look": {},
+   "packLabel": "PSI",
+   "untranslated": false
+  },
+  {
+   "id": "pk-human-innistrad-kessig-psi",
+   "name": "人類 (依尼翠)（Kessig）",
+   "en": "Human (Innistrad) (Kessig)",
+   "group": "人類 (依尼翠)",
+   "size": "中型",
+   "speed": 40,
+   "darkvision": 0,
+   "asi": {
+    "dex": 1,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、任選 1 種",
+   "skills": [
+    "survival"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Forest Folk",
+     "desc": "You have proficiency in the 生存 skill."
+    },
+    {
+     "name": "Fleet of Foot",
+     "desc": "Your base walking speed is 40 feet."
+    },
+    {
+     "name": "Sure-footed",
+     "desc": "When you use the 疾走 action, difficult terrain doesn't cost you extra movement on that turn."
+    },
+    {
+     "name": "Spring Attack",
+     "desc": "When you make a melee attack against a creature, you don't provoke opportunity attacks from that creature for the rest of your turn, whether you hit or not."
+    }
+   ],
+   "blurb": "出自 PSI p.8",
+   "color": "#ff7ad9",
+   "look": {},
+   "packLabel": "PSI",
+   "untranslated": false
+  },
+  {
+   "id": "pk-human-innistrad-nephalia-psi",
+   "name": "人類 (依尼翠)（Nephalia）",
+   "en": "Human (Innistrad) (Nephalia)",
+   "group": "人類 (依尼翠)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "int": 1,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、任選 1 種",
+   "skills": [],
+   "skillChoice": {
+    "count": 4,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "Breadth of Knowledge",
+     "desc": "You gain proficiency in any combination of four skills or with four tools of your choice."
+    }
+   ],
+   "blurb": "出自 PSI p.8",
+   "color": "#ff5a6e",
+   "look": {},
+   "packLabel": "PSI",
+   "untranslated": false
+  },
+  {
+   "id": "pk-human-innistrad-stensia-psi",
+   "name": "人類 (依尼翠)（Stensia）",
+   "en": "Human (Innistrad) (Stensia)",
+   "group": "人類 (依尼翠)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "str": 1,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、任選 1 種",
+   "skills": [
+    "intimidation"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Daunting",
+     "desc": "You have proficiency in the 威嚇 skill."
+    },
+    {
+     "name": "Tough",
+     "desc": "Your hit point maximum increases by 2, and it increases by 2 every time you gain a level."
+    }
+   ],
+   "blurb": "出自 PSI p.8",
+   "color": "#e9c46a",
+   "look": {},
+   "packLabel": "PSI",
+   "untranslated": false
+  },
+  {
+   "id": "pk-human-amonkhet-psa",
+   "name": "人類 (阿芒凱)",
+   "en": "Human (Amonkhet)",
+   "group": "人類 (阿芒凱)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {},
+   "asiChoice": {
+    "count": 2,
+    "amount": 1,
+    "exclude": []
+   },
+   "languages": "通用語、任選 1 種",
+   "skills": [],
+   "skillChoice": {
+    "count": 1,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "技能",
+     "desc": "你熟練於一個你所選擇的技能。"
+    },
+    {
+     "name": "專長",
+     "desc": "你獲得一個你所選擇的專長。"
+    }
+   ],
+   "blurb": "出自 PSA p.14",
+   "color": "#5ad1ff",
+   "look": {},
+   "packLabel": "PSA",
+   "untranslated": false
+  },
+  {
+   "id": "pk-hobgoblin-vgm",
+   "name": "大地精",
+   "en": "Hobgoblin",
+   "group": "大地精",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "con": 2,
+    "int": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、地精語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "軍事訓練",
+     "desc": "你熟練於二種你所選擇的軍用武器和輕甲。"
+    },
+    {
+     "name": "挽回顏面",
+     "desc": "大地精由於懼怕失去地位，因此他們相當謹慎於不在盟友面前暴露軟弱。若你在一次攻擊檢定中失手，或在一次屬性檢定或豁免檢定中失敗，你可以讓該檢定獲得等同於距離你30尺內盟友數量的加值（最大加值+5）。一旦你使用此特性，直到你完成一次短休或長休之前你都不能再使用它。"
+    }
+   ],
+   "blurb": "出自 VGM p.119",
+   "color": "#b388ff",
+   "look": {
+    "earType": "elf",
+    "ears": 0.8,
+    "height": 0.62
+   },
+   "packLabel": "VGM",
+   "untranslated": false
+  },
+  {
+   "id": "pk-genasi-earth-eepc",
+   "name": "元素裔（土）",
+   "en": "Genasi (Earth)",
+   "group": "元素裔",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "con": 2,
+    "str": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、原初語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "大地步行",
+     "desc": "你可以移動穿越由土或石構成的困難地形而不會消耗額外的移動速度。"
+    },
+    {
+     "name": "與石交融",
+     "desc": "你可以使用此特性施放一次行蹤無跡，無需任何材料構材，且當你完成一次長休，你將重新獲得施放該法術的能力。你施展該法術的施法屬性爲體質。"
+    }
+   ],
+   "blurb": "出自 EEPC p.9",
+   "color": "#9be36d",
+   "look": {
+    "skin": "#8a6a45"
+   },
+   "packLabel": "EEPC",
+   "untranslated": false
+  },
+  {
+   "id": "pk-genasi-water-eepc",
+   "name": "元素裔（水）",
+   "en": "Genasi (Water)",
+   "group": "元素裔",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "con": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、原初語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "游泳 30 呎"
+    },
+    {
+     "name": "強酸抗性",
+     "desc": "你具有對強酸傷害的抗性。"
+    },
+    {
+     "name": "兩棲",
+     "desc": "你可以在空氣和水中呼吸。"
+    },
+    {
+     "name": "游泳",
+     "desc": "你擁有30尺的游泳速度。"
+    },
+    {
+     "name": "呼喚波濤",
+     "desc": "你知曉戲法塑水。當你升至3級，你可以使用此特性以二環法術施放一次造水/枯水術，且當你完成一次長休，你將重新獲得施放該法術的能力。你施展該法術的施法屬性爲體質。"
+    }
+   ],
+   "blurb": "出自 EEPC p.10",
+   "color": "#b388ff",
+   "look": {
+    "skin": "#3b7fb5"
+   },
+   "packLabel": "EEPC",
+   "untranslated": false
+  },
+  {
+   "id": "pk-genasi-fire-eepc",
+   "name": "元素裔（火）",
+   "en": "Genasi (Fire)",
+   "group": "元素裔",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "con": 2,
+    "int": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、原初語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你與火元素位面的聯繫使你的黑暗視覺與衆不同：任何你在黑暗中所看到的事物都有着紅色的輪廓。"
+    },
+    {
+     "name": "火焰抗性",
+     "desc": "你具有對火焰傷害的抗性。"
+    },
+    {
+     "name": "觸及烈焰",
+     "desc": "你知曉燃火術戲法。當你升至3級，你可以使用此特性以一環法術施放一次燃燒之手，無需任何材料構材，且當你完成一次長休，你將重新獲得施放該法術的能力。你施展該法術的施法屬性爲體質。"
+    }
+   ],
+   "blurb": "出自 EEPC p.9",
+   "color": "#5ad1ff",
+   "look": {
+    "skin": "#c4502b"
+   },
+   "packLabel": "EEPC",
+   "untranslated": false
+  },
+  {
+   "id": "pk-genasi-air-eepc",
+   "name": "元素裔（氣）",
+   "en": "Genasi (Air)",
+   "group": "元素裔",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "con": 2,
+    "dex": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、原初語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "無盡氣息",
+     "desc": "當你並未處於無力時，你就可以無限期的屏住呼吸。"
+    },
+    {
+     "name": "與風相混",
+     "desc": "你可以使用此特性施放一次浮空術，無需任何材料構材，且當你完成一次長休，你將重新獲得施放該法術的能力。你施展該法術的施法屬性爲體質。"
+    }
+   ],
+   "blurb": "出自 EEPC p.9",
+   "color": "#ffd166",
+   "look": {
+    "skin": "#9fc4dc"
+   },
+   "packLabel": "EEPC",
+   "untranslated": false
+  },
+  {
+   "id": "pk-kenku-vgm",
+   "name": "天狗",
+   "en": "Kenku",
+   "group": "天狗",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "dex": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、原初語",
+   "skills": [],
+   "skillChoice": {
+    "count": 2,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "專業僞造",
+     "desc": "你可以拷貝其他生物的筆跡和手藝。你在用於僞造文書或拷貝既存物體所進行的所有檢定中具有優勢。"
+    },
+    {
+     "name": "天狗訓練",
+     "desc": "你熟練於下列二個你所選擇的技能：體操、欺瞞、隱匿和巧手。"
+    },
+    {
+     "name": "擬聲",
+     "desc": "你可以模仿任何你曾聽過的聲音，包括人的嗓音。一個聽到這類聲音的生物可以通過成功通過一次感知（洞悉）檢定來對抗你的魅力（欺瞞）檢定以辨別出它是被模仿發出的。"
+    }
+   ],
+   "blurb": "出自 VGM p.109",
+   "color": "#ffd166",
+   "look": {},
+   "packLabel": "VGM",
+   "untranslated": false
+  },
+  {
+   "id": "pk-centaur-ggr",
+   "name": "半人馬",
+   "en": "Centaur",
+   "group": "半人馬",
+   "size": "中型",
+   "speed": 40,
+   "darkvision": 0,
+   "asi": {
+    "str": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、木族語、其他",
+   "skills": [],
+   "skillChoice": {
+    "count": 1,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "精類",
+     "desc": "你的生物類型是精類生物，而非類人生物。"
+    },
+    {
+     "name": "衝鋒",
+     "desc": "若你朝着目標直線移動至少30尺並接着以近戰武器在同一回合命中它，你可以立刻在該攻擊後以一個附贈動作，使用你的馬蹄對目標進行一次攻擊。"
+    },
+    {
+     "name": "馬蹄",
+     "desc": "你的馬蹄是天生近戰武器，你可以使用它們來進行徒手打擊。如果你以它們命中目標，則你造成等同1d4 + 你的力量調整值的鈍擊傷害，而不是一般徒手打擊的鈍擊傷害。"
+    },
+    {
+     "name": "馬之身軀",
+     "desc": "當決定你的負重以及你可以拖曳或推動的重量時，你將你的體型視作比原本大一級。 此外，因爲你的馬腿，任何需要手和腳的攀爬對你來說都特別困難。當你進行這攀爬時，每移動1尺都會額外消耗你4尺的移動速度，而非原本的額外1尺移動速度。"
+    },
+    {
+     "name": "生存者",
+     "desc": "你熟練於以下其中一個你所選擇的技能馴獸、醫療、自然或生存。"
+    }
+   ],
+   "blurb": "出自 GGR p.15",
+   "color": "#5ad1ff",
+   "look": {
+    "height": 1.15,
+    "build": 0.9
+   },
+   "packLabel": "GGR",
+   "untranslated": false
+  },
+  {
+   "id": "pk-dhampir-vrgr",
+   "name": "半血裔",
+   "en": "Dhampir",
+   "group": "半血裔",
+   "size": "小型或中型",
+   "speed": 35,
+   "darkvision": 60,
+   "asi": {},
+   "asiChoice": null,
+   "languages": "",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "攀爬 35 呎"
+    },
+    {
+     "name": "先祖遺贈",
+     "desc": "如果你用該族系替換了一個種族，你能保留該種族的以下元素：任何從中獲得的技能熟練，攀爬，飛行或是游泳速度。 創建角色時，如果你不繼承任意一項這些元素的話，你獲得兩項你所選的技能熟練。"
+    },
+    {
+     "name": "黑暗視覺",
+     "desc": "在微光光照下，你身邊60尺內可以視爲等同於明亮光照。而在黑暗中，該範圍內可視爲等同於微光光照。你無法在黑暗中分辨顏色，只能看到有灰度的黑白畫面。"
+    },
+    {
+     "name": "不死本質",
+     "desc": "你不需要呼吸。"
+    },
+    {
+     "name": "蛛行",
+     "desc": "你具有等於行走速度的攀爬速度。此外，從3級起，你能夠在垂直表面任意行走，或是倒掛在天花板上，並且不需要雙手進行攀援。"
+    },
+    {
+     "name": "吸血啃咬",
+     "desc": "你的獠牙撕咬是天生武器，能夠視爲你熟練的簡易武器使用。你將你的體質調整值加到啃咬進行的攻擊和傷害檢定中，而不是力量調整值。你的啃咬命中時造成1d4穿刺傷害。 當你失去一半或一半以上生命值時，你使用該啃咬進行的攻擊具有優勢。 當你使用啃咬命中一個並非構裝生物和不死生物的生物時，你能夠以以下選擇的方式增強自身： ・恢復相當於啃咬造成的穿刺傷害的生命值。 ・在下一次你所進行的屬性檢定或攻擊檢定中獲得加值，加值等同於你啃咬造成的穿刺傷害。 你能使用啃咬增強自身的次數等同於你的熟練次數，你在結束一次長休後會獲得所有消耗的次數。"
+    }
+   ],
+   "blurb": "出自 VRGR p.16",
+   "color": "#e9c46a",
+   "look": {
+    "skin": "#d8dde0"
+   },
+   "packLabel": "VRGR",
+   "untranslated": false
+  },
+  {
+   "id": "pk-halfling-mark-of-hospitality-phb",
+   "name": "半身人（招待龍紋）",
+   "en": "Halfling (Mark of Hospitality)",
+   "group": "半身人",
+   "size": "小型",
+   "speed": 25,
+   "darkvision": 0,
+   "asi": {
+    "dex": 2,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、半身人語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "幸運",
+     "desc": "當你在攻擊檢定、屬性檢定、或豁免檢定中骰出了1，你可以重骰該檢定且必須使用新的擲骰結果。"
+    },
+    {
+     "name": "勇敢",
+     "desc": "你在對抗恐懼的豁免檢定中具有優勢。"
+    },
+    {
+     "name": "半身人靈巧",
+     "desc": "你可以移動穿過任何體型大於你的生物所在的空間。"
+    },
+    {
+     "name": "永遠熱情好客",
+     "desc": "當你進行魅力（說服）檢定或者使用釀酒工具或廚師工具進行屬性檢定時，你能擲一個d4，並把結果加到屬性檢定的結果上。"
+    },
+    {
+     "name": "旅店老闆的魔法",
+     "desc": "你習得戲法魔法技倆。同時，你能夠通過此特性施展淨化飲食和隱形僕役。一旦你使用此特性施展了前述法術，你將無法再次使用此特性，直到完成一次長休。魅力是你在施展這些法術時的關鍵屬性。"
+    },
+    {
+     "name": "龍紋法術",
+     "desc": "如果你擁有施法或契約魔法職業能力，招待龍紋表中的法術將加入你施法職業的法術列表中。 1st：神莓術, 睡眠術；2nd：援助術, 安定心神；3rd：創造飲食, 李歐蒙小屋；4th：淨化靈光, 魔鄧肯私人密室；5th：聖居"
+    }
+   ],
+   "blurb": "出自 ERLW p.44",
+   "color": "#ff9a5a",
+   "look": {
+    "height": 0.62
+   },
+   "packLabel": "ERLW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-halfling-ghostwise-phb",
+   "name": "半身人（鬼智）",
+   "en": "Halfling (Ghostwise)",
+   "group": "半身人",
+   "size": "小型",
+   "speed": 25,
+   "darkvision": 0,
+   "asi": {
+    "dex": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、半身人語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "幸運",
+     "desc": "當你在攻擊檢定、屬性檢定、或豁免檢定中骰出了1，你可以重骰該檢定且必須使用新的擲骰結果。"
+    },
+    {
+     "name": "勇敢",
+     "desc": "你在對抗恐懼的豁免檢定中具有優勢。"
+    },
+    {
+     "name": "半身人靈巧",
+     "desc": "你可以移動穿過任何體型大於你的生物所在的空間。"
+    },
+    {
+     "name": "無聲傳話",
+     "desc": "你可以透過心靈感應向任何一個距離你30尺內的生物說話。該生物必須和你之間有共通語言才能理解你的意思。你同時只能以這個方式對一個生物透過心靈感應傳話。"
+    }
+   ],
+   "blurb": "出自 SCAG p.110",
+   "color": "#ff7ad9",
+   "look": {
+    "height": 0.62
+   },
+   "packLabel": "SCAG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-halfling-stout-phb",
+   "name": "半身人（強魄）",
+   "en": "Halfling (Stout)",
+   "group": "半身人",
+   "size": "小型",
+   "speed": 25,
+   "darkvision": 0,
+   "asi": {
+    "dex": 2,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、半身人語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "幸運",
+     "desc": "當你在攻擊檢定、屬性檢定、或豁免檢定中骰出了1，你可以重骰該檢定且必須使用新的擲骰結果。"
+    },
+    {
+     "name": "勇敢",
+     "desc": "你在對抗恐懼的豁免檢定中具有優勢。"
+    },
+    {
+     "name": "半身人靈巧",
+     "desc": "你可以移動穿過任何體型大於你的生物所在的空間。"
+    },
+    {
+     "name": "強魄韌性",
+     "desc": "你在對抗毒素的豁免檢定中具有優勢，且你對毒素傷害具有抗性。"
+    }
+   ],
+   "blurb": "出自 PHB p.28",
+   "color": "#7dffcf",
+   "look": {
+    "height": 0.62
+   },
+   "packLabel": "PHB",
+   "untranslated": false
+  },
+  {
+   "id": "pk-halfling-lotusden-phb",
+   "name": "半身人（蓮源）",
+   "en": "Halfling (Lotusden)",
+   "group": "半身人",
+   "size": "小型",
+   "speed": 25,
+   "darkvision": 0,
+   "asi": {
+    "dex": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、半身人語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "幸運",
+     "desc": "當你在攻擊檢定、屬性檢定、或豁免檢定中骰出了1，你可以重骰該檢定且必須使用新的擲骰結果。"
+    },
+    {
+     "name": "勇敢",
+     "desc": "你在對抗恐懼的豁免檢定中具有優勢。"
+    },
+    {
+     "name": "半身人靈巧",
+     "desc": "你可以移動穿過任何體型大於你的生物所在的空間。"
+    },
+    {
+     "name": "樹林之子",
+     "desc": "你知曉德魯伊伎倆戲法。當你抵達3級時，你能通過本特質釋放一次糾纏術，當你完成一次長休後可重獲釋放次數。當你抵達5級時，你能釋放一次荊棘叢生 ，當你完成一次長休後可重獲釋放次數。通過本特質釋放的這些法術不需要材料成分。感知是你釋放這些法術的施法屬性。"
+    },
+    {
+     "name": "木行",
+     "desc": "對你進行追蹤的屬性檢定具有劣勢，並且你在通過由非魔法的植物和灌木叢形成的困難地形時，不需要花費額外移動力。"
+    }
+   ],
+   "blurb": "出自 EGW p.164",
+   "color": "#ff5a6e",
+   "look": {
+    "height": 0.62
+   },
+   "packLabel": "EGW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-halfling-mark-of-healing-phb",
+   "name": "半身人（醫療龍紋）",
+   "en": "Halfling (Mark of Healing)",
+   "group": "半身人",
+   "size": "小型",
+   "speed": 25,
+   "darkvision": 0,
+   "asi": {
+    "dex": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、半身人語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "幸運",
+     "desc": "當你在攻擊檢定、屬性檢定、或豁免檢定中骰出了1，你可以重骰該檢定且必須使用新的擲骰結果。"
+    },
+    {
+     "name": "勇敢",
+     "desc": "你在對抗恐懼的豁免檢定中具有優勢。"
+    },
+    {
+     "name": "半身人靈巧",
+     "desc": "你可以移動穿過任何體型大於你的生物所在的空間。"
+    },
+    {
+     "name": "醫療直覺",
+     "desc": "當你進行感知（醫療）檢定或用草藥工具進行屬性檢定時，你能擲一個d4，並把結果加到屬性檢定的結果上。"
+    },
+    {
+     "name": "醫療之觸",
+     "desc": "你能夠通過此特性施展治療傷勢，從第3級起，你還能施展次級復原術。一旦你使用此特性施展了前述法術，你將無法再次使用此特性，直到完成一次長休。感知是你在施展這些法術時的關鍵屬性。"
+    },
+    {
+     "name": "龍紋法術",
+     "desc": "如果你擁有施法或契約魔法職業能力，醫療龍紋表中的法術將加入你施法職業的法術列表中。 1st：治療傷勢, 治癒真言；2nd：次級復原術, 治癒祈禱；3rd：活力靈光, 羣體治癒真言；4th：淨化靈光, 生命靈光；5th：高等復原術"
+    }
+   ],
+   "blurb": "出自 ERLW p.43",
+   "color": "#e9c46a",
+   "look": {
+    "height": 0.62
+   },
+   "packLabel": "ERLW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-half-elf-variant-moon-elf-or-sun-elf-descent-phb",
+   "name": "半精靈 (變體)（月精靈或日精靈血統）",
+   "en": "Half-Elf (Variant) (Moon Elf or Sun Elf Descent)",
+   "group": "半精靈 (變體)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2
+   },
+   "asiChoice": {
+    "count": 2,
+    "amount": 1,
+    "exclude": [
+     "cha"
+    ]
+   },
+   "languages": "通用語、精靈語、任選 1 種",
+   "skills": [],
+   "skillChoice": {
+    "count": 2,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的精靈血統，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "變體特性（選擇1種）",
+     "desc": "多才多藝：你熟練於二個你所選擇的技能。 敏銳感官：你熟練於察覺技能。 精靈武器訓練：你熟練於長劍、短劍、短弓和長弓。 戲法：你知曉一個從法師法術列表中選擇的一個戲法。你施展該法術的施法屬性爲智力。"
+    }
+   ],
+   "blurb": "出自 SCAG p.116",
+   "color": "#9be36d",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "SCAG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-half-elf-variant-wood-elf-descent-phb",
+   "name": "半精靈 (變體)（木精靈血統）",
+   "en": "Half-Elf (Variant) (Wood Elf Descent)",
+   "group": "半精靈 (變體)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2
+   },
+   "asiChoice": {
+    "count": 2,
+    "amount": 1,
+    "exclude": [
+     "cha"
+    ]
+   },
+   "languages": "通用語、精靈語、任選 1 種",
+   "skills": [],
+   "skillChoice": {
+    "count": 2,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的精靈血統，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "變體特性（選擇1種）",
+     "desc": "多才多藝：你熟練於二個你所選擇的技能。 敏銳感官：你熟練於察覺技能。 精靈武器訓練：你熟練於長劍、短劍、短弓和長弓。 輕捷步伐：你的基礎步行速度提升到35尺。 荒野隱蔽：當你處於樹叢、大雨、落雪、霧氣或其他自然現象所造成的輕度遮蔽時，你可以嘗試進行躲藏。"
+    }
+   ],
+   "blurb": "出自 SCAG p.116",
+   "color": "#5ad1ff",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "SCAG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-half-elf-variant-aquatic-elf-descent-phb",
+   "name": "半精靈 (變體)（水生精靈血統）",
+   "en": "Half-Elf (Variant) (Aquatic Elf Descent)",
+   "group": "半精靈 (變體)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2
+   },
+   "asiChoice": {
+    "count": 2,
+    "amount": 1,
+    "exclude": [
+     "cha"
+    ]
+   },
+   "languages": "通用語、精靈語、任選 1 種",
+   "skills": [],
+   "skillChoice": {
+    "count": 2,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的精靈血統，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "變體特性（選擇1種）",
+     "desc": "多才多藝：你熟練於二個你所選擇的技能。 敏銳感官：你熟練於察覺技能。 游泳：你獲得30尺的游泳速度。"
+    }
+   ],
+   "blurb": "出自 SCAG p.116",
+   "color": "#e9c46a",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "SCAG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-half-elf-variant-drow-descent-phb",
+   "name": "半精靈 (變體)（卓爾血統）",
+   "en": "Half-Elf (Variant) (Drow Descent)",
+   "group": "半精靈 (變體)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2
+   },
+   "asiChoice": {
+    "count": 2,
+    "amount": 1,
+    "exclude": [
+     "cha"
+    ]
+   },
+   "languages": "通用語、精靈語、任選 1 種",
+   "skills": [],
+   "skillChoice": {
+    "count": 2,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的精靈血統，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "變體特性（選擇1種）",
+     "desc": "多才多藝：你熟練於二個你所選擇的技能。 敏銳感官：你熟練於察覺技能。 卓爾魔法：你知曉舞光術戲法。當你升至3級，你每天可以施放一次妖火術，你必須完成一次長休才能再次使用此特性施放該法術。當你升至5級，你每天可以施放一次黑暗術，你必須完成一次長休才能再次使用此特性施放該法術。你施展這些法術的施法屬性爲魅力。"
+    }
+   ],
+   "blurb": "出自 SCAG p.116",
+   "color": "#ff9a5a",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6,
+    "skin": "#5a4a6a"
+   },
+   "packLabel": "SCAG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-half-elf-variant-mark-of-detection-phb",
+   "name": "半精靈 (變體)（偵測龍紋）",
+   "en": "Half-Elf (Variant) (Mark of Detection)",
+   "group": "半精靈 (變體)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "wis": 2
+   },
+   "asiChoice": {
+    "count": 1,
+    "amount": 1,
+    "exclude": [
+     "wis"
+    ]
+   },
+   "languages": "通用語、精靈語、任選 1 種",
+   "skills": [],
+   "skillChoice": {
+    "count": 2,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的精靈血統，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "推理直覺",
+     "desc": "當你進行智力（調查）或感知（洞悉）檢定時，你能夠擲一個d4，將結果加到你的屬性檢定結果中。"
+    },
+    {
+     "name": "魔法偵測",
+     "desc": "你能夠施展偵測魔法和偵測毒素或疾病法術，從3級起，你還能施展識破隱形。一旦你使用此特性施展了前述法術，你將無法再次使用此特性，直到完成一次長休。智力是你在施展這些法術時的關鍵屬性，你無需爲這些法術提供材料成分。"
+    },
+    {
+     "name": "龍紋法術",
+     "desc": "如果你擁有施法或契約魔法職業能力，偵測龍紋表中的法術將加入你施法職業的法術列表中。 1st：偵測善惡, 偵測毒素或疾病；2nd：偵測思想, 尋找陷阱；3rd：銳眼術, 迴避偵測；4th：祕法眼, 預言術；5th：通曉傳奇"
+    }
+   ],
+   "blurb": "出自 ERLW p.40",
+   "color": "#7dffcf",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "ERLW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-half-elf-variant-mark-of-storm-phb",
+   "name": "半精靈 (變體)（暴風龍紋）",
+   "en": "Half-Elf (Variant) (Mark of Storm)",
+   "group": "半精靈 (變體)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2,
+    "dex": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、精靈語、任選 1 種",
+   "skills": [],
+   "skillChoice": {
+    "count": 2,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的精靈血統，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "馭風者直覺",
+     "desc": "當你進行敏捷（體操）檢定或任何使用領航工具的屬性檢定時，你能擲一個d4，並把結果加到屬性檢定的結果上。"
+    },
+    {
+     "name": "暴風之祝福",
+     "desc": "你對閃電傷害有抗性。"
+    },
+    {
+     "name": "逆風行事",
+     "desc": "你能夠施展gust戲法。從第3級起，你能夠通過此特性施展造風術。一旦你使用此特性施展了前述法術，你將無法再次使用此特性，直到完成一次長休。魅力是你在施展這些法術時的關鍵屬性。"
+    },
+    {
+     "name": "龍紋法術",
+     "desc": "如果你擁有施法或契約魔法職業能力，暴風龍紋表中的法術將加入你施法職業的法術列表中。 1st：羽落術, 雲霧術；2nd：造風術, 浮空術；3rd：雪雨暴, 風牆術；4th：召喚次級元素生物, 操控水體；5th：召喚元素生物"
+    }
+   ],
+   "blurb": "出自 ERLW p.50",
+   "color": "#ffd166",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "ERLW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-half-orc-mark-of-finding-erlw",
+   "name": "半獸人 (探索龍紋)",
+   "en": "Half-Orc (Mark of Finding)",
+   "group": "半獸人 (探索龍紋)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "con": 1,
+    "wis": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、地精語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "你在黑暗和微光光照中有着超出常人的視力。在微光光照下，你身邊60尺內可以視爲等同於明亮光照。而在黑暗中，該範圍內可視爲等同於微光光照。你無法在黑暗中分辨顏色，只能看到有灰度的黑白畫面。"
+    },
+    {
+     "name": "獵人直覺",
+     "desc": "龍紋讓你的感官變得敏銳，並能幫助你找到獵物。當你進行感知（察覺）或感知（生存）檢定時，你能擲一個d4，並把結果加到屬性檢定的結果上。"
+    },
+    {
+     "name": "尋者魔法",
+     "desc": "你能通過此特性施展獵人印記法術。從第3級起，你還能施展物品定位術。一旦你使用此特性施展了前述法術，你將無法再次使用此特性，直到完成一次長休。感知是你在施展這些法術時的關鍵屬性。"
+    },
+    {
+     "name": "龍紋法術",
+     "desc": "如果你擁有施法或契約魔法職業能力，探索龍紋表中的法術將加入你施法職業的法術列表中。 1st：妖火術, 大步奔行；2nd：動植物定位術, 物品定位術；3rd：銳眼術, 植物交談術；4th：預言術, 生物定位術；5th：問道自然"
+    }
+   ],
+   "blurb": "出自 ERLW p.41",
+   "color": "#b388ff",
+   "look": {
+    "tusks": true,
+    "skin": "#7f9c6a"
+   },
+   "packLabel": "ERLW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-grimlock-dmg",
+   "name": "石盲蠻族",
+   "en": "Grimlock",
+   "group": "石盲蠻族",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "str": 2,
+    "cha": -2
+   },
+   "asiChoice": null,
+   "languages": "地底通用語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "盲視",
+     "desc": "你沒有雙眼，且不會陷入目盲狀態。你可以察覺你周遭30尺範圍內的環境，或在耳聾時則爲10尺範圍。你對超過這個半徑範圍外的事物被視作目盲。"
+    },
+    {
+     "name": "敏銳聽覺和嗅覺",
+     "desc": "你在依賴聽覺和嗅覺的感知（察覺）檢定中具有優勢。"
+    },
+    {
+     "name": "巖地僞裝",
+     "desc": "你在岩石地形爲躲藏所進行的敏捷（隱匿）檢定中具有優勢。"
+    }
+   ],
+   "blurb": "出自 DMG p.282",
+   "color": "#ff7ad9",
+   "look": {},
+   "packLabel": "DMG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-gith-githyanki-mtf",
+   "name": "吉斯人（吉斯洋基）",
+   "en": "Gith (Githyanki)",
+   "group": "吉斯人",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "int": 1,
+    "str": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [],
+   "skillChoice": {
+    "count": 1,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "業餘愛好",
+     "desc": "你學會一種自選的語言，且你熟練於一個自選的技能或tool。在圖納拉斯這座永恆之城，吉斯洋基人有着大量的時間以掌握一些零碎的知識。"
+    },
+    {
+     "name": "軍事人才",
+     "desc": "你熟練於輕甲和中甲，以及shortsword、longsword和greatsword。"
+    },
+    {
+     "name": "吉斯洋基靈能",
+     "desc": "你知曉法師之手戲法，且當你使用此特性施放這個戲法時，這隻手是隱形的。當你升至3級，你可以使用此特性施放一次跳躍術，且你在完成一次長休後才能恢復再次使用此特性這麼做的能力。當你升至5級，你使用此特性施放一次迷蹤步，且你在完成一次長休後才能恢復再次使用此特性這麼做的能力。 你施展這些法術的施法屬性爲智力。當你使用此特性施放它們時，它們並不需要材料構材。"
+    }
+   ],
+   "blurb": "出自 MTF p.96",
+   "color": "#ff7ad9",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6,
+    "skin": "#a4b86a"
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-gith-githzerai-mtf",
+   "name": "吉斯人（吉斯澤萊）",
+   "en": "Gith (Githzerai)",
+   "group": "吉斯人",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "int": 1,
+    "wis": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "心靈紀律",
+     "desc": "你在對抗魅惑和恐懼的豁免檢定中具有優勢。在修道院的大師指導下，吉斯澤萊人學習如何統御自己的思維。"
+    },
+    {
+     "name": "吉斯澤萊靈能",
+     "desc": "你知曉法師之手戲法，且當你使用此特性施放這個戲法時，這隻手是隱形的。當你升至3級，你可以使用此特性施放一次護盾術，且你在完成一次長休後才能恢復再次使用此特性這麼做的能力。當你升至5級，你使用此特性施放一次偵測思想，且你在完成一次長休後才能恢復再次使用此特性這麼做的能力。 你施展這些法術的施法屬性爲感知。當你使用此特性施放它們時，它們並不需要材料構材。"
+    }
+   ],
+   "blurb": "出自 MTF p.96",
+   "color": "#ff5a6e",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6,
+    "skin": "#a4b86a"
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-goblin-vgm",
+   "name": "地精",
+   "en": "Goblin",
+   "group": "地精",
+   "size": "小型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "dex": 2,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、地精語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "小個子怒火",
+     "desc": "當你以一次攻擊或法術傷害了一個體型比你大的生物時，你可以讓該攻擊或法術對該生物造成額外的傷害。這個額外傷害等同於你的等級。一旦你使用此特性，直到你完成一次短休或長休之前都不能再使用它。"
+    },
+    {
+     "name": "靈敏脫逃",
+     "desc": "你可以在每次你的回合以一個附贈動作來採取撤離或躲藏動作。"
+    }
+   ],
+   "blurb": "出自 VGM p.119",
+   "color": "#e9c46a",
+   "look": {
+    "earType": "elf",
+    "ears": 0.8,
+    "height": 0.62
+   },
+   "packLabel": "VGM",
+   "untranslated": false
+  },
+  {
+   "id": "pk-minotaur-ggr",
+   "name": "米諾陶",
+   "en": "Minotaur",
+   "group": "米諾陶",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "str": 2,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [],
+   "skillChoice": {
+    "count": 1,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "牛角",
+     "desc": "你的牛角是天生近戰武器，你可以使用它們來進行徒手打擊。如果你以它們命中目標，則你造成等同1d6 + 你的力量調整值的穿刺傷害，而不是一般徒手打擊的鈍擊傷害。"
+    },
+    {
+     "name": "牛角衝刺",
+     "desc": "緊接在你於你的回合使用疾走動作並移動至少20尺後，你可以立刻以一個附贈動作使用你的牛角進行一次近戰攻擊。"
+    },
+    {
+     "name": "猛捶角擊",
+     "desc": "緊接在你於你的回合以攻擊動作的一部分，通過一次近戰攻擊命中一個生物後，你可以立刻以一個附贈動作嘗試使用你的牛角去推撞該目標。目標的體型不能比你大超過一級，且必須距離你5尺以內。除非它成功通過DC等同於8 + 你的熟練加值 + 你的力量調整值的力量豁免，否則你將把它推離你最多10尺。"
+    },
+    {
+     "name": "威風凜凜",
+     "desc": "你熟練於以下其中一個你所選擇的技能：威嚇或說服。"
+    }
+   ],
+   "blurb": "出自 GGR p.18",
+   "color": "#7dffcf",
+   "look": {
+    "hornStyle": "straight",
+    "build": 0.9,
+    "height": 1.12
+   },
+   "packLabel": "GGR",
+   "untranslated": false
+  },
+  {
+   "id": "pk-minotaur-amonkhet-psa",
+   "name": "米諾陶 (阿芒凱)",
+   "en": "Minotaur (Amonkhet)",
+   "group": "米諾陶 (阿芒凱)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "str": 2,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [
+    "intimidation"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "天生武器",
+     "desc": "你可以使用你的雙角作爲天生武器來進行徒手打擊。如果你以它們命中目標，則你造成等同1d6 + 你的力量調整值的鈍擊傷害。"
+    },
+    {
+     "name": "兇惡",
+     "desc": "你熟練於威嚇技能。"
+    },
+    {
+     "name": "頑強耐性",
+     "desc": "當你的生命值被歸零但沒有當場被殺死時，你可以改爲使生命值減少至1。直到完成一次長休之前，你都不能再使用這個特性。"
+    },
+    {
+     "name": "野蠻攻擊",
+     "desc": "當你以一次近戰武器攻擊造成重擊時，你可以額外骰一次該武器的其中一顆傷害骰，並將之加入重擊的額外傷害中。"
+    }
+   ],
+   "blurb": "出自 PSA p.19",
+   "color": "#9be36d",
+   "look": {
+    "hornStyle": "straight",
+    "build": 0.9,
+    "height": 1.12
+   },
+   "packLabel": "PSA",
+   "untranslated": false
+  },
+  {
+   "id": "pk-custom-lineage-tce",
+   "name": "自定血統",
+   "en": "Custom Lineage",
+   "group": "自定血統",
+   "size": "小型或中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {},
+   "asiChoice": {
+    "count": 1,
+    "amount": 2,
+    "exclude": []
+   },
+   "languages": "通用語、任選 1 種",
+   "skills": [],
+   "skillChoice": {
+    "count": 1,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "專長",
+     "desc": "你選擇一個滿足條件的專長。"
+    },
+    {
+     "name": "可選特徵",
+     "desc": "從以下兩種特性中選擇一個：(a) 60尺黑暗視覺 或 (b) 一個你選擇的技能熟練項。"
+    }
+   ],
+   "blurb": "出自 TCE p.8",
+   "color": "#ff5a6e",
+   "look": {},
+   "packLabel": "TCE",
+   "untranslated": false
+  },
+  {
+   "id": "pk-aven-hawk-headed-psa",
+   "name": "艾文（Hawk-Headed）",
+   "en": "Aven (Hawk-Headed)",
+   "group": "艾文",
+   "size": "中型",
+   "speed": 25,
+   "darkvision": 0,
+   "asi": {
+    "dex": 2,
+    "wis": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [
+    "perception"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "飛行 30 呎"
+    },
+    {
+     "name": "飛行",
+     "desc": "你擁有30尺的飛行速度。你不能在穿着中甲或重甲時使用你的飛行速度。（如果你的戰役使用了負重的變體規則，則你不能在你負載時使用你的飛行速度。）"
+    },
+    {
+     "name": "Hawkeyed",
+     "desc": "You have proficiency in the 察覺 skill. In addition, attacking at long range doesn't impose disadvantage on your ranged weapon attack rolls."
+    }
+   ],
+   "blurb": "出自 PSA p.16",
+   "color": "#ff5a6e",
+   "look": {
+    "wings": "feather"
+   },
+   "packLabel": "PSA",
+   "untranslated": false
+  },
+  {
+   "id": "pk-aven-ibis-headed-psa",
+   "name": "艾文（Ibis-Headed）",
+   "en": "Aven (Ibis-Headed)",
+   "group": "艾文",
+   "size": "中型",
+   "speed": 25,
+   "darkvision": 0,
+   "asi": {
+    "dex": 2,
+    "int": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "飛行 30 呎"
+    },
+    {
+     "name": "飛行",
+     "desc": "你擁有30尺的飛行速度。你不能在穿着中甲或重甲時使用你的飛行速度。（如果你的戰役使用了負重的變體規則，則你不能在你負載時使用你的飛行速度。）"
+    },
+    {
+     "name": "Kefnet's Blessing",
+     "desc": "You can add half your proficiency bonus, rounded down, to any Intelligence check you make that doesn't already include your proficiency bonus."
+    }
+   ],
+   "blurb": "出自 PSA p.16",
+   "color": "#e9c46a",
+   "look": {
+    "wings": "feather"
+   },
+   "packLabel": "PSA",
+   "untranslated": false
+  },
+  {
+   "id": "pk-hexblood-vrgr",
+   "name": "巫咒之子",
+   "en": "Hexblood",
+   "group": "巫咒之子",
+   "size": "小型或中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {},
+   "asiChoice": null,
+   "languages": "",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "先祖遺贈",
+     "desc": "如果你用該族系替換了一個種族，你能保留該種族的以下元素：任何從中獲得的技能熟練，攀爬，飛行或是游泳速度。 創建角色時，如果你不繼承任意一項這些元素的話，你獲得兩項你所選的技能熟練。"
+    },
+    {
+     "name": "黑暗視覺",
+     "desc": "在微光光照下，你身邊60尺內可以視爲等同於明亮光照。而在黑暗中，該範圍內可視爲等同於微光光照。你無法在黑暗中分辨顏色，只能看到有灰度的黑白畫面。"
+    },
+    {
+     "name": "怪誕徽記",
+     "desc": "使用一個附贈動作，你能無害地拔下自己的一片指甲、一顆牙齒或者一縷長髮。該徽記充滿魔力，直到你完成一次長休後消散。當徽記通過這種方式注魔時，你能採取以下的動作： ・使用一個動作，你能向一個持握或攜帶該徽記的生物進行心靈傳訊，只要你們兩者之間的距離不超過10裏。該訊息至多爲25個單詞。 ・如果你在徽記的10裏之內，你能用一個動作進入出神狀態。出神持續一分鐘，你能提前主動解除（不需要動作），或是陷入無力時解除。在出神狀態時，你能看見和聽見徽記所處地點的事物，如同你本人也在那一般。當你使用感官感知徽記的地點時，你對自身周圍處於目盲和耳聾狀態。當出神結束時，徽記會被無害的摧毀。 一旦你使用本特質創造了徽記，直到完成一次長休前都不能再這樣做，當你長休結束時，你失去的身體部分會重新長出來。"
+    },
+    {
+     "name": "巫咒魔法",
+     "desc": "你能通過本特質使用易容術和脆弱詛咒。一旦你通過本特質使用了其中任何一個法術，直到你完成一次長休前你不能再使用本特質釋放該法術。你也能用你擁有的任何法術位來釋放這些法術。 你釋放這些法術的施法關鍵屬性爲智力，感知或魅力中的一種（當你獲得該族系的時候進行選擇）。 成爲鬼婆：鬼婆們能舉行一種儀式，永久性地將一位她們創造的巫咒之子轉變新的鬼婆，新的鬼婆種類要麼與這些鬼婆相同，要麼與巫咒之子的屬性相關聯. 這需要鬼婆與巫咒之子共處一地，並同意進行這漫長的儀式—大多數情況下巫咒之子會迴避這種儀式，但經過數世紀的生活後可能會選擇接受. 除非DM另有想法，否則當巫咒之子進行了該永久性的儀式後，他們就會轉變爲NPC鬼婆，並且不再受玩家控制。"
+    }
+   ],
+   "blurb": "出自 VRGR p.18",
+   "color": "#ffd166",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "VRGR",
+   "untranslated": false
+  },
+  {
+   "id": "pk-bullywug-dmg",
+   "name": "狂蛙人",
+   "en": "Bullywug",
+   "group": "狂蛙人",
+   "size": "中型",
+   "speed": 20,
+   "darkvision": 0,
+   "asi": {
+    "int": -2,
+    "cha": -2
+   },
+   "asiChoice": null,
+   "languages": "其他",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "游泳 40 呎"
+    },
+    {
+     "name": "兩棲",
+     "desc": "你可以在空氣和水中呼吸。"
+    },
+    {
+     "name": "蛙類交談",
+     "desc": "你可以使用狂蛙人語對青蛙與蟾蜍進行簡單概念的溝通。"
+    },
+    {
+     "name": "沼澤僞裝",
+     "desc": "你在沼澤地形爲躲藏所進行的敏捷（隱匿）檢定中具有優勢。"
+    },
+    {
+     "name": "立定跳躍",
+     "desc": "你的跳遠距離最多20尺、且跳高距離最多10尺，無論有沒有助跑都一樣。"
+    }
+   ],
+   "blurb": "出自 DMG p.282",
+   "color": "#9be36d",
+   "look": {},
+   "packLabel": "DMG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-gnome-deep-phb",
+   "name": "侏儒（地底）",
+   "en": "Gnome (Deep)",
+   "group": "侏儒",
+   "size": "小型",
+   "speed": 25,
+   "darkvision": 120,
+   "asi": {
+    "int": 2,
+    "dex": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、侏儒語、地底通用語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "高級黑暗視覺",
+     "desc": "習慣了地底的生活，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你120尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "侏儒狡黠",
+     "desc": "你在所有對抗魔法的智力、感知和魅力豁免中具有優勢。"
+    },
+    {
+     "name": "巖地僞裝",
+     "desc": "你在岩石地形爲躲藏所進行的敏捷（隱匿）檢定中具有優勢。"
+    }
+   ],
+   "blurb": "出自 MTF p.113",
+   "color": "#ff9a5a",
+   "look": {
+    "height": 0.62
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-gnome-deep-svirfneblin-phb",
+   "name": "侏儒（地底/斯奈布力）",
+   "en": "Gnome (Deep/Svirfneblin)",
+   "group": "侏儒",
+   "size": "小型",
+   "speed": 25,
+   "darkvision": 120,
+   "asi": {
+    "int": 2,
+    "dex": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、侏儒語、地底通用語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "高級黑暗視覺",
+     "desc": "習慣了地底的生活，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你120尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "侏儒狡黠",
+     "desc": "你在所有對抗魔法的智力、感知和魅力豁免中具有優勢。"
+    },
+    {
+     "name": "巖地僞裝",
+     "desc": "你在岩石地形爲躲藏所進行的敏捷（隱匿）檢定中具有優勢。"
+    }
+   ],
+   "blurb": "出自 SCAG p.115",
+   "color": "#7dffcf",
+   "look": {
+    "height": 0.62
+   },
+   "packLabel": "SCAG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-gnome-mark-of-scribing-phb",
+   "name": "侏儒（抄錄龍紋）",
+   "en": "Gnome (Mark of Scribing)",
+   "group": "侏儒",
+   "size": "小型",
+   "speed": 25,
+   "darkvision": 60,
+   "asi": {
+    "int": 2,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、侏儒語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "習慣了地底的生活，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "侏儒狡黠",
+     "desc": "你在所有對抗魔法的智力、感知和魅力豁免中具有優勢。"
+    },
+    {
+     "name": "天才抄寫員",
+     "desc": "你當你進行智力（歷史）檢定或使用書法工具進行屬性檢定時，你能擲一個d4，並把結果加到屬性檢定的結果上。"
+    },
+    {
+     "name": "抄寫員的領悟",
+     "desc": "你習得戲法傳訊術。同時，你能夠通過此特性施展通曉語言，在完成一次短休或長休後，你能再次施展此法術。從第3級起，你還能通過此特性施展魔嘴術，在完成一次長休後，你能再次施展此法術。智力是你在施展這些法術時的關鍵屬性。"
+    },
+    {
+     "name": "龍紋法術",
+     "desc": "如果你擁有施法或契約魔法職業能力，抄錄龍紋表中的法術將加入你施法職業的法術列表中。 1st：通曉語言, 迷幻手稿；2nd：動物信使, 沉默術；3rd：短訊術, 巧舌術；4th：祕法眼, 困惑術；5th：託夢術"
+    }
+   ],
+   "blurb": "出自 ERLW p.47",
+   "color": "#9be36d",
+   "look": {
+    "height": 0.62
+   },
+   "packLabel": "ERLW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-gnome-forest-phb",
+   "name": "侏儒（林）",
+   "en": "Gnome (Forest)",
+   "group": "侏儒",
+   "size": "小型",
+   "speed": 25,
+   "darkvision": 60,
+   "asi": {
+    "int": 2,
+    "dex": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、侏儒語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "習慣了地底的生活，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "侏儒狡黠",
+     "desc": "你在所有對抗魔法的智力、感知和魅力豁免中具有優勢。"
+    },
+    {
+     "name": "天生幻術",
+     "desc": "你知曉次級幻象戲法。你施展該法術的施法屬性爲智力。"
+    },
+    {
+     "name": "小型野獸溝通",
+     "desc": "透過聲音和手勢，你可以和體型爲小型或更小的野獸交流簡單的想法。林侏儒喜愛動物，且經常飼養松鼠、獾、兔子、鼴鼠、啄木鳥、或其他生物作爲他們心愛的寵物。"
+    }
+   ],
+   "blurb": "出自 PHB p.37",
+   "color": "#ffd166",
+   "look": {
+    "height": 0.62
+   },
+   "packLabel": "PHB",
+   "untranslated": false
+  },
+  {
+   "id": "pk-simic-hybrid-ggr",
+   "name": "析米克混合體",
+   "en": "Simic Hybrid",
+   "group": "析米克混合體",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "con": 2
+   },
+   "asiChoice": {
+    "count": 1,
+    "amount": 1,
+    "exclude": [
+     "con"
+    ]
+   },
+   "languages": "通用語、choose",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "動物改造",
+     "desc": "你的身體已經被改造成包含某些動物的特徵。你在現在選擇一項動物改造，並在升至5級時選擇第二項。 在1級時，從下列選項中選擇一項： ・你擁有如鰩類般的魚鰭，讓你可以將它們作爲翅膀以減緩墜落速度或讓你得以滑翔。當你墜落且並未無力時，你可以在計算墜落傷害時減去100尺的墜落高度，且每下降1尺，都可以讓你水平移動最多2尺。 ・你擁有等同於你步行速度的攀爬速度。 ・你可以在水下呼吸，且你擁有等同於你步行速度的游泳速度。 在5級時，你的身體進一步進化，發展出新的特徵。選擇一項你在1級時沒有選擇的選項，或從下列選項中選擇一項： ・在你的雙臂旁長出了兩個特殊的附肢。決定它們是爪子還是觸手。以一個動作，你可以使用它們其中之一去嘗試擒抱一個生物。它們兩個都是天生武器，你可以使用它們來進行徒手打擊。如果你以它命中目標，目標將受到等同1d6 + 你的力量調整值的鈍擊傷害，而不是一般徒手打擊的鈍擊傷害。緊接在命中之後，你可以嘗試以一個附贈動作對目標進行擒抱。這些附肢不能精準的操作任何東西，也不能使用武器、魔法物品、或其它專門的裝備。 ・你的肌膚各處覆蓋着厚重的甲殼。當你沒有穿着重甲時，你的AC獲得+1加值。 ・以一個動作，你可以從你嘴裏的腺體對一個距離你30尺內且你所能看見的生物或物體噴出酸液。除非目標成功通過一次DC等同於8 + 你的體質調整值 + 你的熟練加值的敏捷豁免，否則它將受到2d10強酸傷害。這個傷害將在你的等級升至11級時增加至3d10，17級時4d10。你可以使用這項特性的次數等同於你的體質調整值（最少一次），且你在完成一次長休後恢復所有已使用的次數。"
+    }
+   ],
+   "blurb": "出自 GGR p.20",
+   "color": "#ff5a6e",
+   "look": {},
+   "packLabel": "GGR",
+   "untranslated": false
+  },
+  {
+   "id": "pk-kobold-vgm",
+   "name": "狗頭人",
+   "en": "Kobold",
+   "group": "狗頭人",
+   "size": "小型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "dex": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、龍語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "搖尾乞憐",
+     "desc": "在你的回合以一個動作，你可以可憐兮兮地蜷縮以分散附近敵人的注意。直到你下個回合結束前，你的盟友在對距離你10尺內且你能看見的敵人所進行的攻擊檢定中具有優勢。一旦你使用這個特性，直到你完成一次短休或長休之前你都無法再使用它。"
+    },
+    {
+     "name": "羣體戰術",
+     "desc": "若你有至少一個盟友距離目標生物5尺內且該盟友並未無力，則你在對該生物進行的攻擊檢定中具有優勢。"
+    },
+    {
+     "name": "日光敏感",
+     "desc": "當你、你的攻擊目標、或你嘗試感知的東西直接暴露在陽光下，則你依賴於視覺的攻擊檢定以及感知（察覺）檢定具有劣勢。"
+    }
+   ],
+   "blurb": "出自 VGM p.119",
+   "color": "#b388ff",
+   "look": {
+    "hornStyle": "swept",
+    "tail": "dragon",
+    "height": 0.6,
+    "skin": "#a0522d"
+   },
+   "packLabel": "VGM",
+   "untranslated": false
+  },
+  {
+   "id": "pk-aasimar-dmg",
+   "name": "阿斯莫",
+   "en": "Aasimar",
+   "group": "阿斯莫",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "wis": 1,
+    "cha": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、天界語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的天界血脈，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "天界抗性",
+     "desc": "你具有對黯蝕和光耀傷害的抗性。"
+    },
+    {
+     "name": "天界傳承",
+     "desc": "你知曉光亮術戲法。當你升至3級，你可以使用此特性施放一次次級復原術，且你在完成一次長休後恢復再次這麼做的能力。當你升至5級，你可以使用此特性以3環法術施放一次晝明術，且你在完成一次長休後恢復再次這麼做的能力。你施展這些法術的施法屬性爲魅力。"
+    }
+   ],
+   "blurb": "出自 DMG p.286",
+   "color": "#ffd166",
+   "look": {
+    "wings": "feather"
+   },
+   "packLabel": "DMG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-aasimar-scourge-vgm",
+   "name": "阿斯莫（天譴）",
+   "en": "Aasimar (Scourge)",
+   "group": "阿斯莫",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、天界語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "由於受到光耀之魂的祝福，你的視線可以輕易的穿透黑暗。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "天界抗性",
+     "desc": "你具有對黯蝕和光耀傷害的抗性。"
+    },
+    {
+     "name": "治癒之手",
+     "desc": "以一個動作，你可以觸碰一個生物並讓它回覆等同於你等級的生命值。一旦你使用這個特性，直到你完成一次長休之前你都不能再使用它。"
+    },
+    {
+     "name": "光輝掌者",
+     "desc": "你知曉光亮術戲法。你施展這個法術的施法屬性爲魅力。"
+    },
+    {
+     "name": "光輝焚化",
+     "desc": "從3級開始，你可以使用你的動作以釋放你體內的神性能量，這將使灼熱的光芒從你身上輻射而出，並從你的雙眼和口中涌出，威脅着就你焚燒殆盡。 你的轉變將會持續1分鐘，或直到你以一個附贈動作結束它。在轉變期間，你將散發出10尺半徑的明亮光照和再延伸10尺的微光光照，且在你的每個回合結束時，你和每個距離你10尺內的生物都將受到等同於你等級一半（向上取整）的光耀傷害。此外，在你的每個回合一次，你可以在以一次攻擊或法術對一個目標造成傷害時對它造成額外的光耀傷害。這個額外的光耀傷害等同於你的等級。 一旦你使用這個特性，直到你完成一次長休之前你都不能再使用它。"
+    }
+   ],
+   "blurb": "出自 VGM p.105",
+   "color": "#b388ff",
+   "look": {
+    "wings": "feather"
+   },
+   "packLabel": "VGM",
+   "untranslated": false
+  },
+  {
+   "id": "pk-aasimar-protector-vgm",
+   "name": "阿斯莫（守護者）",
+   "en": "Aasimar (Protector)",
+   "group": "阿斯莫",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、天界語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "由於受到光耀之魂的祝福，你的視線可以輕易的穿透黑暗。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "天界抗性",
+     "desc": "你具有對黯蝕和光耀傷害的抗性。"
+    },
+    {
+     "name": "治癒之手",
+     "desc": "以一個動作，你可以觸碰一個生物並讓它回覆等同於你等級的生命值。一旦你使用這個特性，直到你完成一次長休之前你都不能再使用它。"
+    },
+    {
+     "name": "光輝掌者",
+     "desc": "你知曉光亮術戲法。你施展這個法術的施法屬性爲魅力。"
+    },
+    {
+     "name": "光輝靈魂",
+     "desc": "從3級開始，你可以使用你的動作以釋放你體內的神性能量，這將使你的雙眼綻放光芒，並從你的背上長出一對輝煌的無實體羽翼。 你的轉變將會持續1分鐘，或直到你以一個附贈動作結束它。在轉變期間，你具有30尺的飛行速度，且在你的每個回合一次，你可以在以一次攻擊或法術對一個目標造成傷害時對它造成額外的光耀傷害。這個額外的光耀傷害等同於你的等級。 一旦你使用這個特性，直到你完成一次長休之前你都不能再使用它。"
+    }
+   ],
+   "blurb": "出自 VGM p.105",
+   "color": "#5ad1ff",
+   "look": {
+    "wings": "feather"
+   },
+   "packLabel": "VGM",
+   "untranslated": false
+  },
+  {
+   "id": "pk-aasimar-fallen-vgm",
+   "name": "阿斯莫（墮落）",
+   "en": "Aasimar (Fallen)",
+   "group": "阿斯莫",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2,
+    "str": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、天界語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "由於受到光耀之魂的祝福，你的視線可以輕易的穿透黑暗。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "天界抗性",
+     "desc": "你具有對黯蝕和光耀傷害的抗性。"
+    },
+    {
+     "name": "治癒之手",
+     "desc": "以一個動作，你可以觸碰一個生物並讓它回覆等同於你等級的生命值。一旦你使用這個特性，直到你完成一次長休之前你都不能再使用它。"
+    },
+    {
+     "name": "光輝掌者",
+     "desc": "你知曉光亮術戲法。你施展這個法術的施法屬性爲魅力。"
+    },
+    {
+     "name": "死靈障幕",
+     "desc": "從3級開始，你可以使用你的動作以釋放你體內的神性能量，這將使你的雙眼轉變爲一團黑暗，並從你的背上長出一對幽靈般，無法飛行的骨翼。在你轉變的瞬間，所有距離你10尺內且可以看見你的其他生物必須成功通過一次魅力豁免（DC爲8 + 你的熟練加值 + 你的魅力調整值），否則將因你陷入恐懼直到你的下個回合結束。 你的轉變將會持續1分鐘，或直到你以一個附贈動作結束它。在轉變期間，在你的每個回合一次，你可以在以一次攻擊或法術對一個目標造成傷害時對它造成額外的黯蝕傷害。這個額外的黯蝕傷害等同於你的等級。 一旦你使用這個特性，直到你完成一次長休之前你都不能再使用它。"
+    }
+   ],
+   "blurb": "出自 VGM p.105",
+   "color": "#9be36d",
+   "look": {
+    "wings": "feather"
+   },
+   "packLabel": "VGM",
+   "untranslated": false
+  },
+  {
+   "id": "pk-aarakocra-eepc",
+   "name": "阿蘭寇拉鷹人",
+   "en": "Aarakocra",
+   "group": "阿蘭寇拉鷹人",
+   "size": "中型",
+   "speed": 25,
+   "darkvision": 0,
+   "asi": {
+    "dex": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他、原初語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "飛行 50 呎"
+    },
+    {
+     "name": "飛行",
+     "desc": "你擁有50尺的飛行速度。要使用此移動速度，你不能穿着中甲或重甲。"
+    },
+    {
+     "name": "禽爪",
+     "desc": "你熟練於你的徒手打擊，並在命中時造成1d4揮砍傷害。"
+    }
+   ],
+   "blurb": "出自 EEPC p.5",
+   "color": "#7dffcf",
+   "look": {
+    "wings": "feather"
+   },
+   "packLabel": "EEPC",
+   "untranslated": false
+  },
+  {
+   "id": "pk-khenra-psa",
+   "name": "胡狼人",
+   "en": "Khenra",
+   "group": "胡狼人",
+   "size": "中型",
+   "speed": 35,
+   "darkvision": 0,
+   "asi": {
+    "dex": 2,
+    "str": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "胡狼人武器訓練",
+     "desc": "你熟練於埃及鐮狀劍(長劍)、矛和標槍。"
+    },
+    {
+     "name": "胡狼人雙子",
+     "desc": "若你的雙胞胎仍活着，且你可以看見你的雙胞胎，則每當你在一次攻擊檢定、屬性檢定、或豁免檢定中骰出1時，你都可以重擲該骰且必須使用新的擲骰結果。若你的雙胞胎已經死亡（或若你出生時並沒有雙胞胎），則你將不會被恐懼。"
+    }
+   ],
+   "blurb": "出自 PSA p.17",
+   "color": "#9be36d",
+   "look": {},
+   "packLabel": "PSA",
+   "untranslated": false
+  },
+  {
+   "id": "pk-reborn-vrgr",
+   "name": "重生者",
+   "en": "Reborn",
+   "group": "重生者",
+   "size": "小型或中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {},
+   "asiChoice": null,
+   "languages": "",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "先祖遺贈",
+     "desc": "如果你用該族系替換了一個種族，你能保留該種族的以下元素：任何從中獲得的技能熟練，攀爬，飛行或是游泳速度。 創建角色時，如果你不繼承任意一項這些元素的話，你獲得兩項你所選的技能熟練。"
+    },
+    {
+     "name": "不死本質",
+     "desc": "你逃脫了死亡的命運，這爲你提供瞭如下增益： ・你在對抗疾病和中毒的豁免中具有優勢，並且你具有毒素傷害的抗性。 ・你的死亡豁免具有優勢。 ・你無需飲食和呼吸。 ・你無需睡覺，而魔法亦不能讓你陷入睡眠。你可以通過保持4小時靜止不動的有意識狀態來完成長休。"
+    },
+    {
+     "name": "往昔學識",
+     "desc": "你短暫地回憶起過去的零星碎片，也許是來自許多年前或重生之前的失落記憶。當你進行一次使用技能的屬性檢定時，在你看到d20結果後，你能立即投擲一個d6並將d6結果加到檢定中。你能使用該特性的次數等於你的熟練次數，而你在完成一次長休後獲得所有消耗的使用次數。"
+    }
+   ],
+   "blurb": "出自 VRGR p.20",
+   "color": "#7dffcf",
+   "look": {
+    "skin": "#d8dde0"
+   },
+   "packLabel": "VRGR",
+   "untranslated": false
+  },
+  {
+   "id": "pk-grung-oga",
+   "name": "格龍蛙人",
+   "en": "Grung",
+   "group": "格龍蛙人",
+   "size": "小型",
+   "speed": 25,
+   "darkvision": 0,
+   "asi": {
+    "dex": 2,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "其他",
+   "skills": [
+    "perception"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "攀爬 25 呎"
+    },
+    {
+     "name": "樹棲警覺",
+     "desc": "你熟練於察覺技能。"
+    },
+    {
+     "name": "兩棲",
+     "desc": "你可以在空氣和水中呼吸。"
+    },
+    {
+     "name": "毒素免疫",
+     "desc": "你免疫於毒素傷害和中毒狀態。"
+    },
+    {
+     "name": "劇毒皮膚",
+     "desc": "任何擒抱你、或通過任何其他方式直接碰觸到你皮膚的生物都必須成功通過一次DC 12的體質豁免，否則將陷入中毒狀態長達1分鐘。不再直接碰觸你皮膚的中毒生物可以在它的每個回合結束時重複進行這個豁免檢定，豁免成功則結束這個效果對它的影響。 你也可以在使用任何穿刺武器進行攻擊時，作爲其攻擊的一部份使用這個毒素，但這個毒素的效果將會因此產生變化。目標必須成功通過一次DC 12的體質豁免，否則將受到2d4的毒素傷害。"
+    },
+    {
+     "name": "立定跳躍",
+     "desc": "你的跳遠距離最多25尺、且跳高距離最多15尺，無論有沒有助跑都一樣。"
+    },
+    {
+     "name": "依賴水源",
+     "desc": "若你在一天內沒有將自己浸泡在水中至少1小時，你將在該日結束時承受一級力竭。你只能通過魔法或將你自己浸泡在水中至少1小時的方式來解除這個力竭狀態。"
+    }
+   ],
+   "blurb": "出自 OGA p.4",
+   "color": "#ff5a6e",
+   "look": {
+    "height": 0.62,
+    "skin": "#4aa36a"
+   },
+   "packLabel": "OGA",
+   "untranslated": false
+  },
+  {
+   "id": "pk-naga-psa",
+   "name": "納迦",
+   "en": "Naga",
+   "group": "納迦",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "con": 2,
+    "int": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "瞬間加速",
+     "desc": "通過將你的身體壓低在地，並用雙手推動自己，你可以在一段時間內移動得比平常更快。在你的回合以一個附贈動作，若你有兩隻空手，則你可以使你的步行速度增加5尺，持續直到你的回合結束。"
+    },
+    {
+     "name": "天生武器",
+     "desc": "你的尖牙和絞纏的蛇形身體都是天生武器，且你可以用它們來進行徒手打擊。 如果你使用啃咬攻擊並命中目標，則你造成等同1d4 + 你的力量調整值的穿刺傷害，且你的目標必須進行一次體質豁免（DC爲 8 + 你的熟練加值 + 你的體質調整值）。若豁免失敗，目標將受到1d4毒素傷害。 如果你使用絞纏攻擊並命中目標，則你造成等同1d6 + 你的力量調整值的鈍擊傷害，且目標被擒（逃脫DC爲 8 + 你的熟練加值 + 你的力量調整值）。直到擒抱結束前，目標被束縛，且你不能絞纏另一個目標。"
+    },
+    {
+     "name": "毒素免疫",
+     "desc": "你免疫於毒素傷害和中毒狀態。"
+    },
+    {
+     "name": "毒素親合",
+     "desc": "你熟練於製毒工具。"
+    }
+   ],
+   "blurb": "出自 PSA p.21",
+   "color": "#5ad1ff",
+   "look": {},
+   "packLabel": "PSA",
+   "untranslated": false
+  },
+  {
+   "id": "pk-yuan-ti-pureblood-vgm",
+   "name": "純血蛇人",
+   "en": "Yuan-ti Pureblood",
+   "group": "純血蛇人",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2,
+    "int": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、深淵語、龍語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "天生施法",
+     "desc": "你知曉毒氣噴灑戲法。你能夠使用此特性無限次的施放化獸爲友，但你只能指定蛇類作爲它的目標。從3級開始，你也可以使用此特性施放暗示術。一旦你施放它，直到你完成一次長休之前你都不能再這麼做。你施展這些法術的施法屬性爲魅力。"
+    },
+    {
+     "name": "魔法抗性",
+     "desc": "你在對抗法術和其他魔法效果的豁免檢定中具有優勢。"
+    },
+    {
+     "name": "毒素免疫",
+     "desc": "你免疫於毒素傷害和中毒狀態。"
+    }
+   ],
+   "blurb": "出自 VGM p.120",
+   "color": "#ff5a6e",
+   "look": {
+    "skin": "#6f9a5f"
+   },
+   "packLabel": "VGM",
+   "untranslated": false
+  },
+  {
+   "id": "pk-gnoll-dmg",
+   "name": "豺狼人",
+   "en": "Gnoll",
+   "group": "豺狼人",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "str": 2,
+    "int": -2
+   },
+   "asiChoice": null,
+   "languages": "",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "啃咬",
+     "desc": "你長滿獠牙的血盆大口是一種天生武器，且你可以用它來進行徒手打擊。如果你以它命中目標，則你造成等同1d4 + 你的力量調整值的穿刺傷害，而非一般徒手打擊的鈍擊傷害。"
+    },
+    {
+     "name": "黑暗視覺",
+     "desc": "你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "暴走",
+     "desc": "當你在你的回合以一次近戰攻擊將一個生物的生命值歸零，你可以採取一個附贈動作以移動最多等同於你移動速度一半的距離，並進行一次啃咬攻擊。"
+    }
+   ],
+   "blurb": "出自 DMG p.282",
+   "color": "#e9c46a",
+   "look": {},
+   "packLabel": "DMG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-kuo-toa-dmg",
+   "name": "寇濤魚人",
+   "en": "Kuo-Toa",
+   "group": "寇濤魚人",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 120,
+   "asi": {},
+   "asiChoice": null,
+   "languages": "地底通用語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "游泳 30 呎"
+    },
+    {
+     "name": "兩棲",
+     "desc": "你可以在空氣和水中呼吸。"
+    },
+    {
+     "name": "異界感知",
+     "desc": "你可以感知到任何距離你30尺內處於隱形狀態或在乙太位面的生物。你可以準確知道這類生物在移動時的確切位置。"
+    },
+    {
+     "name": "滑溜",
+     "desc": "你在爲逃離擒抱所進行的屬性檢定和豁免檢定中具有優勢。"
+    },
+    {
+     "name": "日光敏感",
+     "desc": "當處於日光照耀下時，你在攻擊檢定，以及依賴視覺的感知（察覺）檢定中具有劣勢。"
+    },
+    {
+     "name": "高級黑暗視覺",
+     "desc": "你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你120尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    }
+   ],
+   "blurb": "出自 DMG p.282",
+   "color": "#ff5a6e",
+   "look": {},
+   "packLabel": "DMG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-triton-vgm",
+   "name": "梭螺魚人",
+   "en": "Triton",
+   "group": "梭螺魚人",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "str": 1,
+    "cha": 1,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、原初語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "游泳 30 呎"
+    },
+    {
+     "name": "游泳速度",
+     "desc": "你擁有30尺的游泳速度。"
+    },
+    {
+     "name": "兩棲",
+     "desc": "你可以在空氣和水中呼吸。"
+    },
+    {
+     "name": "控風操水",
+     "desc": "身爲海洋之子，你可以呼喚氣和水元素的魔法。你可以使用此特性施放雲霧術。從3級開始，你可以使用此特性施放造風術，且從5級開始，你也可以使用此特性施放水牆術。一旦你使用此特性施放一個法術，則直到你完成一次長休之前你都不能再用此特性施放該法術。你施展這些法術的施法屬性爲魅力。"
+    },
+    {
+     "name": "海之使者",
+     "desc": "水生野獸與你的族人之間有着非凡的親和力。你可以與能在水中呼吸的野獸進行簡單概念的溝通。牠們可以理解你話語的意思，然而你並沒有特殊能力以理解牠們的回覆。"
+    },
+    {
+     "name": "深海守護者",
+     "desc": "適應了最極端的深海環境，你具有對冷凍傷害的抗性，且你忽視任何因深水環境所造成的負面影響。"
+    }
+   ],
+   "blurb": "出自 VGM p.115",
+   "color": "#e9c46a",
+   "look": {
+    "skin": "#5a8fb8"
+   },
+   "packLabel": "VGM",
+   "untranslated": false
+  },
+  {
+   "id": "pk-tiefling-baalzebul-phb",
+   "name": "提夫林（巴力西卜）",
+   "en": "Tiefling (Baalzebul)",
+   "group": "提夫林",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2,
+    "int": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、煉獄語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的煉獄血脈，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "煉獄抗性",
+     "desc": "你具有對火焰傷害的抗性。"
+    },
+    {
+     "name": "馬拉多米尼之遺贈",
+     "desc": "你知曉奇術戲法。當你升至3級，你能夠以2環法術施放一次致病射線，你必須完成一次長休才能再次使用此特性施放該法術。當你升至5級，你可以施放一次瘋狂冠冕，你必須完成一次長休才能再次使用此特性施放該法術。你施展這些法術的施法屬性爲魅力。"
+    }
+   ],
+   "blurb": "出自 MTF p.21",
+   "color": "#9be36d",
+   "look": {
+    "hornStyle": "ram",
+    "tail": "devil",
+    "skin": "#b5475a"
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-tiefling-zariel-phb",
+   "name": "提夫林（扎瑞爾）",
+   "en": "Tiefling (Zariel)",
+   "group": "提夫林",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2,
+    "str": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、煉獄語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的煉獄血脈，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "煉獄抗性",
+     "desc": "你具有對火焰傷害的抗性。"
+    },
+    {
+     "name": "阿弗納斯之遺贈",
+     "desc": "你知曉奇術戲法。當你升至3級，你能夠以2環法術施放一次熾炎斬，你必須完成一次長休才能再次使用此特性施放該法術。當你升至5級，你可以施放一次烙印斬，你必須完成一次長休才能再次使用此特性施放該法術。你施展這些法術的施法屬性爲魅力。"
+    }
+   ],
+   "blurb": "出自 MTF p.23",
+   "color": "#b388ff",
+   "look": {
+    "hornStyle": "ram",
+    "tail": "devil",
+    "skin": "#b5475a"
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-tiefling-dispater-phb",
+   "name": "提夫林（狄斯帕特）",
+   "en": "Tiefling (Dispater)",
+   "group": "提夫林",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2,
+    "dex": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、煉獄語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的煉獄血脈，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "煉獄抗性",
+     "desc": "你具有對火焰傷害的抗性。"
+    },
+    {
+     "name": "迪斯之遺贈",
+     "desc": "你知曉奇術戲法。當你升至3級，你可以施放一次易容術，你必須完成一次長休才能再次使用此特性施放該法術。當你升至5級，你可以施放一次偵測思想，你必須完成一次長休才能再次使用此特性施放該法術。你施展這些法術的施法屬性爲魅力。"
+    }
+   ],
+   "blurb": "出自 MTF p.21",
+   "color": "#5ad1ff",
+   "look": {
+    "hornStyle": "ram",
+    "tail": "devil",
+    "skin": "#b5475a"
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-tiefling-asmodeus-phb",
+   "name": "提夫林（阿斯蒙蒂斯）",
+   "en": "Tiefling (Asmodeus)",
+   "group": "提夫林",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2,
+    "int": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、煉獄語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的煉獄血脈，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "煉獄抗性",
+     "desc": "你具有對火焰傷害的抗性。"
+    },
+    {
+     "name": "煉獄傳承",
+     "desc": "你知曉奇術戲法。當你升至3級，你能夠以2環法術施放一次煉獄叱喝，你必須完成一次長休才能再次使用此特性施放該法術。當你升至5級，你可以施放一次黑暗術，你必須完成一次長休才能再次使用此特性施放該法術。你施展這些法術的施法屬性爲魅力。"
+    }
+   ],
+   "blurb": "出自 MTF p.21",
+   "color": "#ffd166",
+   "look": {
+    "hornStyle": "ram",
+    "tail": "devil",
+    "skin": "#b5475a"
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-tiefling-glasya-phb",
+   "name": "提夫林（格萊希亞）",
+   "en": "Tiefling (Glasya)",
+   "group": "提夫林",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2,
+    "dex": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、煉獄語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的煉獄血脈，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "煉獄抗性",
+     "desc": "你具有對火焰傷害的抗性。"
+    },
+    {
+     "name": "馬爾伯吉之遺贈",
+     "desc": "你知曉次級幻象戲法。當你升至3級，你可以施放一次 易容術，你必須完成一次長休才能再次使用此特性施放該法術。當你升至5級，你可以施放一次隱形術，你必須完成一次長休才能再次使用此特性施放該法術。你施展這些法術的施法屬性爲魅力。"
+    }
+   ],
+   "blurb": "出自 MTF p.22",
+   "color": "#ff7ad9",
+   "look": {
+    "hornStyle": "ram",
+    "tail": "devil",
+    "skin": "#b5475a"
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-tiefling-mephistopheles-phb",
+   "name": "提夫林（梅菲斯托費勒斯）",
+   "en": "Tiefling (Mephistopheles)",
+   "group": "提夫林",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2,
+    "int": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、煉獄語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的煉獄血脈，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "煉獄抗性",
+     "desc": "你具有對火焰傷害的抗性。"
+    },
+    {
+     "name": "卡尼亞之遺贈",
+     "desc": "你知曉法師之手戲法。當你升至3級，你能夠以2環法術施放一次燃燒之手，你必須完成一次長休才能再次使用此特性施放該法術。當你升至5級，你可以施放一次火焰刀，你必須完成一次長休才能再次使用此特性施放該法術。你施展這些法術的施法屬性爲魅力。"
+    }
+   ],
+   "blurb": "出自 MTF p.23",
+   "color": "#ff9a5a",
+   "look": {
+    "hornStyle": "ram",
+    "tail": "devil",
+    "skin": "#b5475a"
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-tiefling-fierna-phb",
+   "name": "提夫林（菲爾娜）",
+   "en": "Tiefling (Fierna)",
+   "group": "提夫林",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、煉獄語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的煉獄血脈，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "煉獄抗性",
+     "desc": "你具有對火焰傷害的抗性。"
+    },
+    {
+     "name": "福萊格索斯之遺贈",
+     "desc": "你知曉交友術戲法。當你升至3級，你能夠以2環法術施放一次魅惑人類，你必須完成一次長休才能再次使用此特性施放該法術。當你升至5級，你可以施放一次暗示術，你必須完成一次長休才能再次使用此特性施放該法術。你施展這些法術的施法屬性爲魅力。"
+    }
+   ],
+   "blurb": "出自 MTF p.21",
+   "color": "#b388ff",
+   "look": {
+    "hornStyle": "ram",
+    "tail": "devil",
+    "skin": "#b5475a"
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-tiefling-levistus-phb",
+   "name": "提夫林（萊維斯圖斯）",
+   "en": "Tiefling (Levistus)",
+   "group": "提夫林",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、煉獄語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的煉獄血脈，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "煉獄抗性",
+     "desc": "你具有對火焰傷害的抗性。"
+    },
+    {
+     "name": "斯泰吉亞之遺贈",
+     "desc": "你知曉冷凍射線戲法。當你升至3級，你能夠以2環法術施放一次艾嘉西斯之鎧，你必須完成一次長休才能再次使用此特性施放該法術。當你升至5級，你可以施放一次黑暗術，你必須完成一次長休才能再次使用此特性施放該法術。你施展這些法術的施法屬性爲魅力。"
+    }
+   ],
+   "blurb": "出自 MTF p.22",
+   "color": "#ff5a6e",
+   "look": {
+    "hornStyle": "ram",
+    "tail": "devil",
+    "skin": "#b5475a"
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-tiefling-mammon-phb",
+   "name": "提夫林（瑪門）",
+   "en": "Tiefling (Mammon)",
+   "group": "提夫林",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2,
+    "int": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、煉獄語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的煉獄血脈，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "煉獄抗性",
+     "desc": "你具有對火焰傷害的抗性。"
+    },
+    {
+     "name": "彌瑙洛斯之遺贈",
+     "desc": "你知曉法師之手戲法。當你升至3級，你可以施放一次譚森浮碟術，你必須完成一次短休或長休才能再次使用此特性施放該法術。當你升至5級，你可以施放一次祕法鎖，無須材料構材，你必須完成一次長休才能再次使用此特性施放該法術。你施展這些法術的施法屬性爲魅力。"
+    }
+   ],
+   "blurb": "出自 MTF p.22",
+   "color": "#e9c46a",
+   "look": {
+    "hornStyle": "ram",
+    "tail": "devil",
+    "skin": "#b5475a"
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-tiefling-variant-hellfire-phb",
+   "name": "提夫林（變體; 地獄之火）",
+   "en": "Tiefling (Variant; Hellfire)",
+   "group": "提夫林",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "int": 1
+   },
+   "asiChoice": {
+    "count": 1,
+    "amount": 2,
+    "exclude": [
+     "str",
+     "con",
+     "int",
+     "wis"
+    ]
+   },
+   "languages": "通用語、煉獄語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的煉獄血脈，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "煉獄抗性",
+     "desc": "你具有對火焰傷害的抗性。"
+    },
+    {
+     "name": "地獄之火",
+     "desc": "你知曉奇術戲法。當你升至3級，你每天能夠以2環法術施放一次燃燒之手，你必須完成一次長休才能再次使用此特性施放該法術。當你升至5級，你可以施放一次黑暗術，你必須完成一次長休才能再次使用此特性施放該法術。你施展這些法術的施法屬性爲魅力。"
+    },
+    {
+     "name": "外貌",
+     "desc": "你的提夫林看起來或許和其他提夫林不太一樣。取代《玩家手冊》中描述的身體特徵，你從下列選項中選擇 1d4+1 項特徵：小型犄角、獠牙或尖銳的牙齒、分叉的舌頭、貓瞳、每隻手有六根手指、山羊腿、偶蹄、分叉的尾巴、革質或帶鱗的皮膚、紅色或深藍色的皮膚、不會產生影子或映像、發散出硫磺般的氣味。"
+    }
+   ],
+   "blurb": "出自 SCAG p.118",
+   "color": "#ffd166",
+   "look": {
+    "hornStyle": "ram",
+    "tail": "devil",
+    "skin": "#b5475a"
+   },
+   "packLabel": "SCAG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-tiefling-variant-winged-phb",
+   "name": "提夫林（變體; 飛翔之翼）",
+   "en": "Tiefling (Variant; Winged)",
+   "group": "提夫林",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "int": 1
+   },
+   "asiChoice": {
+    "count": 1,
+    "amount": 2,
+    "exclude": [
+     "str",
+     "con",
+     "int",
+     "wis"
+    ]
+   },
+   "languages": "通用語、煉獄語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "飛行 30 呎"
+    },
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的煉獄血脈，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "煉獄抗性",
+     "desc": "你具有對火焰傷害的抗性。"
+    },
+    {
+     "name": "飛翼",
+     "desc": "你擁有一對從肩胛骨長出的蝙蝠翅膀。當你未穿戴重甲時，你擁有30尺的飛行速度。"
+    },
+    {
+     "name": "外貌",
+     "desc": "你的提夫林看起來或許和其他提夫林不太一樣。取代《玩家手冊》中描述的身體特徵，你從下列選項中選擇 1d4+1 項特徵：小型犄角、獠牙或尖銳的牙齒、分叉的舌頭、貓瞳、每隻手有六根手指、山羊腿、偶蹄、分叉的尾巴、革質或帶鱗的皮膚、紅色或深藍色的皮膚、不會產生影子或映像、發散出硫磺般的氣味。"
+    }
+   ],
+   "blurb": "出自 SCAG p.118",
+   "color": "#5ad1ff",
+   "look": {
+    "hornStyle": "ram",
+    "tail": "devil",
+    "skin": "#b5475a"
+   },
+   "packLabel": "SCAG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-tiefling-variant-infernal-legacy-phb",
+   "name": "提夫林（變體; 煉獄傳承）",
+   "en": "Tiefling (Variant; Infernal Legacy)",
+   "group": "提夫林",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "int": 1
+   },
+   "asiChoice": {
+    "count": 1,
+    "amount": 2,
+    "exclude": [
+     "str",
+     "con",
+     "int",
+     "wis"
+    ]
+   },
+   "languages": "通用語、煉獄語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的煉獄血脈，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "煉獄抗性",
+     "desc": "你具有對火焰傷害的抗性。"
+    },
+    {
+     "name": "煉獄傳承",
+     "desc": "你知曉奇術戲法。當你升至3級，你能夠以2環法術施放一次煉獄叱喝，你必須完成一次長休才能再次使用此特性施放該法術。當你升至5級，你可以施放一次黑暗術，你必須完成一次長休才能再次使用此特性施放該法術。你施展這些法術的施法屬性爲魅力。"
+    },
+    {
+     "name": "外貌",
+     "desc": "你的提夫林看起來或許和其他提夫林不太一樣。取代《玩家手冊》中描述的身體特徵，你從下列選項中選擇 1d4+1 項特徵：小型犄角、獠牙或尖銳的牙齒、分叉的舌頭、貓瞳、每隻手有六根手指、山羊腿、偶蹄、分叉的尾巴、革質或帶鱗的皮膚、紅色或深藍色的皮膚、不會產生影子或映像、發散出硫磺般的氣味。"
+    }
+   ],
+   "blurb": "出自 SCAG p.118",
+   "color": "#9be36d",
+   "look": {
+    "hornStyle": "ram",
+    "tail": "devil",
+    "skin": "#b5475a"
+   },
+   "packLabel": "SCAG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-tiefling-variant-devil-s-tongue-phb",
+   "name": "提夫林（變體; 魔鬼之舌）",
+   "en": "Tiefling (Variant; Devil's Tongue)",
+   "group": "提夫林",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "int": 1
+   },
+   "asiChoice": {
+    "count": 1,
+    "amount": 2,
+    "exclude": [
+     "str",
+     "con",
+     "int",
+     "wis"
+    ]
+   },
+   "languages": "通用語、煉獄語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "多虧於你的煉獄血脈，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "煉獄抗性",
+     "desc": "你具有對火焰傷害的抗性。"
+    },
+    {
+     "name": "魔鬼之舌",
+     "desc": "你知曉惡毒嘲笑戲法。當你升至3級，你每天能夠以2環法術施放一次魅惑人類，你必須完成一次長休才能再次使用此特性施放該法術。當你升至5級，你可以施放一次注目術，你必須完成一次長休才能再次使用此特性施放該法術。你施展這些法術的施法屬性爲魅力。"
+    },
+    {
+     "name": "外貌",
+     "desc": "你的提夫林看起來或許和其他提夫林不太一樣。取代《玩家手冊》中描述的身體特徵，你從下列選項中選擇 1d4+1 項特徵：小型犄角、獠牙或尖銳的牙齒、分叉的舌頭、貓瞳、每隻手有六根手指、山羊腿、偶蹄、分叉的尾巴、革質或帶鱗的皮膚、紅色或深藍色的皮膚、不會產生影子或映像、發散出硫磺般的氣味。"
+    }
+   ],
+   "blurb": "出自 SCAG p.118",
+   "color": "#7dffcf",
+   "look": {
+    "hornStyle": "ram",
+    "tail": "devil",
+    "skin": "#b5475a"
+   },
+   "packLabel": "SCAG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-tabaxi-vgm",
+   "name": "斑貓人",
+   "en": "Tabaxi",
+   "group": "斑貓人",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "dex": 2,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、任選 1 種",
+   "skills": [
+    "perception",
+    "stealth"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "攀爬 20 呎"
+    },
+    {
+     "name": "黑暗視覺",
+     "desc": "你擁有貓的敏銳感官，特別是在黑暗中。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "貓科迅捷",
+     "desc": "你的反射神經和敏捷性讓你能夠以爆發性的速度移動。當你在戰鬥中於你的回合移動時，你可以將你的移動速度變爲二倍，持續直到該回合結束。一旦你使用此特性，直到你在你的其中一個回合移動0尺之前，你都不能再使用它。"
+    },
+    {
+     "name": "貓之利爪",
+     "desc": "由於你的利爪，你擁有20尺的攀爬速度。此外，你的利爪是一種天生武器，且你可以用它來進行徒手打擊。如果你以它們命中目標，則你造成等同1d4 + 你的力量調整值的揮砍傷害，而非一般徒手打擊的鈍擊傷害。"
+    },
+    {
+     "name": "貓之天賦",
+     "desc": "你熟練於察覺和隱匿技能。"
+    }
+   ],
+   "blurb": "出自 VGM p.113",
+   "color": "#7dffcf",
+   "look": {
+    "earType": "cat",
+    "ears": 0.4,
+    "tail": "cat"
+   },
+   "packLabel": "VGM",
+   "untranslated": false
+  },
+  {
+   "id": "pk-loxodon-ggr",
+   "name": "象族",
+   "en": "Loxodon",
+   "group": "象族",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "con": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "強健體格",
+     "desc": "當決定你的負重以及你可以拖曳、推動、或提舉的重量時，你將你的體型視作比原本大一級。"
+    },
+    {
+     "name": "象族沉着",
+     "desc": "你在對抗魅惑或恐懼的豁免檢定中具有優勢。"
+    },
+    {
+     "name": "天生護甲",
+     "desc": "你有着厚實、皮革般的肌膚。當你未穿着護甲的時候，你的AC爲12 + 你的體質調整值。如果你穿着的護甲會讓你有較低的AC，則你可以使用你的天生護甲來計算你的AC。當你使用天生護甲時，盾牌的加值仍會如常作用。 提示：AC的計算方法並不會累積：當遊戲機制給了你多於一種計算護甲等級的方式，你只能使用其中一種方式。由你選擇要使用哪一種。舉例來說，如果你同時擁有象族的天生護甲和武僧的無甲防禦，你不能把它們混在一起使用。你只能選擇其中一種方式來計算你的AC。"
+    },
+    {
+     "name": "象鼻",
+     "desc": "你可以用你的象鼻抓取物品，你也可以把它作爲呼吸管使用。它有着5尺觸及範圍，且它可以擡起等同你力量屬性值五倍的磅數。你可以用它做出以下的簡單作業：擡起、丟下、持握、推動或是拖動一個物體或生物；打開或關上一扇門或容器；擒抱某人；或進行一次徒手打擊。你的DM可能會允許你將其他的簡單作業加到上面的選項列表中。 你的象鼻不能使用武器、盾牌、或其他需要精細操作的東西，像是使用工具或魔法物品、或運行一個法術的姿勢構材。"
+    },
+    {
+     "name": "敏銳嗅覺",
+     "desc": "多虧了你那敏銳的象鼻，你在牽涉到嗅覺的感知（察覺）、感知（生存）和智力（調查）檢定上具有優勢。"
+    }
+   ],
+   "blurb": "出自 GGR p.17",
+   "color": "#9be36d",
+   "look": {
+    "height": 1.15,
+    "build": 0.9
+   },
+   "packLabel": "GGR",
+   "untranslated": false
+  },
+  {
+   "id": "pk-firbolg-vgm",
+   "name": "費爾伯格",
+   "en": "Firbolg",
+   "group": "費爾伯格",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "wis": 2,
+    "str": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、精靈語、巨人語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "費爾伯格魔法",
+     "desc": "你可以使用此特性施放偵測魔法和易容術，使用感知作爲你施放它們的施法屬性。一旦你施放其中一個法術，直到你完成一次短休或長休之前你都不能再施放它。當你使用這個版本的易容術時，你可以讓自己看起來比原本再矮3尺，使你更容易融入人類和精靈之中。"
+    },
+    {
+     "name": "神隱步",
+     "desc": "以一個附贈動作，你可以用魔法變得隱形直到你的下個回合開始，或直到你攻擊、擲傷害骰，或強迫某人進行一次豁免檢定。一旦你使用此特性，直到你完成一次短休或長休之前你都不能再使用它。"
+    },
+    {
+     "name": "強健體格",
+     "desc": "當決定你的負重以及你可以拖曳、推動、或提舉的重量時，你將你的體型視作比原本大一級。"
+    },
+    {
+     "name": "獸與葉之語",
+     "desc": "你擁有與野獸和植物以有限方式進行溝通的能力。它們可以理解你話語的意思，然而你並沒有特殊能力以理解牠們的回覆。你在用於影響它們所進行的所有魅力檢定中具有優勢。"
+    }
+   ],
+   "blurb": "出自 VGM p.107",
+   "color": "#7dffcf",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6,
+    "height": 1.15,
+    "build": 0.9
+   },
+   "packLabel": "VGM",
+   "untranslated": false
+  },
+  {
+   "id": "pk-dwarf-mountain-phb",
+   "name": "矮人（山地）",
+   "en": "Dwarf (Mountain)",
+   "group": "矮人",
+   "size": "中型",
+   "speed": 25,
+   "darkvision": 60,
+   "asi": {
+    "con": 2,
+    "str": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、矮人語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動速度",
+     "desc": "你的移動速度並不會因爲穿着重甲而減少。"
+    },
+    {
+     "name": "黑暗視覺",
+     "desc": "習慣了地底的生活，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "矮人韌性",
+     "desc": "你在對抗毒素的豁免檢定中具有優勢，且你對毒素傷害具有抗性。"
+    },
+    {
+     "name": "矮人戰鬥訓練",
+     "desc": "你熟練於戰斧、手斧、輕錘和戰錘。"
+    },
+    {
+     "name": "工具熟練",
+     "desc": "你熟練於下列其中一個你所選擇的工匠工具：鐵匠工具、釀酒工具或泥瓦匠工具。"
+    },
+    {
+     "name": "岩石熟悉",
+     "desc": "每當你進行關聯於石製品起源的智力（歷史）檢定時，你被視爲熟練於歷史技能，並將你二倍的熟練加值代替你原本的熟練加值加入該檢定中。"
+    },
+    {
+     "name": "矮人護甲訓練",
+     "desc": "你熟練於輕甲和中甲。"
+    }
+   ],
+   "blurb": "出自 PHB p.20",
+   "color": "#5ad1ff",
+   "look": {
+    "height": 0.78,
+    "build": 0.85,
+    "beard": "braided"
+   },
+   "packLabel": "PHB",
+   "untranslated": false
+  },
+  {
+   "id": "pk-dwarf-duergar-phb",
+   "name": "矮人（灰）",
+   "en": "Dwarf (Duergar)",
+   "group": "矮人",
+   "size": "中型",
+   "speed": 25,
+   "darkvision": 120,
+   "asi": {
+    "con": 2,
+    "str": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、矮人語、地底通用語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動速度",
+     "desc": "你的移動速度並不會因爲穿着重甲而減少。"
+    },
+    {
+     "name": "高級黑暗視覺",
+     "desc": "習慣了地底的生活，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你120尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "矮人韌性",
+     "desc": "你在對抗毒素的豁免檢定中具有優勢，且你對毒素傷害具有抗性。"
+    },
+    {
+     "name": "矮人戰鬥訓練",
+     "desc": "你熟練於戰斧、手斧、輕錘和戰錘。"
+    },
+    {
+     "name": "工具熟練",
+     "desc": "你熟練於下列其中一個你所選擇的工匠工具：鐵匠工具、釀酒工具或泥瓦匠工具。"
+    },
+    {
+     "name": "岩石熟悉",
+     "desc": "每當你進行關聯於石製品起源的智力（歷史）檢定時，你被視爲熟練於歷史技能，並將你二倍的熟練加值代替你原本的熟練加值加入該檢定中。"
+    },
+    {
+     "name": "灰矮人韌性",
+     "desc": "你在對抗毒素的豁免檢定中具有優勢，且你對毒素傷害具有抗性。你也在對抗幻術以及對抗魅惑或麻痹的豁免檢定中具有優勢。"
+    },
+    {
+     "name": "灰矮人魔法",
+     "desc": "當你升至3級，你每天可以使用此特性對你自己施放一次變巨/縮小術，但只能使用變巨的選項。當你升至5級，你每天可以使用此特性對你自己施放一次隱形術。你不需要爲這些法術提供材料構材，且你不能在自己暴露於陽光下時施放它們，儘管一旦施放後，陽光對它們不會有任何影響。你在完成一次長休後才能恢復再次使用此特性施放這些法術的能力。你施展這些法術的施法屬性爲智力。"
+    },
+    {
+     "name": "日光敏感",
+     "desc": "當你、你的攻擊目標或你嘗試感知的東西直接暴露在陽光下，則你依賴於視覺的攻擊檢定以及感知（察覺）檢定具有劣勢。"
+    }
+   ],
+   "blurb": "出自 MTF p.81",
+   "color": "#ffd166",
+   "look": {
+    "height": 0.78,
+    "build": 0.85,
+    "beard": "braided"
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-dwarf-mark-of-warding-phb",
+   "name": "矮人（警戒龍紋）",
+   "en": "Dwarf (Mark of Warding)",
+   "group": "矮人",
+   "size": "中型",
+   "speed": 25,
+   "darkvision": 60,
+   "asi": {
+    "con": 2,
+    "int": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、矮人語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動速度",
+     "desc": "你的移動速度並不會因爲穿着重甲而減少。"
+    },
+    {
+     "name": "黑暗視覺",
+     "desc": "習慣了地底的生活，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "矮人韌性",
+     "desc": "你在對抗毒素的豁免檢定中具有優勢，且你對毒素傷害具有抗性。"
+    },
+    {
+     "name": "矮人戰鬥訓練",
+     "desc": "你熟練於戰斧、手斧、輕錘和戰錘。"
+    },
+    {
+     "name": "工具熟練",
+     "desc": "你熟練於下列其中一個你所選擇的工匠工具：鐵匠工具、釀酒工具或泥瓦匠工具。"
+    },
+    {
+     "name": "岩石熟悉",
+     "desc": "每當你進行關聯於石製品起源的智力（歷史）檢定時，你被視爲熟練於歷史技能，並將你二倍的熟練加值代替你原本的熟練加值加入該檢定中。"
+    },
+    {
+     "name": "守衛直覺",
+     "desc": "當你進行智力(調查)檢定或使用盜賊工具進行屬性檢定時，你能擲一個d4，並把結果加到屬性檢定的結果上。"
+    },
+    {
+     "name": "保護與封鎖",
+     "desc": "你能夠施展警報術和法師護甲法術，從3級起，你還能施展祕法鎖。一旦你使用此特性施展了前述法術，你將無法再次使用此特性，直到完成一次長休。智力是你在施展這些法術時的關鍵屬性，你無需爲這些法術提供材料成分。"
+    },
+    {
+     "name": "龍紋法術",
+     "desc": "如果你擁有施法或契約魔法職業能力，警戒龍紋表中的法術將加入你施法職業的法術列表中。 1st：警報術, 艾嘉西斯之鎧；2nd：祕法鎖, 敲擊術；3rd：守衛銘文, 防護法陣；4th：李歐蒙祕藏箱, 魔鄧肯忠犬；5th：反活物護罩"
+    }
+   ],
+   "blurb": "出自 ERLW p.51",
+   "color": "#9be36d",
+   "look": {
+    "height": 0.78,
+    "build": 0.85,
+    "beard": "braided"
+   },
+   "packLabel": "ERLW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-goliath-vgm",
+   "name": "歌利亞",
+   "en": "Goliath",
+   "group": "歌利亞",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "str": 2,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、巨人語",
+   "skills": [
+    "athletics"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "天生運動員",
+     "desc": "你熟練於運動技能。"
+    },
+    {
+     "name": "石之耐性",
+     "desc": "你可以通過專注自身以忽視重傷。當你受到傷害時，你可以使用你的反應以骰一顆1d12。將你的體質調整值加入骰出的數字，並將該傷害減少其總和的數值。在你使用此特性之後，直到完成一次短休或長休之前你都不能再使用它。"
+    },
+    {
+     "name": "強健體格",
+     "desc": "當決定你的負重以及你可以拖曳、推動、或提舉的重量時，你將你的體型視作比原本大一級。"
+    },
+    {
+     "name": "高山之子",
+     "desc": "你已習慣於高海拔的環境，包括海拔高度20,000尺以上的環境。你也天生適應了寒冷的溫度，參見《地下城主指南》第五章的敘述。"
+    }
+   ],
+   "blurb": "出自 VGM p.108",
+   "color": "#b388ff",
+   "look": {
+    "height": 1.15,
+    "build": 0.9,
+    "skin": "#9a9a9e"
+   },
+   "packLabel": "VGM",
+   "untranslated": false
+  },
+  {
+   "id": "pk-bugbear-vgm",
+   "name": "熊地精",
+   "en": "Bugbear",
+   "group": "熊地精",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "str": 2,
+    "dex": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、地精語",
+   "skills": [
+    "stealth"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "長肢",
+     "desc": "當你在你的回合進行一次近戰攻擊時，你的觸及範圍對該攻擊而言視作比原本長5尺。"
+    },
+    {
+     "name": "強健體格",
+     "desc": "當決定你的負重以及你可以拖曳、推動、或提舉的重量時，你將你的體型視作比原本大一級。"
+    },
+    {
+     "name": "鬼祟",
+     "desc": "你熟練於隱匿技能。"
+    },
+    {
+     "name": "突襲攻擊",
+     "desc": "若你突襲一個生物並在你戰鬥中的第一個回合以一次攻擊命中它，則該攻擊將對它造成額外的2d6傷害。你每場戰鬥只能使用此特性一次。"
+    }
+   ],
+   "blurb": "出自 VGM p.119",
+   "color": "#ffd166",
+   "look": {
+    "earType": "elf",
+    "ears": 0.8,
+    "tusks": true,
+    "height": 1.15,
+    "build": 0.9
+   },
+   "packLabel": "VGM",
+   "untranslated": false
+  },
+  {
+   "id": "pk-elf-wood-phb",
+   "name": "精靈（木）",
+   "en": "Elf (Wood)",
+   "group": "精靈",
+   "size": "中型",
+   "speed": 35,
+   "darkvision": 60,
+   "asi": {
+    "dex": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、精靈語",
+   "skills": [
+    "perception"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "習慣了微光森林與夜空，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "敏銳感官",
+     "desc": "你熟練於察覺技能。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "傳思",
+     "desc": "精靈並不需要睡眠。取而代之，他們一天會進行4小時保留潛意識的深度冥想。（通用語將這種冥想稱爲\"傳思\"）在冥想時，你勉強算是會作夢；這些夢境實際上是在多年訓練下產生的反射性心靈鍛鍊。在以這種方式休息後，你得到與人類8小時睡眠後相同的益處。 如果你在長休期間冥想，你可以在花費4小時完成冥想後，在剩下的4小時中保持清醒，並進行輕省活動。你仍然需要花費8小時來完成長休。"
+    },
+    {
+     "name": "精靈武器訓練",
+     "desc": "你熟練於長劍、短劍、短弓和長弓。"
+    },
+    {
+     "name": "輕捷步伐",
+     "desc": "你的基礎步行速度提升到35尺。"
+    },
+    {
+     "name": "荒野隱蔽",
+     "desc": "當你處於樹叢、大雨、落雪、霧氣或其他自然現象所造成的輕度遮蔽時，你可以嘗試進行躲藏。"
+    }
+   ],
+   "blurb": "出自 PHB p.24",
+   "color": "#5ad1ff",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "PHB",
+   "untranslated": false
+  },
+  {
+   "id": "pk-elf-drow-phb",
+   "name": "精靈（卓爾）",
+   "en": "Elf (Drow)",
+   "group": "精靈",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 120,
+   "asi": {
+    "dex": 2,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、精靈語",
+   "skills": [
+    "perception"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "高級黑暗視覺",
+     "desc": "習慣了幽暗地域的深處，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你120尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "敏銳感官",
+     "desc": "你熟練於察覺技能。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "傳思",
+     "desc": "精靈並不需要睡眠。取而代之，他們一天會進行4小時保留潛意識的深度冥想。（通用語將這種冥想稱爲\"傳思\"）在冥想時，你勉強算是會作夢；這些夢境實際上是在多年訓練下產生的反射性心靈鍛鍊。在以這種方式休息後，你得到與人類8小時睡眠後相同的益處。 如果你在長休期間冥想，你可以在花費4小時完成冥想後，在剩下的4小時中保持清醒，並進行輕省活動。你仍然需要花費8小時來完成長休。"
+    },
+    {
+     "name": "日光敏感",
+     "desc": "當你、你的攻擊目標或你嘗試感知的東西直接暴露在陽光下，則你依賴於視覺的攻擊檢定以及感知（察覺）檢定具有劣勢。"
+    },
+    {
+     "name": "卓爾魔法",
+     "desc": "你知曉舞光術戲法。當你升至3級，你每天可以施放一次妖火術，你必須完成一次長休才能再次使用此特性施放該法術。當你升至5級，你每天可以施放一次黑暗術，你必須完成一次長休才能再次使用此特性施放該法術。你施展這些法術的施法屬性爲魅力。"
+    },
+    {
+     "name": "卓爾武器訓練",
+     "desc": "你熟練於rapier、shortsword和hand crossbow。"
+    }
+   ],
+   "blurb": "出自 PHB p.24",
+   "color": "#ff7ad9",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6,
+    "skin": "#5a4a6a"
+   },
+   "packLabel": "PHB",
+   "untranslated": false
+  },
+  {
+   "id": "pk-elf-sea-phb",
+   "name": "精靈（海）",
+   "en": "Elf (Sea)",
+   "group": "精靈",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "dex": 2,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、精靈語",
+   "skills": [
+    "perception"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "游泳 30 呎"
+    },
+    {
+     "name": "黑暗視覺",
+     "desc": "習慣了微光森林與夜空，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "敏銳感官",
+     "desc": "你熟練於察覺技能。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "傳思",
+     "desc": "精靈並不需要睡眠。取而代之，他們一天會進行4小時保留潛意識的深度冥想。（通用語將這種冥想稱爲\"傳思\"）在冥想時，你勉強算是會作夢；這些夢境實際上是在多年訓練下產生的反射性心靈鍛鍊。在以這種方式休息後，你得到與人類8小時睡眠後相同的益處。 如果你在長休期間冥想，你可以在花費4小時完成冥想後，在剩下的4小時中保持清醒，並進行輕省活動。你仍然需要花費8小時來完成長休。"
+    },
+    {
+     "name": "海精靈武器訓練",
+     "desc": "你熟練於spear、trident、light crossbow和net。"
+    },
+    {
+     "name": "海洋之子",
+     "desc": "你擁有30尺的游泳速度，且你可以在空氣與水中呼吸。"
+    },
+    {
+     "name": "海洋之友",
+     "desc": "利用手勢與聲音，你可以和任何擁有天生游泳速度的野獸溝通簡單的想法。"
+    },
+    {
+     "name": "額外語言",
+     "desc": "你能夠說、讀、寫水族語。"
+    }
+   ],
+   "blurb": "出自 MTF p.62",
+   "color": "#ffd166",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-elf-mark-of-shadow-phb",
+   "name": "精靈（陰影龍紋）",
+   "en": "Elf (Mark of Shadow)",
+   "group": "精靈",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "dex": 2,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、精靈語",
+   "skills": [
+    "perception"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "習慣了微光森林與夜空，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "敏銳感官",
+     "desc": "你熟練於察覺技能。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "傳思",
+     "desc": "精靈並不需要睡眠。取而代之，他們一天會進行4小時保留潛意識的深度冥想。（通用語將這種冥想稱爲\"傳思\"）在冥想時，你勉強算是會作夢；這些夢境實際上是在多年訓練下產生的反射性心靈鍛鍊。在以這種方式休息後，你得到與人類8小時睡眠後相同的益處。 如果你在長休期間冥想，你可以在花費4小時完成冥想後，在剩下的4小時中保持清醒，並進行輕省活動。你仍然需要花費8小時來完成長休。"
+    },
+    {
+     "name": "狡詐直覺",
+     "desc": "當你進行魅力（表演）或敏捷（隱匿）檢定時，你能擲一個d4，並把結果加到屬性檢定的結果上。"
+    },
+    {
+     "name": "陰影塑形",
+     "desc": "你能夠施展次級幻象戲法。從第3級起，你能夠通過此特性施展隱形術。一旦你使用此特性施展了前述法術，你將無法再次使用此特性，直到完成一次長休。魅力是你在施展這些法術時的關鍵屬性。"
+    },
+    {
+     "name": "龍紋法術",
+     "desc": "如果你擁有施法或契約魔法職業能力，陰影龍紋表中的法術將加入你施法職業的法術列表中。 1st：易容術, 無聲幻影；2nd：黑暗術, 行蹤無跡；3rd：銳眼術, 強效幻影；4th：高等隱形術, 幻景；5th：假象術"
+    }
+   ],
+   "blurb": "出自 ERLW p.49",
+   "color": "#ff9a5a",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "ERLW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-elf-eladrin-phb",
+   "name": "精靈（雅靈）",
+   "en": "Elf (Eladrin)",
+   "group": "精靈",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "dex": 2,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、精靈語",
+   "skills": [
+    "perception"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "習慣了微光森林與夜空，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "敏銳感官",
+     "desc": "你熟練於察覺技能。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "傳思",
+     "desc": "精靈並不需要睡眠。取而代之，他們一天會進行4小時保留潛意識的深度冥想。（通用語將這種冥想稱爲\"傳思\"）在冥想時，你勉強算是會作夢；這些夢境實際上是在多年訓練下產生的反射性心靈鍛鍊。在以這種方式休息後，你得到與人類8小時睡眠後相同的益處。 如果你在長休期間冥想，你可以在花費4小時完成冥想後，在剩下的4小時中保持清醒，並進行輕省活動。你仍然需要花費8小時來完成長休。"
+    },
+    {
+     "name": "妖精步",
+     "desc": "以一個附贈動作，你可以魔法性的傳送最多30尺距離到一處未被佔據的可見空間。一旦你使用此特性，直到你完成一次短休或長休之前都無法再使用它。 當你升至3級，你的妖精步將根據你的季節獲得一個額外效果；若該效果需要豁免，則DC等同8+你的熟練加值+你的魅力調整值： ・緊接在你使用妖精步後，距離你10尺內最多二個你所選擇的生物必須成功通過一次感知豁免，否則被你魅惑1分鐘，或直到你或你的同伴對它造成傷害。 ・當你使用妖精步時，一個你所選擇在你傳送前距離你5尺內的可見生物必須成功通過一次感知豁免，否則對你感到恐懼直到你的下個回合結束。 ・當你使用妖精步時，你可以觸碰一個距離你5尺內的自願生物。該生物將代替你被傳送，並出現在距離你30尺內的一處未被佔據的可見空間。 ・緊接在你使用妖精步後，距離你5尺內每個你所選擇的生物將受到等同於你魅力調整值的火焰傷害（最少1點）。"
+    }
+   ],
+   "blurb": "出自 MTF p.61",
+   "color": "#e9c46a",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-elf-pallid-phb",
+   "name": "精靈（蒼白）",
+   "en": "Elf (Pallid)",
+   "group": "精靈",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "dex": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、精靈語",
+   "skills": [
+    "perception"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "習慣了微光森林與夜空，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "敏銳感官",
+     "desc": "你熟練於察覺技能。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "傳思",
+     "desc": "精靈並不需要睡眠。取而代之，他們一天會進行4小時保留潛意識的深度冥想。（通用語將這種冥想稱爲\"傳思\"）在冥想時，你勉強算是會作夢；這些夢境實際上是在多年訓練下產生的反射性心靈鍛鍊。在以這種方式休息後，你得到與人類8小時睡眠後相同的益處。 如果你在長休期間冥想，你可以在花費4小時完成冥想後，在剩下的4小時中保持清醒，並進行輕省活動。你仍然需要花費8小時來完成長休。"
+    },
+    {
+     "name": "Incisive Sense",
+     "desc": "You have advantage on Intelligence（調查）and Wisdom（洞悉）checks."
+    },
+    {
+     "name": "Blessing of the Moon Weaver",
+     "desc": "You know the 光亮術 cantrip. When you reach 3rd level, you can cast the 睡眠術 spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the 隱形術 spell (targeting yourself only) once with this trait and regain the ability to do so when you finish a long rest. Casting these spells with this trait doesn't require material components. Wisdom is your spellcasting ability for these spells."
+    }
+   ],
+   "blurb": "出自 EGW p.21",
+   "color": "#7dffcf",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "EGW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-elf-shadar-kai-phb",
+   "name": "精靈（影靈）",
+   "en": "Elf (Shadar-kai)",
+   "group": "精靈",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "dex": 2,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、精靈語",
+   "skills": [
+    "perception"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "習慣了微光森林與夜空，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "敏銳感官",
+     "desc": "你熟練於察覺技能。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "傳思",
+     "desc": "精靈並不需要睡眠。取而代之，他們一天會進行4小時保留潛意識的深度冥想。（通用語將這種冥想稱爲\"傳思\"）在冥想時，你勉強算是會作夢；這些夢境實際上是在多年訓練下產生的反射性心靈鍛鍊。在以這種方式休息後，你得到與人類8小時睡眠後相同的益處。 如果你在長休期間冥想，你可以在花費4小時完成冥想後，在剩下的4小時中保持清醒，並進行輕省活動。你仍然需要花費8小時來完成長休。"
+    },
+    {
+     "name": "黯蝕抗性",
+     "desc": "你具有對黯蝕傷害的抗性。"
+    },
+    {
+     "name": "鴉後的祝福",
+     "desc": "以一個附贈動作，你可以魔法性的傳送最多30尺距離到一處未被佔據的可見空間。一旦你使用此特性，直到你完成一次長休之前都無法再使用它。 從3級開始，當你使用此特性傳送時，你也獲得對所有傷害的抗性。這個抗性持續到你的下個回合開始。在這段期間，你變得朦朧且半透明。"
+    }
+   ],
+   "blurb": "出自 MTF p.62",
+   "color": "#9be36d",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "MTF",
+   "untranslated": false
+  },
+  {
+   "id": "pk-elf-kaladesh-bishatar-and-tirahar-psk",
+   "name": "精靈 (卡拉德許)（Bishatar and Tirahar）",
+   "en": "Elf (Kaladesh) (Bishatar and Tirahar)",
+   "group": "精靈 (卡拉德許)",
+   "size": "中型",
+   "speed": 35,
+   "darkvision": 60,
+   "asi": {
+    "dex": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、精靈語",
+   "skills": [
+    "perception"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "習慣了微光森林與夜空，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "敏銳感官",
+     "desc": "你熟練於察覺技能。"
+    },
+    {
+     "name": "精靈武器訓練",
+     "desc": "你熟練於長劍、短劍、短弓和長弓。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "傳思",
+     "desc": "精靈並不需要睡眠。取而代之，他們一天會進行4小時保留潛意識的深度冥想。（通用語將這種冥想稱爲\"傳思\"）在冥想時，你勉強算是會作夢；這些夢境實際上是在多年訓練下產生的反射性心靈鍛鍊。在以這種方式休息後，你得到與人類8小時睡眠後相同的益處。 如果你在長休期間冥想，你可以在花費4小時完成冥想後，在剩下的4小時中保持清醒，並進行輕省活動。你仍然需要花費8小時來完成長休。"
+    },
+    {
+     "name": "Fleet of Foot",
+     "desc": "Your ground speed increases to 35 feet."
+    },
+    {
+     "name": "Mask of the Wild",
+     "desc": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+    }
+   ],
+   "blurb": "出自 PSK p.21",
+   "color": "#b388ff",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "PSK",
+   "untranslated": false
+  },
+  {
+   "id": "pk-elf-kaladesh-vadahar-psk",
+   "name": "精靈 (卡拉德許)（Vadahar）",
+   "en": "Elf (Kaladesh) (Vadahar)",
+   "group": "精靈 (卡拉德許)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "dex": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、精靈語",
+   "skills": [
+    "perception"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "習慣了微光森林與夜空，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "敏銳感官",
+     "desc": "你熟練於察覺技能。"
+    },
+    {
+     "name": "精靈武器訓練",
+     "desc": "你熟練於長劍、短劍、短弓和長弓。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "傳思",
+     "desc": "精靈並不需要睡眠。取而代之，他們一天會進行4小時保留潛意識的深度冥想。（通用語將這種冥想稱爲\"傳思\"）在冥想時，你勉強算是會作夢；這些夢境實際上是在多年訓練下產生的反射性心靈鍛鍊。在以這種方式休息後，你得到與人類8小時睡眠後相同的益處。 如果你在長休期間冥想，你可以在花費4小時完成冥想後，在剩下的4小時中保持清醒，並進行輕省活動。你仍然需要花費8小時來完成長休。"
+    },
+    {
+     "name": "Cantrip",
+     "desc": "You know one cantrip of your choice from the druid spell list. Wisdom is your spellcasting ability for it."
+    },
+    {
+     "name": "Extra Language",
+     "desc": "You can speak, read, and write one extra language of your choosing."
+    }
+   ],
+   "blurb": "出自 PSK p.21",
+   "color": "#ff7ad9",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "PSK",
+   "untranslated": false
+  },
+  {
+   "id": "pk-elf-zendikar-joraga-nation-psz",
+   "name": "精靈 (贊迪卡)（Joraga Nation）",
+   "en": "Elf (Zendikar) (Joraga Nation)",
+   "group": "精靈 (贊迪卡)",
+   "size": "中型",
+   "speed": 35,
+   "darkvision": 60,
+   "asi": {
+    "wis": 2,
+    "dex": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、精靈語",
+   "skills": [
+    "perception"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "習慣了微光森林與夜空，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "敏銳感官",
+     "desc": "你熟練於察覺技能。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "Mask of the Wild",
+     "desc": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+    },
+    {
+     "name": "Elf Weapon Training",
+     "desc": "You have proficiency with the longsword, shortsword, shortbow, and longbow."
+    },
+    {
+     "name": "Fleet of Foot",
+     "desc": "Your ground speed increases to 35 feet."
+    }
+   ],
+   "blurb": "出自 PSZ p.19",
+   "color": "#ff5a6e",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "PSZ",
+   "untranslated": false
+  },
+  {
+   "id": "pk-elf-zendikar-mul-daya-nation-psz",
+   "name": "精靈 (贊迪卡)（Mul Daya Nation）",
+   "en": "Elf (Zendikar) (Mul Daya Nation)",
+   "group": "精靈 (贊迪卡)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 120,
+   "asi": {
+    "wis": 2,
+    "str": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、精靈語",
+   "skills": [
+    "perception"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Superior Darkvision",
+     "desc": "Your Darkvision has a radius of 120 feet."
+    },
+    {
+     "name": "敏銳感官",
+     "desc": "你熟練於察覺技能。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "Mul Daya Magic",
+     "desc": "You know the 寒顫之觸 cantrip. When you reach 3rd level, you can cast the 脆弱詛咒 spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the 黑暗術 spell once with this trait and regain the ability to do so when you finish a long rest. Wisdom is your spellcasting ability for these spells."
+    },
+    {
+     "name": "Sunlight Sensitivity",
+     "desc": "You have disadvantage on attack rolls and on Wisdom（察覺）checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
+    },
+    {
+     "name": "Elf Weapon Training",
+     "desc": "You have proficiency with the longsword, shortsword, shortbow, and longbow."
+    }
+   ],
+   "blurb": "出自 PSZ p.19",
+   "color": "#e9c46a",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "PSZ",
+   "untranslated": false
+  },
+  {
+   "id": "pk-elf-zendikar-tajuru-nation-psz",
+   "name": "精靈 (贊迪卡)（Tajuru Nation）",
+   "en": "Elf (Zendikar) (Tajuru Nation)",
+   "group": "精靈 (贊迪卡)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "wis": 2,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、精靈語",
+   "skills": [],
+   "skillChoice": {
+    "count": 2,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "習慣了微光森林與夜空，你在黑暗與微光環境下仍能保持卓越視覺。你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "敏銳感官",
+     "desc": "你熟練於察覺技能。"
+    },
+    {
+     "name": "精類血統",
+     "desc": "你在對抗魅惑的豁免檢定中具有優勢，且魔法無法讓你入睡。"
+    },
+    {
+     "name": "Skill Versatility",
+     "desc": "You have proficiency with any combination of two other skills or tools of your choice."
+    }
+   ],
+   "blurb": "出自 PSZ p.18",
+   "color": "#ff9a5a",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6
+   },
+   "packLabel": "PSZ",
+   "untranslated": false
+  },
+  {
+   "id": "pk-vedalken-ggr",
+   "name": "維多肯",
+   "en": "Vedalken",
+   "group": "維多肯",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "int": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他、任選 1 種",
+   "skills": [],
+   "skillChoice": {
+    "count": 1,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "維多肯式沉着",
+     "desc": "你在所有智力、感知和魅力的豁免檢定上具有優勢。"
+    },
+    {
+     "name": "孜孜不倦的專家",
+     "desc": "你熟練於以下其中一個你所選擇的技能：奧祕、歷史、調查、醫療、表演或巧手。你也熟練於一個你所選擇的工具。 每當你進行一次使用所選的工具或技能的屬性檢定時，骰一顆D4，並將骰出來的數字加到該檢定的總和中。"
+    },
+    {
+     "name": "部分兩棲",
+     "desc": "藉由通過你的肌膚吸收氧氣，你可以在水下呼吸長達1小時。一旦你到達這個極限，直到你完成一次長休之前都不能再使用這個能力。"
+    }
+   ],
+   "blurb": "出自 GGR p.21",
+   "color": "#9be36d",
+   "look": {
+    "earType": "elf",
+    "ears": 0.6,
+    "skin": "#5a8fb8"
+   },
+   "packLabel": "GGR",
+   "untranslated": false
+  },
+  {
+   "id": "pk-lizardfolk-vgm",
+   "name": "蜥蜴人",
+   "en": "Lizardfolk",
+   "group": "蜥蜴人",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "con": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、龍語",
+   "skills": [],
+   "skillChoice": {
+    "count": 2,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "游泳 30 呎"
+    },
+    {
+     "name": "游泳速度",
+     "desc": "你擁有30尺的游泳速度。"
+    },
+    {
+     "name": "啃咬",
+     "desc": "你長滿獠牙的血盆大口是一種天生武器，且你可以用它來進行徒手打擊。如果你以它命中目標，則你造成等同1d6 + 你的力量調整值的穿刺傷害，而非一般徒手打擊的鈍擊傷害。"
+    },
+    {
+     "name": "能巧工匠",
+     "desc": "作爲短休的一部分，你可以利用從被殺死的小型或更大的野獸、構裝體、龍、怪獸，或植物身上採集下來的骨頭和獸皮製作下列其中一個物品：一面盾牌、一根棍棒、一把標槍或1d4個飛鏢或吹箭。若要使用這個特性，你將需要一把刀刃，像是一把匕首或是其他適合的工匠工具，例如皮匠工具。"
+    },
+    {
+     "name": "屏息",
+     "desc": "你可以屏住你的呼吸長達15分鐘。"
+    },
+    {
+     "name": "獵人學識",
+     "desc": "你熟練於下列二種你所選擇的技能：馴獸、自然、察覺、隱匿和生存。"
+    },
+    {
+     "name": "天生護甲",
+     "desc": "你擁有堅硬、帶鱗的皮膚。當你未穿戴護甲時，你的AC爲13 + 你的敏捷調整值。如果你穿着的護甲會讓你有較低的AC，則你可以使用你的天生護甲來計算你的AC。當你使用天生護甲時，盾牌的加值仍會如常作用。"
+    },
+    {
+     "name": "飢渴之齶",
+     "desc": "在戰鬥中，你可以讓你自己陷入一種兇猛的暴食狂熱。以一個附贈動作，你可以使用你的啃咬進行一次特殊攻擊。若該攻擊命中，則它將造成它原本的傷害，且你獲得等同於你體質調整值（最低爲1）的臨時生命值，且直到你完成一次短休或長休之前你都不能再使用此特性。"
+    }
+   ],
+   "blurb": "出自 VGM p.111",
+   "color": "#7dffcf",
+   "look": {
+    "tail": "dragon",
+    "skin": "#5f8a5a"
+   },
+   "packLabel": "VGM",
+   "untranslated": false
+  },
+  {
+   "id": "pk-skeleton-dmg",
+   "name": "骷髏",
+   "en": "Skeleton",
+   "group": "骷髏",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "dex": 2,
+    "int": -4,
+    "cha": -4
+   },
+   "asiChoice": null,
+   "languages": "",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "易碎骸骨",
+     "desc": "你具有對鈍擊傷害的易傷。"
+    },
+    {
+     "name": "不死本質",
+     "desc": "你免疫於毒素傷害和力竭狀態，且你不會陷入中毒狀態。你不再需要呼吸、進食、飲水、或睡眠。"
+    },
+    {
+     "name": "黑暗視覺",
+     "desc": "你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    }
+   ],
+   "blurb": "出自 DMG p.282",
+   "color": "#ff9a5a",
+   "look": {
+    "skin": "#d8dde0"
+   },
+   "packLabel": "DMG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-troglodyte-dmg",
+   "name": "戰蜥人",
+   "en": "Troglodyte",
+   "group": "戰蜥人",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "str": 2,
+    "con": 2,
+    "int": -4,
+    "cha": -4
+   },
+   "asiChoice": null,
+   "languages": "其他",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "變色皮膚",
+     "desc": "你在爲躲藏所進行的敏捷（隱匿）檢定中具有優勢。"
+    },
+    {
+     "name": "惡臭",
+     "desc": "任何除了戰蜥人以外在距離你5尺內開始它的回合的生物都必須成功通過一次DC 12的體質豁免，否則陷入中毒狀態直到該生物的下個回合開始。若此豁免成功，該生物將免疫於所有戰蜥人的惡臭長達1小時。"
+    },
+    {
+     "name": "日光敏感",
+     "desc": "當處於日光照耀下時，你在攻擊檢定，以及依賴視覺的感知（察覺）檢定中具有劣勢。"
+    },
+    {
+     "name": "天生護甲",
+     "desc": "你的厚皮讓你的護甲等級獲得+1加值。"
+    },
+    {
+     "name": "黑暗視覺",
+     "desc": "你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    }
+   ],
+   "blurb": "出自 DMG p.282",
+   "color": "#ff9a5a",
+   "look": {
+    "tail": "dragon",
+    "skin": "#5f8a5a"
+   },
+   "packLabel": "DMG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-dragonborn-ravenite-phb",
+   "name": "龍裔（拾荒種）",
+   "en": "Dragonborn (Ravenite)",
+   "group": "龍裔",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "str": 2,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、龍語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "龍族血統",
+     "desc": "你擁有龍族的血統。從龍族血統表中選擇一個龍種。你的噴吐武器和傷害抗性將會由你所選的龍種而決定，如表所示。 黑龍：強酸：5尺x30尺直線 (敏捷豁免)；藍龍：閃電：5尺x30尺直線 (敏捷豁免)；黃銅龍：火焰：5尺x30尺直線 (敏捷豁免)；青銅龍：閃電：5尺x30尺直線 (敏捷豁免)；赤銅龍：強酸：5尺x30尺直線 (敏捷豁免)；金龍：火焰：15尺錐形 (敏捷豁免)；綠龍：毒素：15尺錐形 (體質豁免)；紅龍：火焰：15尺錐形 (敏捷豁免)；銀龍：冷凍：15尺錐形 (體質豁免)；白龍：冷凍：15尺錐形 (體質豁免)"
+    },
+    {
+     "name": "噴吐武器",
+     "desc": "你可以使用你的動作以呼出毀滅性的能量。你的龍族血統決定了這個吐息的尺寸、形狀、以及傷害類型。 當你使用你的噴吐武器時，每個在吐息範圍內的生物都必須進行一次豁免檢定，其豁免屬行由你的龍族血統決定。這個豁免檢定的DC等同於8 + 你的體質調整值 + 你的熟練加值。一個豁免失敗的生物將受到2d6傷害，豁免成功則只受到一半的傷害。這個傷害將在你的等級升至6級時增加至3d6，11級時4d6，以及16級時5d6。 在你使用你的噴吐武器之後，直到完成一次短休或長休之前，你都不能再使用它。"
+    },
+    {
+     "name": "傷害抗性",
+     "desc": "你具有與你龍族血統相應傷害類型的抗性。"
+    },
+    {
+     "name": "Darkvision",
+     "desc": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Vengeful Assault",
+     "desc": "When you take damage from a creature in range of a weapon you are wielding, you can use your reaction to make an attack with the weapon against that creature. Once you use this trait, you can't do so again until you finish a short or long rest."
+    },
+    {
+     "name": "Draconic Ancestry",
+     "desc": "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon is determined by the dragon type, as shown in the table. Black：Acid：5 by 30 ft. line (Dex. save)；Blue：Lightning：5 by 30 ft. line (Dex. save)；Brass：Fire：5 by 30 ft. line (Dex. save)；Bronze：Lightning：5 by 30 ft. line (Dex. save)；Copper：Acid：5 by 30 ft. line (Dex. save)；Gold：Fire：15 ft. cone (Dex. save)；Green：Poison：15 ft. cone (Con. save)；Red：Fire：15 ft. cone (Dex. save)；Silver：Cold：15 ft. cone (Con. save)；White：Cold：15 ft. cone (Con. save)"
+    }
+   ],
+   "blurb": "出自 EGW p.168",
+   "color": "#7dffcf",
+   "look": {
+    "wings": "feather",
+    "hornStyle": "swept",
+    "tail": "dragon"
+   },
+   "packLabel": "EGW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-dragonborn-draconblood-phb",
+   "name": "龍裔（龍國血統）",
+   "en": "Dragonborn (Draconblood)",
+   "group": "龍裔",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "int": 2,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、龍語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "龍族血統",
+     "desc": "你擁有龍族的血統。從龍族血統表中選擇一個龍種。你的噴吐武器和傷害抗性將會由你所選的龍種而決定，如表所示。 黑龍：強酸：5尺x30尺直線 (敏捷豁免)；藍龍：閃電：5尺x30尺直線 (敏捷豁免)；黃銅龍：火焰：5尺x30尺直線 (敏捷豁免)；青銅龍：閃電：5尺x30尺直線 (敏捷豁免)；赤銅龍：強酸：5尺x30尺直線 (敏捷豁免)；金龍：火焰：15尺錐形 (敏捷豁免)；綠龍：毒素：15尺錐形 (體質豁免)；紅龍：火焰：15尺錐形 (敏捷豁免)；銀龍：冷凍：15尺錐形 (體質豁免)；白龍：冷凍：15尺錐形 (體質豁免)"
+    },
+    {
+     "name": "噴吐武器",
+     "desc": "你可以使用你的動作以呼出毀滅性的能量。你的龍族血統決定了這個吐息的尺寸、形狀、以及傷害類型。 當你使用你的噴吐武器時，每個在吐息範圍內的生物都必須進行一次豁免檢定，其豁免屬行由你的龍族血統決定。這個豁免檢定的DC等同於8 + 你的體質調整值 + 你的熟練加值。一個豁免失敗的生物將受到2d6傷害，豁免成功則只受到一半的傷害。這個傷害將在你的等級升至6級時增加至3d6，11級時4d6，以及16級時5d6。 在你使用你的噴吐武器之後，直到完成一次短休或長休之前，你都不能再使用它。"
+    },
+    {
+     "name": "傷害抗性",
+     "desc": "你具有與你龍族血統相應傷害類型的抗性。"
+    },
+    {
+     "name": "Darkvision",
+     "desc": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Forceful Presence",
+     "desc": "You can use your understanding of creative diplomacy or intimidation to guide a conversation in your favor. When you make a Charisma (威嚇 or 說服) check, you can do so with advantage. Once you use this trait, you can't do so again until you finish a short or long rest."
+    },
+    {
+     "name": "Draconic Ancestry",
+     "desc": "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon is determined by the dragon type, as shown in the table. Black：Acid：5 by 30 ft. line (Dex. save)；Blue：Lightning：5 by 30 ft. line (Dex. save)；Brass：Fire：5 by 30 ft. line (Dex. save)；Bronze：Lightning：5 by 30 ft. line (Dex. save)；Copper：Acid：5 by 30 ft. line (Dex. save)；Gold：Fire：15 ft. cone (Dex. save)；Green：Poison：15 ft. cone (Con. save)；Red：Fire：15 ft. cone (Dex. save)；Silver：Cold：15 ft. cone (Con. save)；White：Cold：15 ft. cone (Con. save)"
+    }
+   ],
+   "blurb": "出自 EGW p.168",
+   "color": "#ff9a5a",
+   "look": {
+    "hornStyle": "swept",
+    "tail": "dragon"
+   },
+   "packLabel": "EGW",
+   "untranslated": false
+  },
+  {
+   "id": "pk-tortle-ttp",
+   "name": "龜人",
+   "en": "Tortle",
+   "group": "龜人",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "str": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "原初語、通用語",
+   "skills": [
+    "survival"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "爪抓",
+     "desc": "你的利爪是一種天生武器，且你可以用它來進行徒手打擊。如果你以它們命中目標，則你造成等同1d4 + 你的力量調整值的揮砍傷害，而非一般徒手打擊的鈍擊傷害。"
+    },
+    {
+     "name": "屏息",
+     "desc": "你可以屏住你的呼吸長達1小時。龜人並非天生的游泳健將，但他們在需要浮出水面呼吸空氣之前，可以待在水中好一段時間。"
+    },
+    {
+     "name": "天生護甲",
+     "desc": "由於你的龜殼和你身體的形狀，你並不適合穿戴護甲。然而，你的龜殼將提供充足的防護；它使你的基礎AC變爲17（你的敏捷調整值並不會影響這個數字）。你無法獲得穿戴護甲的好處，但若你使用盾牌，你仍然可以正常應用盾牌的加值。"
+    },
+    {
+     "name": "龜殼防禦",
+     "desc": "你能夠以一個動作縮回殼內。直到你出殼，你的AC將獲得+4加值，且你在力量和體質豁免中具有優勢。當你躲在龜殼內時，你處於伏地狀態，你的移動速度歸零且無法被提升，你在敏捷豁免中具有劣勢，你無法採取反應，且你唯一能做的動作是以一個附贈動作從龜殼裏出來。"
+    },
+    {
+     "name": "生存本能",
+     "desc": "你熟練於生存技能。龜人磨練出了優秀的生存本能。"
+    }
+   ],
+   "blurb": "出自 TTP p.3",
+   "color": "#ff7ad9",
+   "look": {},
+   "packLabel": "TTP",
+   "untranslated": false
+  },
+  {
+   "id": "pk-zombie-dmg",
+   "name": "殭屍",
+   "en": "Zombie",
+   "group": "殭屍",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "str": 1,
+    "con": 2,
+    "int": -6,
+    "wis": -4,
+    "cha": -4
+   },
+   "asiChoice": null,
+   "languages": "",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "不死韌性",
+     "desc": "若傷害將你的生命值歸零，除非該傷害爲光耀傷害或來自重擊，否則你必須進行一次DC爲 5 + 所受傷害值的體質豁免。若豁免成功，則你改爲將生命值減少至1。"
+    },
+    {
+     "name": "不死本質",
+     "desc": "你免疫於毒素傷害和力竭狀態，且你不會陷入中毒狀態。你不再需要呼吸、進食、飲水、或睡眠。"
+    },
+    {
+     "name": "黑暗視覺",
+     "desc": "你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    }
+   ],
+   "blurb": "出自 DMG p.282",
+   "color": "#e9c46a",
+   "look": {
+    "skin": "#d8dde0"
+   },
+   "packLabel": "DMG",
+   "untranslated": false
+  },
+  {
+   "id": "pk-siren-psx",
+   "name": "賽壬",
+   "en": "Siren",
+   "group": "賽壬",
+   "size": "中型",
+   "speed": 25,
+   "darkvision": 0,
+   "asi": {
+    "cha": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "飛行 30 呎"
+    },
+    {
+     "name": "賽壬之歌",
+     "desc": "你知曉交友術戲法，且施放時無需任何材料構材。"
+    },
+    {
+     "name": "飛行",
+     "desc": "你擁有30尺的飛行速度。你不能在穿着中甲或重甲時使用你的飛行速度。（如果你的戰役使用了負重的變體規則，則你不能在你負載時使用你的飛行速度。）"
+    }
+   ],
+   "blurb": "出自 PSX p.17",
+   "color": "#e9c46a",
+   "look": {},
+   "packLabel": "PSX",
+   "untranslated": false
+  },
+  {
+   "id": "pk-orc-vgm",
+   "name": "獸人",
+   "en": "Orc",
+   "group": "獸人",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "str": 2,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、獸人語",
+   "skills": [],
+   "skillChoice": {
+    "count": 2,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "黑暗視覺",
+     "desc": "你在看距離你60尺範圍內的事物時，微光的照明程度對你而言視作明亮，黑暗則視作微光。 你無法辨別黑暗中的顏色，而只能看到灰黑的輪廓。"
+    },
+    {
+     "name": "侵略性",
+     "desc": "以一個附贈動作，你可以向一個你所能看見或聽見的敵意生物移動最多等同你移動速度的距離。你必須在比你開始移動時距離該敵人更近的位置結束此移動。"
+    },
+    {
+     "name": "兇惡",
+     "desc": "你熟練於威嚇技能。"
+    },
+    {
+     "name": "強健體格",
+     "desc": "當決定你的負重以及你可以拖曳、推動、或提舉的重量時，你將你的體型視作比原本大一級。"
+    }
+   ],
+   "blurb": "出自 VGM p.120",
+   "color": "#e9c46a",
+   "look": {
+    "tusks": true,
+    "skin": "#7f9c6a"
+   },
+   "packLabel": "VGM",
+   "untranslated": false
+  },
+  {
+   "id": "pk-aetherborn-psk",
+   "name": "Aetherborn",
+   "en": "",
+   "group": "Aetherborn",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2
+   },
+   "asiChoice": {
+    "count": 2,
+    "amount": 1,
+    "exclude": [
+     "cha"
+    ]
+   },
+   "languages": "通用語、任選 2 種",
+   "skills": [
+    "intimidation"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Darkvision",
+     "desc": "Thanks to your heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Born of Aether",
+     "desc": "You have resistance to necrotic damage."
+    },
+    {
+     "name": "Menacing",
+     "desc": "You have proficiency in the 威嚇 skill."
+    },
+    {
+     "name": "Gift of the Aetherborn",
+     "desc": "An unknown aetherborn, desperately seeking a means to extend their short life, discovered a process of transformation that prolonged their existence—by giving them the ability to feed on the life essence of other beings. Since then, other aetherborn have learned and carried out this monstrous transformation, and aetherborn with this \"gift\" have become a small minority among an already small population. A gifted aetherborn has the ability to drain the life essence of other beings. Similar to the way heat is transferred from a warm object to a cold one, a gifted aetherborn need only touch another living being with a clawed hand to draw life essence out, fueling their own continued existence while draining strength and vitality from their victim. For many aetherborn, living as they do for indulgence and instant gratification, the concepts of \"want\" and \"need\" are virtually synonymous. But Aetherborn with this gift understand what it is to truly need, for they develop a hunger for life essence that far exceeds any desires they might have felt before their transformation. A gifted aetherborn who abstains from this feeding deteriorates even more rapidly than other aetherborn, while enduring unspeakable agony caused by the deprivation of life energy. At the DM's option, an aetherborn character can research methods of achieving this dark \"gift.\" The process is similar to inventing and manufacturing a rare magic item (see \"Inventing and Manufacturing Devices\" earlier in this document). But rather than aether, the process requires a variety of rare unguents and unusual ingredients that make up the cost of researching and undergoing the transformation. An aetherborn with this gift gains the Drain Life ability: a natural attack that deals 1d6 necrotic damage and restores the same number of hit points to the aetherborn. However, if the aetherborn goes for 7 days without dealing this damage, their hit point maximum is reduced by 1d6 per week. This reduction can't be removed until the aetherborn has used their Drain Life ability and completed a long rest."
+    }
+   ],
+   "blurb": "出自 PSK p.17（原站未翻譯）",
+   "color": "#ff7ad9",
+   "look": {},
+   "packLabel": "PSK",
+   "untranslated": true
+  },
+  {
+   "id": "pk-aven-psd",
+   "name": "Aven",
+   "en": "",
+   "group": "Aven",
+   "size": "中型",
+   "speed": 25,
+   "darkvision": 0,
+   "asi": {
+    "dex": 2,
+    "wis": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [
+    "perception"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "飛行 30 呎"
+    },
+    {
+     "name": "Flight",
+     "desc": "You have a flying speed of 30 feet. You can't use your flying speed while you wear medium or heavy armor. (If your campaign uses the variant rule for encumbrance, you can't use your flying speed if you are encumbered.)"
+    },
+    {
+     "name": "Hawkeyed",
+     "desc": "You have proficiency in the 察覺 skill. In addition, attacking at long range doesn't impose disadvantage on your ranged weapon attack rolls."
+    }
+   ],
+   "blurb": "出自 PSD p.6（原站未翻譯）",
+   "color": "#ff9a5a",
+   "look": {},
+   "packLabel": "PSD",
+   "untranslated": true
+  },
+  {
+   "id": "pk-changeling-erlw",
+   "name": "Changeling",
+   "en": "",
+   "group": "Changeling",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "cha": 2
+   },
+   "asiChoice": {
+    "count": 1,
+    "amount": 1,
+    "exclude": [
+     "cha"
+    ]
+   },
+   "languages": "通用語、任選 2 種",
+   "skills": [],
+   "skillChoice": {
+    "count": 2,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "Shapechanger",
+     "desc": "As an action, you can change your appearance and your voice. You determine the specifics of the changes, including your coloration, hair length, and sex. You can also adjust your height and weight, but not so much that your size changes. You can make yourself appear as a member of another race, though none of your game statistics change. You can't duplicate the appearance of a creature you've never seen, and you must adopt a form that has the same basic arrangement of limbs that you have. Your clothing and equipment aren't changed by this trait. You stay in the new form until you use an action to revert to your true form or until you die."
+    },
+    {
+     "name": "Changeling Instincts",
+     "desc": "You gain proficiency with two of the following skills of your choice: 欺瞞, 洞悉, 威嚇, and 說服."
+    }
+   ],
+   "blurb": "出自 ERLW p.17（原站未翻譯）",
+   "color": "#ff7ad9",
+   "look": {},
+   "packLabel": "ERLW",
+   "untranslated": true
+  },
+  {
+   "id": "pk-dwarf-kaladesh-psk",
+   "name": "Dwarf (Kaladesh)",
+   "en": "",
+   "group": "Dwarf (Kaladesh)",
+   "size": "中型",
+   "speed": 25,
+   "darkvision": 60,
+   "asi": {
+    "con": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、矮人語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Speed",
+     "desc": "Your speed is not reduced by wearing heavy armor."
+    },
+    {
+     "name": "Darkvision",
+     "desc": "Accustomed to life underground in your race's ancient past, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Dwarven Resilience",
+     "desc": "You have advantage on saving throws against poison, and you have resistance against poison damage."
+    },
+    {
+     "name": "Dwarven Toughness",
+     "desc": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
+    },
+    {
+     "name": "Artisan's Expertise",
+     "desc": "You gain proficiency with two kinds of artisan's tools of your choice. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies. In addition, whenever you make an Intelligence（歷史）check related to the origin of any architectural construction (including buildings, public works such as canals and aqueducts, and the massive cogwork that underlies much of the construction of Ghirapur), you are considered proficient in the 歷史 skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
+    }
+   ],
+   "blurb": "出自 PSK p.19（原站未翻譯）",
+   "color": "#b388ff",
+   "look": {},
+   "packLabel": "PSK",
+   "untranslated": true
+  },
+  {
+   "id": "pk-goblin-ixalan-psx",
+   "name": "Goblin (Ixalan)",
+   "en": "",
+   "group": "Goblin (Ixalan)",
+   "size": "小型",
+   "speed": 25,
+   "darkvision": 60,
+   "asi": {
+    "dex": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、地精語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "攀爬 25 呎"
+    },
+    {
+     "name": "Agile Climber",
+     "desc": "You have a climbing speed of 25 feet. You can't use your climbing speed while you wear medium or heavy armor. (If your campaign uses the variant rule for encumbrance, you can't use your climbing speed if you are encumbered.)"
+    },
+    {
+     "name": "Darkvision",
+     "desc": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    }
+   ],
+   "blurb": "出自 PSX p.16（原站未翻譯）",
+   "color": "#7dffcf",
+   "look": {},
+   "packLabel": "PSX",
+   "untranslated": true
+  },
+  {
+   "id": "pk-grotag-tribe-psz",
+   "name": "Goblin (Zendikar)（Grotag Tribe）",
+   "en": "(Grotag Tribe)",
+   "group": "Goblin (Zendikar)",
+   "size": "小型",
+   "speed": 25,
+   "darkvision": 60,
+   "asi": {
+    "con": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、地精語",
+   "skills": [
+    "animal"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Darkvision",
+     "desc": "Thanks to your heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Grit",
+     "desc": "You have resistance to fire damage and psychic damage. In addition, when you are wearing no armor, your AC is equal to 11 + your Dexterity modifier."
+    },
+    {
+     "name": "Grotag Tamer",
+     "desc": "You have proficiency in the 馴獸 skill."
+    }
+   ],
+   "blurb": "出自 PSZ p.17（原站未翻譯）",
+   "color": "#ffd166",
+   "look": {},
+   "packLabel": "PSZ",
+   "untranslated": true
+  },
+  {
+   "id": "pk-lavastep-tribe-psz",
+   "name": "Goblin (Zendikar)（Lavastep Tribe）",
+   "en": "(Lavastep Tribe)",
+   "group": "Goblin (Zendikar)",
+   "size": "小型",
+   "speed": 25,
+   "darkvision": 60,
+   "asi": {
+    "con": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、地精語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Darkvision",
+     "desc": "Thanks to your heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Grit",
+     "desc": "You have resistance to fire damage and psychic damage. In addition, when you are wearing no armor, your AC is equal to 11 + your Dexterity modifier."
+    },
+    {
+     "name": "Lavastep Grit",
+     "desc": "You have advantage on Dexterity（隱匿）checks made to hide in rocky or subterranean environments."
+    }
+   ],
+   "blurb": "出自 PSZ p.17（原站未翻譯）",
+   "color": "#9be36d",
+   "look": {},
+   "packLabel": "PSZ",
+   "untranslated": true
+  },
+  {
+   "id": "pk-tuktuk-tribe-psz",
+   "name": "Goblin (Zendikar)（Tuktuk Tribe）",
+   "en": "(Tuktuk Tribe)",
+   "group": "Goblin (Zendikar)",
+   "size": "小型",
+   "speed": 25,
+   "darkvision": 60,
+   "asi": {
+    "con": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、地精語",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Darkvision",
+     "desc": "Thanks to your heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Grit",
+     "desc": "You have resistance to fire damage and psychic damage. In addition, when you are wearing no armor, your AC is equal to 11 + your Dexterity modifier."
+    },
+    {
+     "name": "Tuktuk Cunning",
+     "desc": "You have proficiency with 盜賊工具."
+    }
+   ],
+   "blurb": "出自 PSZ p.17（原站未翻譯）",
+   "color": "#5ad1ff",
+   "look": {},
+   "packLabel": "PSZ",
+   "untranslated": true
+  },
+  {
+   "id": "pk-human-ixalan-psx",
+   "name": "Human (Ixalan)",
+   "en": "",
+   "group": "Human (Ixalan)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "str": 1,
+    "dex": 1,
+    "con": 1,
+    "int": 1,
+    "wis": 1,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、任選 1 種",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [],
+   "blurb": "出自 PSX p.11（原站未翻譯）",
+   "color": "#ff9a5a",
+   "look": {},
+   "packLabel": "PSX",
+   "untranslated": true
+  },
+  {
+   "id": "pk-human-psz",
+   "name": "Human (Zendikar)",
+   "en": "Human",
+   "group": "Human (Zendikar)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "str": 2,
+    "dex": 2,
+    "con": 2,
+    "int": 2,
+    "wis": 2,
+    "cha": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、任選 1 種",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [],
+   "blurb": "出自 PSZ p.9（原站未翻譯）",
+   "color": "#7dffcf",
+   "look": {},
+   "packLabel": "PSZ",
+   "untranslated": true
+  },
+  {
+   "id": "pk-kalashtar-erlw",
+   "name": "Kalashtar",
+   "en": "",
+   "group": "Kalashtar",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "wis": 2,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他、任選 1 種",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Dual Mind",
+     "desc": "You have advantage on all Wisdom saving throws."
+    },
+    {
+     "name": "Mental Discipline",
+     "desc": "You have resistance to psychic damage."
+    },
+    {
+     "name": "Mind Link",
+     "desc": "You can speak telepathically to any creature you can see, provided the creature is within a number of feet of you equal to 10 times your level. You don't need to share a language with the creature for it to understand your telepathic utterances, but the creature must be able to understand at least one language. When you're using this trait to speak telepathically to a creature, you can use your action to give that creature the ability to speak telepathically with you for 1 hour or until you end this effect as an action. To use this ability, the creature must be able to see you and must be within this trait's range. You can give this ability to only one creature at a time; giving it to a creature takes it away from another creature who has it."
+    },
+    {
+     "name": "Severed from Dreams",
+     "desc": "Kalashtar sleep, but they don't connect to the plane of dreams as other creatures do. Instead, their minds draw from the memories of their otherworldly spirit while they sleep. As such, you are immune to spells and other magical effects that require you to dream, like 託夢術, but not to spells and other magical effects that put you to sleep, like 睡眠術."
+    }
+   ],
+   "blurb": "出自 ERLW p.29（原站未翻譯）",
+   "color": "#ff9a5a",
+   "look": {},
+   "packLabel": "ERLW",
+   "untranslated": true
+  },
+  {
+   "id": "pk-kor-psz",
+   "name": "Kor",
+   "en": "",
+   "group": "Kor",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "dex": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [
+    "athletics",
+    "acrobatics"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "攀爬 30 呎"
+    },
+    {
+     "name": "Brave",
+     "desc": "You have advantage on saving throws against being 恐懼."
+    },
+    {
+     "name": "Climbing",
+     "desc": "You also have a climbing speed of 30 feet as long as you are not encumbered or wearing heavy armor."
+    },
+    {
+     "name": "Kor Climbing",
+     "desc": "You have proficiency in the 運動 and 體操 skills."
+    },
+    {
+     "name": "Lucky",
+     "desc": "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll."
+    }
+   ],
+   "blurb": "出自 PSZ p.10（原站未翻譯）",
+   "color": "#ff7ad9",
+   "look": {},
+   "packLabel": "PSZ",
+   "untranslated": true
+  },
+  {
+   "id": "pk-leonin-mot",
+   "name": "Leonin",
+   "en": "",
+   "group": "Leonin",
+   "size": "中型",
+   "speed": 35,
+   "darkvision": 60,
+   "asi": {
+    "str": 1,
+    "con": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [],
+   "skillChoice": {
+    "count": 1,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "Darkvision",
+     "desc": "You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Claws",
+     "desc": "Your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you can deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike."
+    },
+    {
+     "name": "Hunter's Instincts",
+     "desc": "You have proficiency in one of the following skills of your choice: 運動, 威嚇, 察覺, or 生存."
+    },
+    {
+     "name": "Daunting Roar",
+     "desc": "As a bonus action, you can let out an especially menacing roar. Creatures of your choice within 10 feet of you that can hear you must succeed on a Wisdom saving throw or become 恐懼 of you until the end of your next turn. The DC of the save equals 8 + your proficiency bonus + your Constitution modifier. Once you use this trait, you can't use it again until you finish a short or long rest."
+    }
+   ],
+   "blurb": "出自 MOT p.20（原站未翻譯）",
+   "color": "#e9c46a",
+   "look": {},
+   "packLabel": "MOT",
+   "untranslated": true
+  },
+  {
+   "id": "pk-locathah-lr",
+   "name": "Locathah",
+   "en": "",
+   "group": "Locathah",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "str": 2,
+    "dex": 1
+   },
+   "asiChoice": null,
+   "languages": "水族語、通用語",
+   "skills": [
+    "athletics",
+    "perception"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "游泳 30 呎"
+    },
+    {
+     "name": "Natural Armor",
+     "desc": "You have tough, scaly skin. When you aren't wearing armor, your AC is 12 + your Dexterity modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal while you use your natural armor."
+    },
+    {
+     "name": "Observant & Athletic",
+     "desc": "You have proficiency in the 運動 and 察覺 skills."
+    },
+    {
+     "name": "Leviathan Will",
+     "desc": "You have advantage on saving throws against being 魅惑, 恐懼, 麻痹, 中毒, 震懾, or put to sleep."
+    },
+    {
+     "name": "Limited Amphibiousness",
+     "desc": "You can breathe air and water, but you need to be submerged at least once every 4 hours to avoid suffocating."
+    },
+    {
+     "name": "Language",
+     "desc": "You can speak, read, and write Aquan and Common."
+    }
+   ],
+   "blurb": "出自 LR p.24（原站未翻譯）",
+   "color": "#ffd166",
+   "look": {},
+   "packLabel": "LR",
+   "untranslated": true
+  },
+  {
+   "id": "pk-blue-psx",
+   "name": "Merfolk (Ixalan)（Blue）",
+   "en": "(Blue)",
+   "group": "Merfolk (Ixalan)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "cha": 1,
+    "int": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他、任選 1 種",
+   "skills": [
+    "history",
+    "nature"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "游泳 30 呎"
+    },
+    {
+     "name": "Amphibious",
+     "desc": "You can breathe air and water."
+    },
+    {
+     "name": "Swimming",
+     "desc": "You have a swimming speed of 30 feet."
+    },
+    {
+     "name": "Cantrip",
+     "desc": "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it."
+    },
+    {
+     "name": "Lore of the Waters",
+     "desc": "You gain proficiency in the 歷史 and 自然 skills."
+    }
+   ],
+   "blurb": "出自 PSX p.12（原站未翻譯）",
+   "color": "#b388ff",
+   "look": {},
+   "packLabel": "PSX",
+   "untranslated": true
+  },
+  {
+   "id": "pk-green-psx",
+   "name": "Merfolk (Ixalan)（Green）",
+   "en": "(Green)",
+   "group": "Merfolk (Ixalan)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "cha": 1,
+    "wis": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他、任選 1 種",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "游泳 30 呎"
+    },
+    {
+     "name": "Amphibious",
+     "desc": "You can breathe air and water."
+    },
+    {
+     "name": "Swimming",
+     "desc": "You have a swimming speed of 30 feet."
+    },
+    {
+     "name": "Cantrip",
+     "desc": "You know one cantrip of your choice from the druid spell list. Wisdom is your spellcasting ability for it."
+    },
+    {
+     "name": "Mask of the Wild",
+     "desc": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+    }
+   ],
+   "blurb": "出自 PSX p.12（原站未翻譯）",
+   "color": "#ff7ad9",
+   "look": {},
+   "packLabel": "PSX",
+   "untranslated": true
+  },
+  {
+   "id": "pk-cosi-creed-psz",
+   "name": "Merfolk (Zendikar)（Cosi Creed）",
+   "en": "(Cosi Creed)",
+   "group": "Merfolk (Zendikar)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "cha": 3,
+    "int": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他、任選 1 種",
+   "skills": [
+    "sleight",
+    "stealth"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "游泳 30 呎"
+    },
+    {
+     "name": "Amphibious",
+     "desc": "You can breathe air and water."
+    },
+    {
+     "name": "Swimming",
+     "desc": "You have a swimming speed of 30 feet."
+    },
+    {
+     "name": "Cantrip",
+     "desc": "You know one cantrip of your choice from the bard spell list. Charisma is your spellcasting ability for it."
+    },
+    {
+     "name": "Creed of the Trickster",
+     "desc": "You have proficiency in the 巧手 and 隱匿 skills."
+    }
+   ],
+   "blurb": "出自 PSZ p.13（原站未翻譯）",
+   "color": "#ff5a6e",
+   "look": {},
+   "packLabel": "PSZ",
+   "untranslated": true
+  },
+  {
+   "id": "pk-emeria-creed-psz",
+   "name": "Merfolk (Zendikar)（Emeria Creed）",
+   "en": "(Emeria Creed)",
+   "group": "Merfolk (Zendikar)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "cha": 1,
+    "wis": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他、任選 1 種",
+   "skills": [
+    "deception",
+    "persuasion"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "游泳 30 呎"
+    },
+    {
+     "name": "Amphibious",
+     "desc": "You can breathe air and water."
+    },
+    {
+     "name": "Swimming",
+     "desc": "You have a swimming speed of 30 feet."
+    },
+    {
+     "name": "Cantrip",
+     "desc": "You know one cantrip of your choice from the druid spell list. Wisdom is your spellcasting ability for it."
+    },
+    {
+     "name": "Wind Creed Manipulation",
+     "desc": "You have proficiency in the 欺瞞 and 說服 skills."
+    }
+   ],
+   "blurb": "出自 PSZ p.13（原站未翻譯）",
+   "color": "#e9c46a",
+   "look": {},
+   "packLabel": "PSZ",
+   "untranslated": true
+  },
+  {
+   "id": "pk-ula-creed-psz",
+   "name": "Merfolk (Zendikar)（Ula Creed）",
+   "en": "(Ula Creed)",
+   "group": "Merfolk (Zendikar)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "cha": 1,
+    "int": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他、任選 1 種",
+   "skills": [
+    "survival"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "移動方式",
+     "desc": "游泳 30 呎"
+    },
+    {
+     "name": "Amphibious",
+     "desc": "You can breathe air and water."
+    },
+    {
+     "name": "Swimming",
+     "desc": "You have a swimming speed of 30 feet."
+    },
+    {
+     "name": "Cantrip",
+     "desc": "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it."
+    },
+    {
+     "name": "Water Creed Navigation",
+     "desc": "You have proficiency with 領航工具 and in the 生存 skill."
+    }
+   ],
+   "blurb": "出自 PSZ p.13（原站未翻譯）",
+   "color": "#ff9a5a",
+   "look": {},
+   "packLabel": "PSZ",
+   "untranslated": true
+  },
+  {
+   "id": "pk-orc-ixalan-psx",
+   "name": "Orc (Ixalan)",
+   "en": "",
+   "group": "Orc (Ixalan)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "str": 2,
+    "con": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、獸人語",
+   "skills": [
+    "intimidation"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Menacing",
+     "desc": "You gain proficiency in the Intimidation skill."
+    },
+    {
+     "name": "Relentless Endurance",
+     "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest."
+    },
+    {
+     "name": "Savage Attacks",
+     "desc": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit."
+    },
+    {
+     "name": "Darkvision",
+     "desc": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    }
+   ],
+   "blurb": "出自 PSX p.15（原站未翻譯）",
+   "color": "#ff9a5a",
+   "look": {},
+   "packLabel": "PSX",
+   "untranslated": true
+  },
+  {
+   "id": "pk-satyr-mot",
+   "name": "Satyr",
+   "en": "",
+   "group": "Satyr",
+   "size": "中型",
+   "speed": 35,
+   "darkvision": 0,
+   "asi": {
+    "cha": 2,
+    "dex": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、木族語",
+   "skills": [
+    "performance",
+    "persuasion"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Fey",
+     "desc": "Your creature type is fey, rather than humanoid."
+    },
+    {
+     "name": "Ram",
+     "desc": "You can use your head and horns to make unarmed strikes. If you hit with them, you deal bludgeoning damage equal to 1d4 + your Strength modifier."
+    },
+    {
+     "name": "Magic Resistance",
+     "desc": "You have advantage on saving throws against spells and other magical effects."
+    },
+    {
+     "name": "Mirthful Leaps",
+     "desc": "Whenever you make a long or high jump, you can roll a d8 and add the number rolled to the number of feet you cover, even when making a standing jump. This extra distance costs movement as normal."
+    },
+    {
+     "name": "Reveler",
+     "desc": "You have proficiency in the 表演 and 說服 skills, and you have proficiency with one musical instrument of your choice."
+    }
+   ],
+   "blurb": "出自 MOT p.24（原站未翻譯）",
+   "color": "#ffd166",
+   "look": {},
+   "packLabel": "MOT",
+   "untranslated": true
+  },
+  {
+   "id": "pk-beasthide-erlw",
+   "name": "Shifter（Beasthide）",
+   "en": "(Beasthide)",
+   "group": "Shifter",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "con": 2,
+    "str": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語",
+   "skills": [
+    "athletics"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Speed",
+     "desc": "Your base walking speed is 30 feet."
+    },
+    {
+     "name": "Darkvision",
+     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Shifting",
+     "desc": "As a bonus action, you can assume a more bestial appearance. This transformation lasts for 1 minute, until you die, or until you revert to your normal appearance as a bonus action. When you shift, you gain temporary hit points equal to your level + your Constitution modifier (minimum of 1 temporary hit point). You also gain additional benefits that depend on your shifter subrace, described below. Once you shift, you can't do so again until you finish a short or long rest."
+    },
+    {
+     "name": "Natural Athlete",
+     "desc": "You have proficiency in the 運動 skill."
+    },
+    {
+     "name": "Shifting Feature",
+     "desc": "Whenever you shift, you gain 1d6 additional temporary hit points. While shifted, you have a +1 bonus to your Armor Class."
+    }
+   ],
+   "blurb": "出自 ERLW p.34（原站未翻譯）",
+   "color": "#9be36d",
+   "look": {},
+   "packLabel": "ERLW",
+   "untranslated": true
+  },
+  {
+   "id": "pk-longtooth-erlw",
+   "name": "Shifter（Longtooth）",
+   "en": "(Longtooth)",
+   "group": "Shifter",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "str": 2,
+    "dex": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語",
+   "skills": [
+    "intimidation"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Speed",
+     "desc": "Your base walking speed is 30 feet."
+    },
+    {
+     "name": "Darkvision",
+     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Shifting",
+     "desc": "As a bonus action, you can assume a more bestial appearance. This transformation lasts for 1 minute, until you die, or until you revert to your normal appearance as a bonus action. When you shift, you gain temporary hit points equal to your level + your Constitution modifier (minimum of 1 temporary hit point). You also gain additional benefits that depend on your shifter subrace, described below. Once you shift, you can't do so again until you finish a short or long rest."
+    },
+    {
+     "name": "Fierce",
+     "desc": "You have proficiency in the 威嚇 skill."
+    },
+    {
+     "name": "Shifting Feature",
+     "desc": "While shifted, you can use your elongated fangs to make an unarmed strike as a bonus action. If you hit with your fangs, you can deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike."
+    }
+   ],
+   "blurb": "出自 ERLW p.34（原站未翻譯）",
+   "color": "#5ad1ff",
+   "look": {},
+   "packLabel": "ERLW",
+   "untranslated": true
+  },
+  {
+   "id": "pk-swiftstride-erlw",
+   "name": "Shifter（Swiftstride）",
+   "en": "(Swiftstride)",
+   "group": "Shifter",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "dex": 2,
+    "cha": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語",
+   "skills": [
+    "acrobatics"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Speed",
+     "desc": "Your base walking speed is 30 feet."
+    },
+    {
+     "name": "Darkvision",
+     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Shifting",
+     "desc": "As a bonus action, you can assume a more bestial appearance. This transformation lasts for 1 minute, until you die, or until you revert to your normal appearance as a bonus action. When you shift, you gain temporary hit points equal to your level + your Constitution modifier (minimum of 1 temporary hit point). You also gain additional benefits that depend on your shifter subrace, described below. Once you shift, you can't do so again until you finish a short or long rest."
+    },
+    {
+     "name": "Graceful",
+     "desc": "You have proficiency in the 體操 skill."
+    },
+    {
+     "name": "Shifting Feature",
+     "desc": "While shifted, your walking speed increases by 10 feet. Additionally, you can move up to 10 feet as a reaction when a creature ends its turn within 5 feet of you. This reactive movement doesn't provoke opportunity attacks."
+    }
+   ],
+   "blurb": "出自 ERLW p.34（原站未翻譯）",
+   "color": "#b388ff",
+   "look": {},
+   "packLabel": "ERLW",
+   "untranslated": true
+  },
+  {
+   "id": "pk-wildhunt-erlw",
+   "name": "Shifter（Wildhunt）",
+   "en": "(Wildhunt)",
+   "group": "Shifter",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "wis": 2,
+    "dex": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語",
+   "skills": [
+    "survival"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Speed",
+     "desc": "Your base walking speed is 30 feet."
+    },
+    {
+     "name": "Darkvision",
+     "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Shifting",
+     "desc": "As a bonus action, you can assume a more bestial appearance. This transformation lasts for 1 minute, until you die, or until you revert to your normal appearance as a bonus action. When you shift, you gain temporary hit points equal to your level + your Constitution modifier (minimum of 1 temporary hit point). You also gain additional benefits that depend on your shifter subrace, described below. Once you shift, you can't do so again until you finish a short or long rest."
+    },
+    {
+     "name": "Natural Tracker",
+     "desc": "You have proficiency in the 生存 skill."
+    },
+    {
+     "name": "Shifting Feature",
+     "desc": "While shifted, you have advantage on Wisdom checks, and no creature within 30 feet of you can make an attack roll with advantage against you, unless you're 無力."
+    }
+   ],
+   "blurb": "出自 ERLW p.34（原站未翻譯）",
+   "color": "#ff7ad9",
+   "look": {},
+   "packLabel": "ERLW",
+   "untranslated": true
+  },
+  {
+   "id": "pk-vampire-ixalan-psx",
+   "name": "Vampire (Ixalan)",
+   "en": "",
+   "group": "Vampire (Ixalan)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "cha": 2,
+    "wis": 1
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Bloodthirst",
+     "desc": "You can drain blood and life energy from a willing creature, or one that is 被擒 by you, 無力, or 束縛. Make a melee attack against the target. If you hit, you deal 1 piercing damage and 1d6 necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and you regain hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces it's hit point maximum to 0."
+    },
+    {
+     "name": "Feast of Blood",
+     "desc": "When you drain blood with your Bloodthirst ability, you experience a surge of vitality. Your speed increases by 10 feet, and you gain advantage on Strength and Dexterity checks and saving throws for 1 minute."
+    },
+    {
+     "name": "Vampiric Resistance",
+     "desc": "You have resistance to necrotic damage."
+    },
+    {
+     "name": "Darkvision",
+     "desc": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    }
+   ],
+   "blurb": "出自 PSX p.14（原站未翻譯）",
+   "color": "#7dffcf",
+   "look": {},
+   "packLabel": "PSX",
+   "untranslated": true
+  },
+  {
+   "id": "pk-vampire-zendikar-psz",
+   "name": "Vampire (Zendikar)",
+   "en": "",
+   "group": "Vampire (Zendikar)",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 60,
+   "asi": {
+    "int": 1,
+    "cha": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、其他",
+   "skills": [],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Blood Thirst",
+     "desc": "You can drain blood and life energy from a willing creature, or one that is 被擒 by you, 無力, or 束縛. Make a melee attack against the target. If you hit, you deal 1 piercing damage and 1d6 necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and you regain hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. A humanoid killed in this way becomes a zombie."
+    },
+    {
+     "name": "Darkvision",
+     "desc": "Thanks to your heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+    },
+    {
+     "name": "Vampiric Resistance",
+     "desc": "You have resistance to necrotic damage."
+    }
+   ],
+   "blurb": "出自 PSZ p.14（原站未翻譯）",
+   "color": "#ffd166",
+   "look": {},
+   "packLabel": "PSZ",
+   "untranslated": true
+  },
+  {
+   "id": "pk-verdan-ai",
+   "name": "Verdan",
+   "en": "",
+   "group": "Verdan",
+   "size": "V",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "con": 1,
+    "cha": 2
+   },
+   "asiChoice": null,
+   "languages": "通用語、地精語、任選 1 種",
+   "skills": [
+    "persuasion"
+   ],
+   "skillChoice": null,
+   "traits": [
+    {
+     "name": "Black Blood Healing",
+     "desc": "The black blood that is a sign of your people's connection to That-Which-Endures boosts your natural healing. When you roll a 1 or 2 on any Hit Die you spend at the end of a short rest, you can reroll the die and must use the new roll."
+    },
+    {
+     "name": "Limited Telepathy",
+     "desc": "You can telepathically speak to any creature you can see within 30 feet of you. You don't need to share a language with the creature for it to understand your telepathy, but it must be able to understand at least one language. This process of communication is slow and limited, allowing you to transmit and receive only simple ideas and straightforward concepts."
+    },
+    {
+     "name": "Persuasive",
+     "desc": "Your people's lack of history makes you trustworthy and humble. You have proficiency in the 說服 skill."
+    },
+    {
+     "name": "Telepathic Insight",
+     "desc": "Your mind's connection to the world around you strengthens your will. You have advantage on all Wisdom and Charisma saving throws."
+    },
+    {
+     "name": "Language",
+     "desc": "You speak, read, and write Common, Goblin, and one additional language of your choice. This language typically has some connection to one of the areas or cultures that has been part of your life."
+    }
+   ],
+   "blurb": "出自 AI p.72（原站未翻譯）",
+   "color": "#b388ff",
+   "look": {},
+   "packLabel": "AI",
+   "untranslated": true
+  },
+  {
+   "id": "pk-warforged-erlw",
+   "name": "Warforged",
+   "en": "",
+   "group": "Warforged",
+   "size": "中型",
+   "speed": 30,
+   "darkvision": 0,
+   "asi": {
+    "con": 2
+   },
+   "asiChoice": {
+    "count": 1,
+    "amount": 1,
+    "exclude": [
+     "con"
+    ]
+   },
+   "languages": "通用語、任選 1 種",
+   "skills": [],
+   "skillChoice": {
+    "count": 2,
+    "list": "any"
+   },
+   "traits": [
+    {
+     "name": "Constructed Resilience",
+     "desc": "You were created to have remarkable fortitude, represented by the following benefits: ・You have advantage on saving throws against being 中毒, and you have resistance to poison damage. ・You don't need to eat, drink, or breathe. ・You are immune to disease. ・You don't need to sleep, and magic can't put you to sleep."
+    },
+    {
+     "name": "Sentry's Rest",
+     "desc": "When you take a long rest, you must spend at least six hours in an inactive, motionless state, rather than sleeping. In this state, you appear inert, but it doesn't render you 昏迷, and you can see and hear as normal."
+    },
+    {
+     "name": "Integrated Protection",
+     "desc": "Your body has built-in defensive layers, which can be enhanced with armor: ・You gain a +1 bonus to Armor Class. ・You can don only armor with which you have proficiency. To don armor other than a shield, you must incorporate it into your body over the course of 1 hour, during which you remain in contact with the armor. To doff armor, you must spend 1 hour removing it. You can rest while donning or doffing armor in this way. ・While you live, the armor incorporated into your body can't be removed against your will."
+    },
+    {
+     "name": "Specialized Design",
+     "desc": "You gain one skill proficiency and one tool proficiency of your choice."
+    }
+   ],
+   "blurb": "出自 ERLW p.35（原站未翻譯）",
+   "color": "#ff7ad9",
+   "look": {},
+   "packLabel": "ERLW",
+   "untranslated": true
+  }
+ ],
+ "spells": []
+}
