@@ -64,7 +64,7 @@ function raceForm() {
     </div>
     <div style="display:flex;gap:8px;margin-top:14px"><button type="button" class="toggle" data-w="preview" style="flex:1">👁 預覽外觀</button><button type="submit" class="big-btn gold" style="flex:2">${r.id ? '儲存變更' : '建立種族'}</button></div>
   </form>
-  <div class="ws-list"><div class="sec">已建立的種族</div>${custom.races.length ? custom.races.map((x) => `<div class="ws-item"><span class="swatch" style="background:${x.color || '#ff7ad9'};width:14px;height:14px"></span><div class="nm"><b>${esc(x.name)}</b><small>${Object.entries(x.asi || {}).filter(([, v]) => v).map(([k, v]) => `${ABILITIES.find((a) => a.id === k).name}${v > 0 ? '+' : ''}${v}`).join(' ')}</small></div><button data-w="editRace" data-id="${esc(x.id)}">編輯</button><button class="del" data-w="delRace" data-id="${esc(x.id)}">刪除</button></div>`).join('') : '<div class="muted" style="font-size:13px">尚無自訂種族</div>'}
+  <div class="ws-list"><div class="sec">已建立的種族</div>${custom.races.some((x) => !x.packLabel) ? custom.races.filter((x) => !x.packLabel).map((x) => `<div class="ws-item"><span class="swatch" style="background:${x.color || '#ff7ad9'};width:14px;height:14px"></span><div class="nm"><b>${esc(x.name)}</b><small>${Object.entries(x.asi || {}).filter(([, v]) => v).map(([k, v]) => `${ABILITIES.find((a) => a.id === k).name}${v > 0 ? '+' : ''}${v}`).join(' ')}</small></div><button data-w="editRace" data-id="${esc(x.id)}">編輯</button><button class="del" data-w="delRace" data-id="${esc(x.id)}">刪除</button></div>`).join('') : '<div class="muted" style="font-size:13px">尚無自訂種族</div>'}
     <div class="note">建立後會出現在「種族」步驟的列表中，並套用你設定的 3D 外觀預設。</div></div></div>`;
 }
 
@@ -96,8 +96,10 @@ function spellForm() {
 }
 
 function packView() {
-  return `<div class="grid c2" style="gap:16px">
-    <div class="detail"><h3>匯出內容包</h3><p class="muted" style="font-size:13px">目前有 ${custom.races.length} 個自訂種族、${custom.spells.length} 道自訂法術。匯出後傳給團員，對方匯入即可使用相同的自訂內容。</p>
+  const packRaces = custom.races.filter((x) => x.packLabel).length;
+  return `${packRaces ? `<div class="note" style="display:flex;align-items:center;gap:10px">已匯入擴充包種族 ${packRaces} 個（在種族頁可用「擴充包」篩選）。<button class="toggle" data-w="clearPack" style="margin-left:auto">移除擴充包種族</button></div>` : ''}
+  <div class="grid c2" style="gap:16px">
+    <div class="detail"><h3>匯出內容包</h3><p class="muted" style="font-size:13px">目前有 ${custom.races.filter((x) => !x.packLabel).length} 個自訂種族、${custom.spells.length} 道自訂法術。匯出後傳給團員，對方匯入即可使用相同的自訂內容。</p>
       <button class="big-btn" data-w="exportPack">下載內容包 JSON</button>
       <button class="toggle" data-w="copyPack" style="width:100%;margin-top:8px">複製內容包分享碼</button></div>
     <div class="detail"><h3>匯入內容包</h3><p class="muted" style="font-size:13px">支援 JSON 檔或分享碼。相同 ID 的項目會被覆蓋更新。</p>
@@ -178,6 +180,7 @@ function bind(box) {
       if (key === 'spells') update((s) => { s.spells = s.spells.filter((x) => x !== b.dataset.id); s.cantrips = s.cantrips.filter((x) => x !== b.dataset.id); });
       saveCustom(); sfx.click(); render();
     }
+    if (w === 'clearPack') { if (!b.dataset.armed) { b.dataset.armed = '1'; b.textContent = '再按一次確認'; return; } custom.races = custom.races.filter((x) => !x.packLabel); if (custom.races.every((x) => x.id !== state.raceId) && state.raceId.startsWith('pk-')) update((st) => { st.raceId = 'human'; }); saveCustom(); toast('已移除擴充包種族'); render(); }
     if (w === 'exportPack') downloadJSON('dndforge-homebrew-pack.json', { type: 'dndforge-pack', version: 1, races: custom.races, spells: custom.spells });
     if (w === 'copyPack') { const code = await encodeShare({ races: custom.races, spells: custom.spells }); try { await navigator.clipboard.writeText(code); toast('分享碼已複製'); } catch { box.querySelector('#packCode').value = code; toast('請手動複製下方分享碼'); } }
     if (w === 'importFile') box.querySelector('#packFile').click();

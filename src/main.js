@@ -99,6 +99,7 @@ const STEPS = [
 let stepIdx = 0;
 let lookTab = 'base';
 let spellFilter = { lv: 0, q: '', school: '' };
+let raceFilter = { q: '', src: 'all' };
 let poolPick = null; // 標準數組 / 擲骰：目前選中的數值索引
 let rolling = false;
 
@@ -167,12 +168,21 @@ const RACE_COLORS = { human: '#e9c46a', 'high-elf': '#7dffcf', 'hill-dwarf': '#f
 
 const RENDER = {
   race() {
-    const races = allRaces(); const d = derive(); const r = d.race;
-    let h = `<div class="sec">血脈 <small>${races.length} 種</small></div><div class="grid c3">`;
+    const all = allRaces(); const d = derive(); const r = d.race;
+    const q = raceFilter.q.trim().toLowerCase();
+    const kind = (x) => (!x.custom ? 'core' : x.packLabel ? 'pack' : 'custom');
+    const races = all.filter((x) => (raceFilter.src === 'all' || kind(x) === raceFilter.src) && (!q || x.name.toLowerCase().includes(q) || (x.en || '').toLowerCase().includes(q) || (x.group || '').includes(q)));
+    const counts = { all: all.length, core: all.filter((x) => kind(x) === 'core').length, pack: all.filter((x) => kind(x) === 'pack').length, custom: all.filter((x) => kind(x) === 'custom').length };
+    let h = `<div class="sec">血脈 <small>${races.length} / ${all.length} 種</small></div>`;
+    if (all.length > 12) {
+      h += `<div style="display:flex;gap:6px;margin-bottom:8px"><input class="inp" placeholder="搜尋種族（中文或英文）…" data-input="rq" value="${esc(raceFilter.q)}" style="flex:1" /></div>
+        <div class="spell-filters">${[['all', '全部'], ['core', '核心 SRD'], ['pack', '擴充包'], ['custom', '自訂']].filter(([k]) => k === 'all' || counts[k]).map(([k, n]) => `<button class="toggle ${raceFilter.src === k ? 'on' : ''}" data-act="raceSrc" data-id="${k}">${n} ${counts[k]}</button>`).join('')}</div>`;
+    }
+    h += `<div class="grid c3">`;
     for (const x of races) {
       const c = hexRgb(x.color || RACE_COLORS[x.id] || '#ff7ad9');
       h += `<button class="card ${x.id === state.raceId ? 'sel' : ''}" style="--c:${c}" data-act="race" data-id="${esc(x.id)}">
-        ${x.custom ? '<span class="badge">自訂</span>' : ''}
+        ${x.custom ? `<span class="badge">${esc(x.packLabel || '自訂')}</span>` : ''}
         <div class="card-glyph">${esc(x.name[0])}</div><div class="card-name">${esc(x.name)}</div><div class="card-en">${esc(x.en || '')}</div>
         <div class="chips">${asiChips(x)}</div></button>`;
     }
@@ -653,6 +663,7 @@ const ACT = {
   spell(el, ev) { toggleSpell('spells', el, ev, derive().magic.spells); },
   raceCantrip(el, ev) { toggleSpell('raceCantrips', el, ev, getRace(state.raceId).bonusCantrip.count); },
   preview(el, ev) { ev.stopPropagation(); stage.castSpell(el.dataset.color); sfx.cast(); },
+  raceSrc(el) { raceFilter.src = el.dataset.id; sfx.click(); renderPanel(); },
   sfLv(el) { spellFilter.lv = Number(el.dataset.id); sfx.click(); renderPanel(); },
   lookTab(el) { lookTab = el.dataset.id; sfx.click(); stage.focus(lookCam()); renderPanel(); },
   lookSet(el) {
@@ -749,6 +760,7 @@ panel.addEventListener('input', (ev) => {
   if (k === 'trait') { update((s) => { s.traits[el.dataset.key] = el.value; }, { silent: true }); return; }
   if (k === 'player') { update((s) => { s.player = el.value; }, { silent: true }); return; }
   if (k === 'name') { update((s) => { s.name = el.value; }, { silent: true }); renderHUD(); renderNav(); return; }
+  if (k === 'rq') { raceFilter.q = el.value; const pos = el.selectionStart; renderPanel(); const ni = panel.querySelector('[data-input=rq]'); ni.focus(); ni.setSelectionRange(pos, pos); return; }
   if (k === 'sq') { spellFilter.q = el.value; const pos = el.selectionStart; renderPanel(); const ni = panel.querySelector('[data-input=sq]'); ni.focus(); ni.setSelectionRange(pos, pos); return; }
   if (k === 'school') { spellFilter.school = el.value; renderPanel(); }
 });
