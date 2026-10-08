@@ -229,10 +229,10 @@ const RENDER = {
     for (const x of CLASSES) {
       h += `<button class="card ${x.id === state.classId ? 'sel' : ''}" style="--c:${hexRgb(x.color)}" data-act="class" data-id="${x.id}">
         <div class="card-glyph">${x.name[0]}</div><div class="card-name">${x.name}</div><div class="card-en">${x.en}</div>
-        <div class="chips"><span class="chip">d${x.hd}</span>${x.caster ? '<span class="chip acc">施法</span>' : ''}</div></button>`;
+        <div class="chips"><span class="chip">d${x.hd}</span>${x.caster ? '<span class="chip acc">施法</span>' : ''}${x.beta ? '<span class="chip gold">UA</span>' : ''}</div></button>`;
     }
     h += `</div><div class="detail"><h3>${c.name} <small class="muted" style="font-family:var(--display);font-size:12px;letter-spacing:2px">${c.en}</small></h3>
-      <p class="blurb">「${c.blurb}」</p>
+      <p class="blurb">「${c.blurb}」</p>${c.beta ? `<div class="note">試玩版職業（${c.beta}），正式出版時規則可能變動。</div>` : ''}
       <div class="stat-row"><div class="stat"><b>d${c.hd}</b><span>生命骰</span></div><div class="stat"><b>${d.hp}</b><span>最大生命</span></div><div class="stat"><b>${c.primary.map(abName).join('/')}</b><span>主屬性</span></div></div>
       <ul class="traits">
         <li><b>豁免</b>${c.saves.map(abName).join('、')}</li>
@@ -552,7 +552,7 @@ const CLASS_PALETTE = {
   barbarian: ['#5a2a1e', '#c9a24a'], bard: ['#7a2a5a', '#e9c46a'], cleric: ['#d6ccb0', '#c9a24a'], druid: ['#2f5a34', '#9be36d'],
   fighter: ['#2b3a67', '#c9a24a'], monk: ['#c46a2b', '#3a2a22'], paladin: ['#34467a', '#e9c46a'], ranger: ['#3a4a2a', '#8a6a3a'],
   rogue: ['#22202e', '#b388ff'], sorcerer: ['#5a1e2e', '#ff6a3d'], warlock: ['#24183a', '#a46bff'], wizard: ['#1b1f3a', '#e9c46a'],
-  artificer: ['#4a3626', '#ffa94d'],
+  artificer: ['#4a3626', '#ffa94d'], psion: ['#2a1e3f', '#ff5ca8'],
 };
 function applyRaceLook(L, race, prevRace) {
   const rl = race.look || {};

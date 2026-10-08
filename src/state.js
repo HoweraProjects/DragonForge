@@ -150,6 +150,7 @@ export function derive(s = state) {
     const cantrips = c.cantrips ? c.cantrips[s.level - 1] : 0;
     let spells = 0; let label = '已知法術';
     if (c.known) spells = c.known[s.level - 1];
+    else if (c.preparedTable) { spells = c.preparedTable[s.level - 1]; label = '準備法術'; }
     else if (c.spellbook) { spells = 6 + 2 * (s.level - 1); label = '法術書'; }
     else if (c.prepared === 'full') { spells = Math.max(1, abM + s.level); label = '準備法術'; }
     else if (c.prepared === 'half') { spells = s.level < 2 ? 0 : Math.max(1, abM + Math.floor(s.level / 2)); label = '準備法術'; }

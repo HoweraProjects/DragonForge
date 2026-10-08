@@ -218,7 +218,7 @@ export class VRMAvatar {
     if (L.tail !== 'none') { const t = new THREE.Group(); t.scale.setScalar(0.85); hips.add(t); buildTail(t, LL, M, this.anim); }
     const spine = this.adapter('spine'); spine.position.set(0, -0.04, 0);
     if (L.wings !== 'none') { const w = new THREE.Group(); w.position.y = 0.06; w.scale.setScalar(0.85); spine.add(w); buildWings(w, LL, M, this.anim); }
-    if (L.cape && L.wings === 'none' && ['plate', 'ranger', 'rogue', 'warlock', 'sorcerer', 'bard'].includes(cls.outfit)) {
+    if (L.cape && L.wings === 'none' && ['plate', 'ranger', 'rogue', 'warlock', 'sorcerer', 'bard', 'psion'].includes(cls.outfit)) {
       const cg = new THREE.PlaneGeometry(0.4, 0.95, 8, 14); cg.translate(0, -0.475, 0);
       const cape = mesh(cg, toon(cls.outfit === 'plate' ? o2 : new THREE.Color(o1).multiplyScalar(0.6), { side: THREE.DoubleSide }));
       const up = this.adapter('upperChest' in this.body.humanoid.humanBones && this.bone('upperChest') ? 'upperChest' : 'chest');

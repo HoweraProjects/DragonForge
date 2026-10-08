@@ -232,7 +232,7 @@ export function buildAvatar(look, ctx) {
   }
 
   // 披風
-  if (L.cape && L.wings === 'none' && ['plate', 'ranger', 'rogue', 'warlock', 'sorcerer', 'bard'].includes(outfit)) {
+  if (L.cape && L.wings === 'none' && ['plate', 'ranger', 'rogue', 'warlock', 'sorcerer', 'bard', 'psion'].includes(outfit)) {
     const cg = new THREE.PlaneGeometry(shoulderW * 2.3, 1.05, 8, 14);
     cg.translate(0, -0.525, 0);
     const capeMat = toon(outfit === 'plate' ? L.outfit2 : new THREE.Color(L.outfit1).multiplyScalar(0.6), { side: THREE.DoubleSide });
@@ -568,6 +568,20 @@ export function buildWeapon(rig, type, L, M, anim) {
     const ring = mesh(new THREE.TorusGeometry(0.1, 0.006, 4, 32), M.steelM); gear.add(ring);
     drone.add(gear); anim.floaters.push({ o: gear, spin: -1.2, axis: 'z' });
     rig.spine.add(drone); anim.floaters.push({ o: drone, base: 0.42, amp: 0.025 });
+  } else if (type === 'psi') {
+    // 頭頂環繞的心靈晶體 + 雙手間懸浮的念力碎石
+    const crown = new THREE.Group(); crown.position.set(0, 0.62, 0);
+    for (let i = 0; i < 5; i++) {
+      const a = (i / 5) * Math.PI * 2;
+      const c = new THREE.Mesh(new THREE.OctahedronGeometry(0.035), glow(aura, 3.5)); c.scale.y = 1.8; c.position.set(Math.cos(a) * 0.2, 0, Math.sin(a) * 0.2); crown.add(c);
+    }
+    rig.spine.add(crown); anim.floaters.push({ o: crown, base: 0.62, amp: 0.015 }, { o: crown, spin: 0.9, axis: 'y' });
+    for (const [h, s] of [[hand, 1], [handL, -1]]) {
+      const rocks = new THREE.Group(); rocks.position.set(0, -0.14, 0.04);
+      for (let i = 0; i < 3; i++) { const r = mesh(new THREE.DodecahedronGeometry(0.022 + i * 0.006, 0), M.steelM); r.position.set(Math.cos(i * 2.1) * 0.07, i * 0.03, Math.sin(i * 2.1) * 0.07); rocks.add(r); }
+      const halo = new THREE.Mesh(new THREE.TorusGeometry(0.08, 0.003, 4, 32), glow(aura, 2.5)); halo.rotation.x = Math.PI / 2; rocks.add(halo);
+      h.add(rocks); anim.floaters.push({ o: rocks, spin: s * 1.3, axis: 'y' });
+    }
   } else if (type === 'fists') {
     for (const h of [hand, handL]) {
       const wrap = new THREE.Mesh(new THREE.TorusGeometry(0.05, 0.008, 6, 20), glow(aura, 3)); wrap.rotation.x = Math.PI / 2; wrap.position.y = 0.0; h.add(wrap);
@@ -595,6 +609,7 @@ export const POSES = {
   lute: { shoulderR: [D(-30), D(10), D(8)], elbowR: [D(-70), D(30), D(20)], shoulderL: [D(-45), 0, D(-30)], elbowL: [D(-60), 0, D(40)] },
   tome: { shoulderL: [D(-35), 0, D(-14)], elbowL: [D(-75), 0, D(15)], shoulderR: [D(-5), 0, D(10)], elbowR: [D(-20), 0, 0] },
   gadget: { shoulderR: [D(-15), 0, D(14)], elbowR: [D(-60), 0, 0], shoulderL: [D(-20), 0, D(-16)], elbowL: [D(-45), 0, D(10)] },
+  psi: { shoulderR: [D(-25), 0, D(28)], elbowR: [D(-60), 0, D(-10)], shoulderL: [D(-25), 0, D(-28)], elbowL: [D(-60), 0, D(10)], head: [D(-4), 0, 0] },
   fists: { shoulderR: [D(-45), 0, D(20)], elbowR: [D(-100), 0, 0], shoulderL: [D(-55), 0, D(-20)], elbowL: [D(-110), 0, 0], thighL: [D(-15), 0, D(-10)], thighR: [D(10), 0, D(10)], kneeL: [D(15), 0, 0], kneeR: [D(10), 0, 0] },
   none: {},
   // 動作
@@ -679,7 +694,7 @@ export function buildHeadwear(headPivot, hr, L, cls, M) {
   const { skinM, hairM, hornM, goldM, steelM } = M;
   // 頭飾
   let hw = L.headwear;
-  if (hw === 'auto') hw = { wizard: 'wizardHat', rogue: 'hood', ranger: 'hood', cleric: 'circlet', warlock: 'horns-circlet' }[cls.id] || 'none';
+  if (hw === 'auto') hw = { wizard: 'wizardHat', rogue: 'hood', ranger: 'hood', cleric: 'circlet', warlock: 'horns-circlet', psion: 'circlet' }[cls.id] || 'none';
   if (hw === 'wizardHat') {
     const brim = mesh(new THREE.CylinderGeometry(hr * 2.0, hr * 2.0, hr * 0.06, 36), toon(L.outfit1)); brim.position.y = hr * 0.78; brim.rotation.x = -0.08; headPivot.add(brim);
     const curve = new THREE.CatmullRomCurve3([new THREE.Vector3(0, 0, 0), new THREE.Vector3(0, hr * 0.9, -hr * 0.1), new THREE.Vector3(0, hr * 1.6, -hr * 0.5), new THREE.Vector3(hr * 0.2, hr * 1.9, -hr * 1.0)]);

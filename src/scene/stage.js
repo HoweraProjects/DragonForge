@@ -431,7 +431,7 @@ export class Stage {
     anim.wings.forEach(({ g, s }) => { g.rotation.y = s * (0.55 + Math.sin(t * 1.5) * 0.18); g.rotation.z = s * Math.sin(t * 1.5) * 0.05; });
     anim.floaters.forEach((f) => {
       if (f.base != null) f.o.position.y = f.base + Math.sin(t * 2) * f.amp;
-      if (f.spin) { if (f.axis === 'z') f.o.rotation.z += 0.016 * f.spin; else { f.o.rotation.x += 0.012 * f.spin; f.o.rotation.y += 0.016 * f.spin; } }
+      if (f.spin) { if (f.axis === 'z') f.o.rotation.z += 0.016 * f.spin; else if (f.axis === 'y') f.o.rotation.y += 0.016 * f.spin; else { f.o.rotation.x += 0.012 * f.spin; f.o.rotation.y += 0.016 * f.spin; } }
       if (f.pulse) f.o.scale.setScalar(1 + Math.sin(t * 6) * 0.15);
     });
     if (anim.skirt) anim.skirt.rotation.z = Math.sin(t * 1.1) * 0.02;
