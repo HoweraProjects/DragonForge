@@ -552,6 +552,7 @@ const CLASS_PALETTE = {
   barbarian: ['#5a2a1e', '#c9a24a'], bard: ['#7a2a5a', '#e9c46a'], cleric: ['#d6ccb0', '#c9a24a'], druid: ['#2f5a34', '#9be36d'],
   fighter: ['#2b3a67', '#c9a24a'], monk: ['#c46a2b', '#3a2a22'], paladin: ['#34467a', '#e9c46a'], ranger: ['#3a4a2a', '#8a6a3a'],
   rogue: ['#22202e', '#b388ff'], sorcerer: ['#5a1e2e', '#ff6a3d'], warlock: ['#24183a', '#a46bff'], wizard: ['#1b1f3a', '#e9c46a'],
+  artificer: ['#4a3626', '#ffa94d'],
 };
 function applyRaceLook(L, race, prevRace) {
   const rl = race.look || {};

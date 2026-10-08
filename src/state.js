@@ -153,6 +153,7 @@ export function derive(s = state) {
     else if (c.spellbook) { spells = 6 + 2 * (s.level - 1); label = '法術書'; }
     else if (c.prepared === 'full') { spells = Math.max(1, abM + s.level); label = '準備法術'; }
     else if (c.prepared === 'half') { spells = s.level < 2 ? 0 : Math.max(1, abM + Math.floor(s.level / 2)); label = '準備法術'; }
+    else if (c.prepared === 'artificer') { spells = Math.max(1, abM + Math.floor(s.level / 2)); label = '準備法術'; }
     magic = { ab: c.ab, list: c.list, type: c.type, slots, maxLv, cantrips, spells, label, dc: 8 + pb + abM, atk: pb + abM,
       prepared: c.spellbook ? Math.max(1, abM + s.level) : null };
   }

@@ -256,7 +256,7 @@ export class VRMAvatar {
       const handL = this.adapter('rightHand', { z: -Math.PI / 2 });
       const wrapR = new THREE.Group(); wrapR.position.y = -0.04; handR.add(wrapR);
       // 劍、槌類斜向外側，避免擋住臉
-      if (['sword', 'mace', 'warhammer', 'greataxe'].includes(cls.weapon)) wrapR.rotation.y = 0.65;
+      if (['sword', 'mace', 'warhammer', 'greataxe', 'gadget'].includes(cls.weapon)) wrapR.rotation.y = 0.65;
       const wrapL = new THREE.Group(); wrapL.position.y = -0.04; handL.add(wrapL);
       const sp = new THREE.Group(); sp.position.set(0, 0.06, -0.01); sp.scale.setScalar(0.88); spine.add(sp);
       buildWeapon({ handR: wrapR, handL: wrapL, spine: sp }, cls.weapon, LL, { steelM: M.steelM, goldM: M.goldM, leather: M.leather, o1: M.o1, o2: M.o2 }, this.anim);

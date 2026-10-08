@@ -188,6 +188,7 @@ export function spellSlots(caster, level) {
   if (!caster) return [];
   if (caster.type === 'full') return FULL[level] || [];
   if (caster.type === 'half') return level < 2 ? [] : FULL[Math.ceil(level / 2)];
+  if (caster.type === 'artificer') return FULL[Math.ceil(level / 2)]; // 半施法但向上取整，1 級即有法術位
   if (caster.type === 'pact') {
     const n = level === 1 ? 1 : level <= 10 ? 2 : level <= 16 ? 3 : 4;
     const lv = Math.min(5, Math.ceil(level / 2));
@@ -397,6 +398,28 @@ export const CLASSES = [
       [20, '招牌法術', '兩道 3 環法術各可免費施展一次。'],
     ],
     blurb: '以知識撬開宇宙的法則。',
+  },
+  {
+    id: 'artificer', name: '奇械師', en: 'Artificer', hd: 8, primary: ['int'], saves: ['con', 'int'],
+    skillCount: 2, skillList: ['arcana', 'history', 'investigation', 'medicine', 'nature', 'perception', 'sleight'],
+    armor: '輕甲、中甲、盾牌', weapons: '簡易武器', ac: { base: 14, dex: 2, shield: true },
+    gear: '兩把簡易武器、輕弩與 20 支弩矢、鱗甲、盜賊工具、地城探索者套組', weapon: 'gadget', outfit: 'artificer', color: '#ffa94d',
+    caster: { ab: 'int', type: 'artificer', list: 'artificer', cantrips: Array.from({ length: 20 }, (_, i) => (i + 1 >= 14 ? 4 : i + 1 >= 10 ? 3 : 2)), prepared: 'artificer' },
+    subclassLevel: 3, subclass: { name: '鍊金師', desc: '以法術位製作實驗藥劑；治療與強酸、火焰、毒素法術額外加上智力調整值。' },
+    features: [
+      [1, '魔法巧匠', '以盜賊工具或工匠工具賦予微小物件發光、留言、氣味等小型魔法效果。'],
+      [1, '施法', '以智力施法（向上取整的半施法者），必須以工具作為施法法器。'],
+      [2, '注入奇械', '長休時將魔法注入物品，製作魔法裝備（如附魔武器、儲法法杖）。'],
+      [3, '恰當工具', '花 1 小時以工匠工具憑空打造一套工匠工具。'],
+      [6, '工具專精', '使用工具的屬性檢定熟練加值加倍。'],
+      [7, '靈光一閃', '以反應為自己或盟友的屬性檢定或豁免加上智力調整值。'],
+      [10, '魔法物品熟手', '可同調 4 件魔法物品，製作常見與非常見物品更快更便宜。'],
+      [11, '儲法物品', '將一道 1～2 環法術存入物品，供任何人使用多次。'],
+      [14, '魔法物品專家', '可同調 5 件魔法物品，無視職業、種族與等級的同調限制。'],
+      [18, '魔法物品大師', '可同調 6 件魔法物品。'],
+      [20, '靈魂奇械', '每件同調物品使豁免 +1；降至 0 生命時可犧牲一件注入改為 1 生命。'],
+    ],
+    blurb: '以齒輪與符文重塑魔法——亦稱「工匠」，發明即是咒語。',
   },
 ];
 
