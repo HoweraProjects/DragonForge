@@ -256,12 +256,13 @@ export class VRMAvatar {
       const handL = this.adapter('rightHand', { z: -Math.PI / 2 });
       const wrapR = new THREE.Group(); wrapR.position.y = -0.04; handR.add(wrapR);
       // 劍、槌類斜向外側，避免擋住臉
-      if (['sword', 'mace', 'warhammer', 'greataxe', 'gadget'].includes(cls.weapon)) wrapR.rotation.y = 0.65;
+      if (['sword', 'mace', 'warhammer', 'greataxe'].includes(cls.weapon)) wrapR.rotation.y = 0.65;
       const wrapL = new THREE.Group(); wrapL.position.y = -0.04; handL.add(wrapL);
       const sp = new THREE.Group(); sp.position.set(0, 0.06, -0.01); sp.scale.setScalar(0.88); spine.add(sp);
       buildWeapon({ handR: wrapR, handL: wrapL, spine: sp }, cls.weapon, LL, { steelM: M.steelM, goldM: M.goldM, leather: M.leather, o1: M.o1, o2: M.o2 }, this.anim);
     }
-    this.grip = L.showWeapon && cls.weapon !== 'none';
+    // 托球的奇械師張開手掌，其餘有武器時握拳
+    this.grip = !L.showWeapon || cls.weapon === 'none' ? 0.35 : cls.weapon === 'gadget' ? 0.3 : 1.15;
   }
 
   // joints：與程序化骨架同名的歐拉角 [x,y,z]
@@ -289,8 +290,8 @@ export class VRMAvatar {
     setQ('hips', eq(J.hips).clone());
     setQ('neck', eq([J.head[0] * 0.4, J.head[1] * 0.4, J.head[2] * 0.4]).clone());
     setQ('head', eq([J.head[0] * 0.6, J.head[1] * 0.6, J.head[2] * 0.6]).clone());
-    // 握拳
-    const curl = this.grip ? 1.15 : 0.35;
+    // 手指彎曲（握拳或張掌）
+    const curl = this.grip ?? 0.35;
     for (const side of ['left', 'right']) {
       const s = side === 'left' ? -1 : 1;
       for (const f of FINGERS) for (const seg of ['Proximal', 'Intermediate', 'Distal']) {

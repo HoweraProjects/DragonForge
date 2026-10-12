@@ -553,21 +553,16 @@ export function buildWeapon(rig, type, L, M, anim) {
     for (let i = 0; i < 3; i++) { const r = new THREE.Mesh(new THREE.TorusGeometry(0.16 + i * 0.04, 0.003, 4, 48), glow(aura, 2)); r.rotation.x = Math.PI / 2; r.position.y = 0.06 + i * 0.03; book.add(r); anim.floaters.push({ o: r, spin: (i % 2 ? -1 : 1) * (0.6 + i * 0.3), axis: 'z' }); }
     rig.spine.add(book); anim.floaters.push({ o: book, base: 0.0, amp: 0.02 });
   } else if (type === 'gadget') {
-    // 符文工匠錘
-    const haft = mesh(cap(0.016, 0.38), M.leather); haft.position.y = 0.14; g.add(haft);
-    const headM = mesh(new THREE.BoxGeometry(0.16, 0.08, 0.08), M.steelM); headM.position.y = 0.36; g.add(headM);
-    const band = mesh(new THREE.CylinderGeometry(0.03, 0.03, 0.1, 8), M.goldM); band.rotation.z = Math.PI / 2; band.position.y = 0.36; g.add(band);
-    const rune = new THREE.Mesh(new THREE.CircleGeometry(0.025, 6), glow(aura, 3)); rune.position.set(0, 0.36, 0.042); g.add(rune);
-    g.rotation.set(Math.PI / 2 + 0.2, 0, 0); g.position.y = -0.04; hand.add(g);
-    // 發條無人機：齒輪環 + 發光核心，懸浮於左肩
-    const drone = new THREE.Group(); drone.position.set(-0.3, 0.42, 0.05);
+    // 發條無人機：齒輪環 + 發光核心，托在朝上的右手掌心
+    const holder = new THREE.Group(); holder.position.set(0.08, -0.07, 0); holder.rotation.z = -Math.PI / 2; holder.scale.setScalar(0.75); hand.add(holder);
+    const drone = new THREE.Group();
     const core = new THREE.Mesh(sph(0.045), glow(aura, 4)); drone.add(core);
     const shell = mesh(new THREE.TorusGeometry(0.075, 0.012, 6, 24), M.goldM); drone.add(shell); anim.floaters.push({ o: shell, spin: 1.4 });
     const gear = new THREE.Group();
     for (let i = 0; i < 10; i++) { const t = mesh(new THREE.BoxGeometry(0.02, 0.025, 0.012), M.steelM); const a = (i / 10) * Math.PI * 2; t.position.set(Math.cos(a) * 0.11, Math.sin(a) * 0.11, 0); t.rotation.z = a; gear.add(t); }
     const ring = mesh(new THREE.TorusGeometry(0.1, 0.006, 4, 32), M.steelM); gear.add(ring);
     drone.add(gear); anim.floaters.push({ o: gear, spin: -1.2, axis: 'z' });
-    rig.spine.add(drone); anim.floaters.push({ o: drone, base: 0.42, amp: 0.025 });
+    holder.add(drone); anim.floaters.push({ o: drone, base: 0, amp: 0.02 });
   } else if (type === 'psi') {
     // 頭頂環繞的心靈晶體 + 雙手間懸浮的念力碎石
     const crown = new THREE.Group(); crown.position.set(0, 0.62, 0);
@@ -608,7 +603,7 @@ export const POSES = {
   daggers: { shoulderR: [D(-25), 0, D(25)], elbowR: [D(-70), 0, 0], shoulderL: [D(-25), 0, D(-25)], elbowL: [D(-70), 0, 0], spine: [D(8), 0, 0], kneeL: [D(15), 0, 0], kneeR: [D(15), 0, 0], thighL: [D(-12), 0, D(-8)], thighR: [D(-6), 0, D(8)] },
   lute: { shoulderR: [D(-30), D(10), D(8)], elbowR: [D(-70), D(30), D(20)], shoulderL: [D(-45), 0, D(-30)], elbowL: [D(-60), 0, D(40)] },
   tome: { shoulderL: [D(-35), 0, D(-14)], elbowL: [D(-75), 0, D(15)], shoulderR: [D(-5), 0, D(10)], elbowR: [D(-20), 0, 0] },
-  gadget: { shoulderR: [D(-15), 0, D(14)], elbowR: [D(-60), 0, 0], shoulderL: [D(-20), 0, D(-16)], elbowL: [D(-45), 0, D(10)] },
+  gadget: { shoulderR: [D(-10), D(-60), D(60)], elbowR: [D(-110), 0, 0], shoulderL: [D(-5), 0, D(-10)], elbowL: [D(-25), 0, 0] },
   psi: { shoulderR: [D(-25), 0, D(28)], elbowR: [D(-60), 0, D(-10)], shoulderL: [D(-25), 0, D(-28)], elbowL: [D(-60), 0, D(10)], head: [D(-4), 0, 0] },
   fists: { shoulderR: [D(-45), 0, D(20)], elbowR: [D(-100), 0, 0], shoulderL: [D(-55), 0, D(-20)], elbowL: [D(-110), 0, 0], thighL: [D(-15), 0, D(-10)], thighR: [D(10), 0, D(10)], kneeL: [D(15), 0, 0], kneeR: [D(10), 0, 0] },
   none: {},
