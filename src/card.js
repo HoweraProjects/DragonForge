@@ -78,11 +78,54 @@ function section(g, label, x, y, w, accent) {
   g.fillStyle = grd; g.fillRect(x + tw + 14, y - 9, w - tw - 14, 1.5);
 }
 
+// ---------- 防呆 ----------
+// 卡上任何數字或文字只要不合理，整張卡就判為毀損，不准輸出
+const BAD_TEXT = [[/[+-]\s*[+-]\s*\d/, '正負號重複'], [/NaN/, '出現 NaN'], [/\b(undefined|null)\b/, '出現空值'], [/Infinity/, '出現無限大'], [/\[object/, '出現物件字串']];
+const isInt = (v) => Number.isInteger(v);
+function validateCard(d, texts) {
+  const issues = [];
+  const need = (ok, msg) => { if (!ok) issues.push(msg); };
+  need(isInt(state.level) && state.level >= 1 && state.level <= 20, `等級 ${state.level} 不在 1–20`);
+  for (const a of ABILITIES) {
+    need(isInt(d.scores[a.id]) && d.scores[a.id] >= 1 && d.scores[a.id] <= 30, `${a.name}屬性值 ${d.scores[a.id]} 不合理`);
+    need(isInt(d.mods[a.id]), `${a.name}調整值 ${d.mods[a.id]} 不是整數`);
+  }
+  for (const [k, v] of Object.entries(d.race.asi || {})) need(isInt(v), `種族屬性加值 ${k} = ${v} 不是整數`);
+  need(isInt(d.hp) && d.hp >= 1, `生命 ${d.hp} 不合理`);
+  need(isInt(d.ac) && d.ac >= 1, `護甲 ${d.ac} 不合理`);
+  for (const [n, v] of [['先攻', d.init], ['速度', d.speed], ['熟練', d.pb], ['被動察覺', d.passive]]) need(isInt(v), `${n} ${v} 不是整數`);
+  if (d.magic) need(isInt(d.magic.dc) && isInt(d.magic.atk), `施法 DC／攻擊 不是整數`);
+  for (const t of texts) for (const [re, why] of BAD_TEXT) if (re.test(t)) issues.push(`${why}：「${t.length > 24 ? `${t.slice(0, 24)}…` : t}」`);
+  return [...new Set(issues)];
+}
+
+// 毀損戳記：蓋滿整張卡，避免被當成正常卡流出
+function stampDamaged(g, issues) {
+  g.save();
+  g.fillStyle = 'rgba(120,0,16,0.55)'; g.fillRect(0, 0, W, H);
+  g.strokeStyle = 'rgba(255,60,80,0.35)'; g.lineWidth = 6;
+  for (let x = -H; x < W; x += 60) { g.beginPath(); g.moveTo(x, 0); g.lineTo(x + H, H); g.stroke(); }
+  g.translate(W / 2, H / 2 - 80); g.rotate(-0.22);
+  g.textAlign = 'center'; g.textBaseline = 'middle';
+  g.fillStyle = 'rgba(10,0,4,0.85)'; g.fillRect(-470, -120, 940, 240);
+  g.strokeStyle = '#ff3c50'; g.lineWidth = 8; g.strokeRect(-470, -120, 940, 240);
+  g.fillStyle = '#ff3c50'; g.font = `900 120px ${FONT_SERIF}`; g.fillText('毀　損', 0, -18);
+  g.font = `700 34px ${FONT_DISPLAY}`; g.fillText('CORRUPTED · DO NOT USE', 0, 74);
+  g.restore();
+  g.save(); g.textAlign = 'left'; g.textBaseline = 'alphabetic'; g.font = `500 30px ${FONT_SANS}`; g.fillStyle = '#fff';
+  issues.slice(0, 6).forEach((t, i) => g.fillText(`✕ ${t}`, 70, H / 2 + 150 + i * 44));
+  g.restore();
+}
+
+// 回傳 { blob, issues }；issues 非空代表卡片毀損，blob 只供預覽，不含角色資料
 export async function renderCard(stage) {
   await Promise.all([`900 64px ${FONT_SERIF}`, `600 26px ${FONT_SERIF}`, `400 24px ${FONT_SANS}`, `700 40px Rajdhani`, `700 20px Cinzel`].map((f) => document.fonts.load(f).catch(() => {})));
   const d = derive();
   const accent = state.look.aura;
   const c = document.createElement('canvas'); c.width = W; c.height = H; const g = c.getContext('2d');
+  // 記下畫上卡片的每段文字，供防呆檢查
+  const texts = []; const rawFill = g.fillText.bind(g);
+  g.fillText = (t, ...rest) => { texts.push(String(t)); rawFill(t, ...rest); };
 
   // 背景
   g.fillStyle = '#0a0816'; g.fillRect(0, 0, W, H);
@@ -174,12 +217,19 @@ export async function renderCard(stage) {
   g.textAlign = 'right'; g.font = `400 21px ${FONT_SANS}`; g.fillStyle = '#6f6890';
   g.fillText(`${state.player ? `玩家：${state.player}　` : ''}原圖拖回龍鑄可匯入角色`, W - PAD, H - 48);
 
+  const issues = validateCard(d, texts);
+  g.fillText = rawFill;
+  if (issues.length) {
+    stampDamaged(g, issues);
+    return { blob: await new Promise((r) => c.toBlob(r, 'image/png')), issues };
+  }
+
   // 輸出 PNG 並嵌入角色資料
   const blob = await new Promise((r) => c.toBlob(r, 'image/png'));
   const bytes = new Uint8Array(await blob.arrayBuffer());
   const code = await encodeShare({ c: state, ...neededCustomForCard() });
   const out = embedText(bytes, KEY, code);
-  return new Blob([out], { type: 'image/png' });
+  return { blob: new Blob([out], { type: 'image/png' }), issues };
 }
 
 let neededCustomForCard = () => ({});

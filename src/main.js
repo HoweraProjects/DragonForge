@@ -160,7 +160,7 @@ function renderHUD() {
 
 // ---------- 各步驟畫面 ----------
 const asiChips = (r) => {
-  const out = Object.entries(r.asi || {}).map(([k, v]) => `<span class="chip gold">${abName(k)} +${v}</span>`);
+  const out = Object.entries(r.asi || {}).filter(([, v]) => v).map(([k, v]) => `<span class="chip ${v > 0 ? 'gold' : 'neg'}">${abName(k)} ${fmt(v)}</span>`);
   if (r.asiChoice) out.push(`<span class="chip gold">任選 ${r.asiChoice.count} 項 +${r.asiChoice.amount}</span>`);
   return out.join('');
 };
@@ -871,11 +871,19 @@ async function openCardModal() {
       </div>
     </div></div>`);
   sfx.forge(); stage.burst(state.look.aura, { count: 120, flash: 0.25 });
-  let blob;
-  try { blob = await renderCard(stage); } catch (e) { console.error(e); box.querySelector('.card-preview').innerHTML = '<div class="empty">產生失敗</div>'; return; }
+  let blob; let issues;
+  try { ({ blob, issues } = await renderCard(stage)); } catch (e) { console.error(e); box.querySelector('.card-preview').innerHTML = '<div class="empty">產生失敗</div>'; return; }
   if (!box.isConnected) return;
   const url = URL.createObjectURL(blob);
   box.querySelector('.card-preview').innerHTML = `<img src="${url}" alt="角色卡" />`;
+  // 防呆失敗：卡片判為毀損，鎖住所有輸出，改完才能下載
+  if (issues.length) {
+    sfx.error();
+    box.querySelector('.card-preview img').oncontextmenu = (e) => e.preventDefault();
+    box.querySelector('.card-side').innerHTML = `<div class="note bad"><b>⚠ 角色卡毀損，無法輸出</b><br/>防呆檢查發現以下問題，請回到對應步驟修正後再重新產生角色卡：<ul>${issues.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></div>
+      <div class="card-btns"><button class="big-btn" disabled>⬇ 下載 PNG（毀損，已鎖定）</button></div>`;
+    return;
+  }
   const fname = `${(state.name || 'character').replace(/[\\/:*?"<>|]/g, '_')}.dndforge.png`;
   const file = new File([blob], fname, { type: 'image/png' });
   if (navigator.canShare?.({ files: [file] })) box.querySelector('[data-c=share]').hidden = false;
