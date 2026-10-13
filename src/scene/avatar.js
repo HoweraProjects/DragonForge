@@ -708,6 +708,42 @@ export function buildHeadwear(headPivot, hr, L, cls, M) {
   }
 }
 
+// 狐尾：根部細、中段蓬成大毛刷、末端收成白色尖梢，並帶一圈圈毛簇起伏
+function foxTail(hairColor) {
+  const curve = new THREE.CatmullRomCurve3([
+    new THREE.Vector3(0, 0, 0), new THREE.Vector3(0, -0.11, -0.1), new THREE.Vector3(0.04, -0.24, -0.26),
+    new THREE.Vector3(0.1, -0.22, -0.46), new THREE.Vector3(0.15, -0.06, -0.6), new THREE.Vector3(0.13, 0.1, -0.66),
+  ]);
+  const segs = 48; const radial = 24; const PEAK = 0.55; const RMAX = 0.12;
+  const frames = curve.computeFrenetFrames(segs, false);
+  const tip = new THREE.Color('#fff8ee'); const pos = []; const col = []; const idx = [];
+  for (let i = 0; i <= segs; i++) {
+    const t = i / segs; const p = curve.getPointAt(t);
+    let r = t < PEAK ? THREE.MathUtils.lerp(0.022, RMAX, THREE.MathUtils.smoothstep(t, 0, PEAK)) : RMAX * Math.pow(Math.cos(((t - PEAK) / (1 - PEAK)) * Math.PI / 2), 0.65);
+    if (i === segs) r = 0;
+    const tuft = THREE.MathUtils.smoothstep(t, 0.12, 0.35);
+    const c = hairColor.clone().lerp(tip, THREE.MathUtils.smoothstep(t, 0.78, 0.84));
+    const N = frames.normals[i]; const B = frames.binormals[i];
+    for (let j = 0; j <= radial; j++) {
+      const a = (j / radial) * Math.PI * 2;
+      // 毛簇：沿圓周的尖鋸齒，順著尾巴螺旋錯開
+      const rr = r * (1 + tuft * 0.11 * Math.pow(Math.abs(Math.sin(a * 4 + t * 14)), 3));
+      const cx = Math.cos(a) * rr; const cy = Math.sin(a) * rr * 0.86;
+      pos.push(p.x + cx * N.x + cy * B.x, p.y + cx * N.y + cy * B.y, p.z + cx * N.z + cy * B.z);
+      col.push(c.r, c.g, c.b);
+    }
+  }
+  for (let i = 0; i < segs; i++) for (let j = 0; j < radial; j++) {
+    const a = i * (radial + 1) + j; const b = a + radial + 1;
+    idx.push(a, a + 1, b, b, a + 1, b + 1); // 繞序反過來讓法線朝外
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  g.setAttribute('color', new THREE.Float32BufferAttribute(col, 3));
+  g.setIndex(idx); g.computeVertexNormals();
+  return mesh(g, toon('#ffffff', { vertexColors: true }));
+}
+
 export function buildTail(hips, L, M, anim) {
   const { skinM, hairM, hornM, goldM, steelM } = M;
   // 尾巴
@@ -715,10 +751,9 @@ export function buildTail(hips, L, M, anim) {
     const tg = new THREE.Group(); tg.position.set(0, -0.06, -0.09); hips.add(tg);
     const pts = [new THREE.Vector3(0, 0, 0), new THREE.Vector3(0, -0.15, -0.15), new THREE.Vector3(0.05, -0.3, -0.35), new THREE.Vector3(0.15, -0.25, -0.55), new THREE.Vector3(0.22, -0.05, -0.62)];
     const cfg = { devil: [0.022, 0.006, skinM], dragon: [0.085, 0.012, skinM], cat: [0.03, 0.025, hairM], fox: [0.06, 0.03, hairM] }[L.tail] || [0.03, 0.01, skinM];
-    const tm = mesh(taperTube(new THREE.CatmullRomCurve3(pts), cfg[0], cfg[1], 30, 10), cfg[2]);
-    tg.add(tm);
+    if (L.tail === 'fox') tg.add(foxTail(hairM.color));
+    else tg.add(mesh(taperTube(new THREE.CatmullRomCurve3(pts), cfg[0], cfg[1], 30, 10), cfg[2]));
     if (L.tail === 'devil') { const tip = mesh(new THREE.ConeGeometry(0.045, 0.1, 4), skinM); tip.position.copy(pts[4]); tip.rotation.z = -0.8; tip.scale.z = 0.3; tg.add(tip); }
-    if (L.tail === 'fox') { const fc = new THREE.CatmullRomCurve3(pts.slice(1)); const fluff = mesh(taperTube(fc, 0.07, 0.035, 24, 12), hairM); tg.add(fluff); const tip = mesh(sph(0.045), toon('#fff6ea')); tip.position.copy(pts[4]); tg.add(tip); }
     anim.tails.push(tg);
   }
 }
