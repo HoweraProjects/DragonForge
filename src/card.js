@@ -150,7 +150,7 @@ export async function renderCard(stage) {
   g.shadowColor = accent; g.shadowBlur = 24; g.fillText(name, PAD, 152); g.shadowBlur = 0;
   const ancestry = d.race.choice && state.raceChoice[d.race.choice.key] ? `（${d.race.choice.options.find((o) => o.id === state.raceChoice[d.race.choice.key])?.name || ''}）` : '';
   g.font = `500 30px ${FONT_SANS}`; g.fillStyle = '#c9c2e3';
-  const sub = `${d.race.name}${ancestry} · ${d.cls.name}${state.level >= d.cls.subclassLevel ? `（${d.cls.subclass.name}）` : ''} · ${d.bg.name} · ${state.alignment}`;
+  const sub = `${d.race.name}${ancestry} · ${d.cls.name}${d.sub ? `（${d.sub.name}）` : ''} · ${d.bg.name} · ${state.alignment}`;
   wrap(g, sub, PAD, 198, W - PAD * 2, 34, 1);
 
   // 立繪

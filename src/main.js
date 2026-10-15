@@ -3,7 +3,7 @@ import { Stage } from './scene/stage.js';
 import { sfx } from './sfx.js';
 import {
   state, update, on, emit, derive, stepStatus, replaceState, newCharacter, DEFAULT_LOOK,
-  allRaces, allSpells, getRace, getClass, getSpell, pointsSpent, mod, fmt, roster, encodeShare, decodeShare,
+  allRaces, allSpells, getRace, getClass, getSubclass, getSpell, pointsSpent, mod, fmt, roster, encodeShare, decodeShare,
   ABILITIES, SKILLS, CLASSES, BACKGROUNDS, POINT_COST, STANDARD_ARRAY,
 } from './state.js';
 import { SCHOOLS, ALIGNMENTS } from './data/rules.js';
@@ -146,7 +146,7 @@ function renderHUD() {
     <div class="hud-id">
       <div class="hud-lv">LV <b>${state.level}</b></div>
       <div class="hud-name">${esc(state.name || '無名冒險者')}</div>
-      <div class="hud-cls">${esc(d.race.name)} · ${esc(d.cls.name)}${state.level >= d.cls.subclassLevel ? ` · ${esc(d.cls.subclass.name)}` : ''}</div>
+      <div class="hud-cls">${esc(d.race.name)} · ${esc(d.cls.name)}${d.sub ? ` · ${esc(d.sub.name)}` : ''}</div>
     </div>
     <div class="hud-stats">
       <div class="hs hp"><b>${d.hp}</b><span>生命</span></div>
@@ -240,8 +240,13 @@ const RENDER = {
         <li><b>技能</b>${c.skillList === 'any' ? '任選' : c.skillList.map(skName).join('、')}（選 ${c.skillCount}）</li>
         <li><b>起始裝備</b>${c.gear}</li>
       </ul>
+      <div class="sec">子職業 <small>Lv.${c.subclassLevel} 起生效</small></div>${state.level < c.subclassLevel ? `<div class="note">目前等級未達 ${c.subclassLevel} 級，可先選好，升級後自動生效。</div>` : ''}<div class="grid c2">`;
+    for (const sc of c.subclasses) {
+      h += `<button class="toggle ${sc.id === d.subclass.id ? 'on' : ''}" data-act="subclass" data-id="${sc.id}" style="text-align:left"><b>${sc.name}</b><br/><small class="muted">${sc.desc}</small></button>`;
+    }
+    h += `</div>
       <div class="sec">職業特性 <small>Lv.1–20</small></div><ul class="traits">`;
-    const feats = [...c.features, [c.subclassLevel, `子職業：${c.subclass.name}`, c.subclass.desc]].sort((a, b) => a[0] - b[0]);
+    const feats = [...c.features, [c.subclassLevel, `子職業：${d.subclass.name}`, d.subclass.desc]].sort((a, b) => a[0] - b[0]);
     for (const [lv, n, ds] of feats) h += `<li class="${lv > state.level ? 'locked' : ''}"><span class="lv">Lv${lv}</span><b>${n}</b>${ds}</li>`;
     h += `</ul></div>`;
     return h;
@@ -397,7 +402,7 @@ const RENDER = {
     const missing = STEPS.filter((s) => !st[s.id] && s.id !== 'summary').map((s) => s.zh);
     let h = `<div class="sheet-hero"><div class="portrait" id="portrait"></div><div>
       <input class="inp sheet-name" data-input="name" value="${esc(state.name)}" placeholder="輸入角色名稱" style="font-size:20px;padding:6px 8px" />
-      <div class="sheet-sub">Lv.${state.level} ${esc(d.race.name)}${d.race.choice && state.raceChoice[d.race.choice.key] ? `（${esc(d.race.choice.options.find((o) => o.id === state.raceChoice[d.race.choice.key])?.name || '')}）` : ''} · ${d.cls.name}${state.level >= d.cls.subclassLevel ? `（${d.cls.subclass.name}）` : ''}</div>
+      <div class="sheet-sub">Lv.${state.level} ${esc(d.race.name)}${d.race.choice && state.raceChoice[d.race.choice.key] ? `（${esc(d.race.choice.options.find((o) => o.id === state.raceChoice[d.race.choice.key])?.name || '')}）` : ''} · ${d.cls.name}${d.sub ? `（${d.sub.name}）` : ''}</div>
       <div class="sheet-sub">${d.bg.name} · ${state.alignment}</div>
       <div class="stat-row"><div class="stat"><b style="color:#ff6b7d">${d.hp}</b><span>生命</span></div><div class="stat"><b style="color:#9fd3ff">${d.ac}</b><span>護甲</span></div><div class="stat"><b>${d.speed}</b><span>速度</span></div></div>
       </div></div>`;
@@ -601,11 +606,16 @@ const ACT = {
     const id = el.dataset.id; if (id === state.classId) return;
     const c = getClass(id);
     update((s) => {
-      s.classId = id; s.skills = []; s.cantrips = []; s.spells = [];
+      s.classId = id; s.subclassId = c.subclasses[0].id; s.skills = []; s.cantrips = []; s.spells = [];
       s.look.aura = c.color; [s.look.outfit1, s.look.outfit2] = CLASS_PALETTE[id];
     }, { look: true });
     applyAccent(); sfx.forge(); stage.burst(c.color, { count: 160 }); setTimeout(() => stage.play(c.caster ? 'cast' : 'flourish', 1.5), 150);
     banner(c.en.toUpperCase(), c.name);
+  },
+  subclass(el) {
+    if (el.dataset.id === getSubclass(getClass(state.classId), state.subclassId).id) return;
+    update((s) => { s.subclassId = el.dataset.id; });
+    sfx.select(); stage.burst(getClass(state.classId).color, { count: 80, flash: 0.2 });
   },
   lv(el) { setLevel(state.level + Number(el.dataset.d)); },
   method(el) {
@@ -927,7 +937,7 @@ function buildPrintSheet() {
   if (!el) { el = document.createElement('div'); el.id = 'printSheet'; $('#app').append(el); }
   const spells = [...state.raceCantrips, ...state.cantrips, ...state.spells].map(getSpell).filter(Boolean).sort((a, b) => a.level - b.level);
   el.innerHTML = `<div class="ps-top"><img src="${stage.snapshot(420, 560)}" /><div style="flex:1"><h1>${esc(state.name || '無名冒險者')}</h1>
-    <div>Lv.${state.level} ${esc(d.race.name)} ${d.cls.name}${state.level >= d.cls.subclassLevel ? `（${d.cls.subclass.name}）` : ''}　${d.bg.name}　${state.alignment}　玩家：${esc(state.player)}</div>
+    <div>Lv.${state.level} ${esc(d.race.name)} ${d.cls.name}${d.sub ? `（${d.sub.name}）` : ''}　${d.bg.name}　${state.alignment}　玩家：${esc(state.player)}</div>
     <div class="ps-grid">${ABILITIES.map((a) => `<div class="ps-box">${a.name}<b>${fmt(d.mods[a.id])}</b>${d.scores[a.id]}</div>`).join('')}</div>
     <div class="ps-grid">${[['生命', d.hp], ['護甲', d.ac], ['先攻', fmt(d.init)], ['速度', d.speed], ['熟練', fmt(d.pb)], ['被動察覺', d.passive]].map(([n, v]) => `<div class="ps-box">${n}<b>${v}</b></div>`).join('')}</div></div></div>
     <div class="ps-cols"><div>

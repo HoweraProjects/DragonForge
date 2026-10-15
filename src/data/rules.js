@@ -205,7 +205,12 @@ export const CLASSES = [
     skillCount: 2, skillList: ['animal', 'athletics', 'intimidation', 'nature', 'perception', 'survival'],
     armor: '輕甲、中甲、盾牌', weapons: '簡易武器、軍用武器', ac: { kind: 'unarmored', bonus: 'con' },
     gear: '巨斧、兩把手斧、探險家套組、四根標槍', weapon: 'greataxe', outfit: 'fur', color: '#ff4d3d',
-    subclassLevel: 3, subclass: { name: '狂戰士之道', desc: '狂暴時可進入狂亂狀態，以附贈動作進行額外近戰攻擊。' },
+    subclassLevel: 3, subclasses: [
+      { id: 'berserker', name: '狂戰士之道', desc: '狂暴時可進入狂亂狀態，以附贈動作進行額外近戰攻擊。' },
+      { id: 'wildheart', name: '野性之心道途', desc: '與動物靈魂共鳴：狂暴時可選熊、鷹、狼之力，獲得抗性、飛躍或助攻等能力。' },
+      { id: 'worldtree', name: '世界樹之道', desc: '狂暴時獲得生命活力（臨時生命），並以樹枝將敵人與盟友拉近或傳送。' },
+      { id: 'zealot', name: '狂熱者之道', desc: '狂暴時每回合首次命中額外造成光耀或黯蝕傷害；被神祇眷顧，復活不需材料。' },
+    ],
     features: [
       [1, '狂暴', '附贈動作進入狂暴：力量檢定與豁免具優勢、近戰傷害加值、鈍擊/穿刺/揮砍抗性。'],
       [1, '無甲防禦', '未著甲時 AC = 10 + 敏捷 + 體質調整值。'],
@@ -224,7 +229,12 @@ export const CLASSES = [
     armor: '輕甲', weapons: '簡易武器、手弩、長劍、細劍、短劍', ac: { base: 11, dex: 99 },
     gear: '細劍、外交官套組、魯特琴、皮甲、匕首', weapon: 'lute', outfit: 'bard', color: '#ff7ad9',
     caster: { ab: 'cha', type: 'full', list: 'bard', cantrips: tiers(2, 3, 4), known: [4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 15, 16, 18, 19, 19, 20, 22, 22, 22] },
-    subclassLevel: 3, subclass: { name: '逸聞學院', desc: '額外三項技能熟練；可用激勵骰削弱敵人的攻擊或檢定。' },
+    subclassLevel: 3, subclasses: [
+      { id: 'lore', name: '逸聞學院', desc: '額外三項技能熟練；可用激勵骰削弱敵人的攻擊或檢定。' },
+      { id: 'valor', name: '勇氣學院', desc: '熟練中甲、盾牌與軍用武器；激勵骰可加於傷害或 AC，6 級獲得額外攻擊。' },
+      { id: 'dance', name: '舞蹈學院', desc: '未著甲時以魅力計 AC、徒手攻擊使用激勵骰；舞步讓隊伍先攻與移動更靈活。' },
+      { id: 'glamour', name: '迷惑學院', desc: '以激勵骰賦予盟友臨時生命與移動；可施展命令術、魅惑他人。' },
+    ],
     features: [
       [1, '施法', '以魅力施法，習得固定法術。'],
       [1, '吟遊激勵', '附贈動作給予盟友一顆激勵骰（d6，逐級提升）。'],
@@ -242,7 +252,12 @@ export const CLASSES = [
     armor: '輕甲、中甲、盾牌', weapons: '簡易武器', ac: { base: 14, dex: 2, shield: true },
     gear: '硬頭錘、鱗甲、輕弩與 20 支弩矢、祭司套組、盾牌、聖徽', weapon: 'mace', outfit: 'cleric', color: '#ffe08a',
     caster: { ab: 'wis', type: 'full', list: 'cleric', cantrips: tiers(3, 4, 5), prepared: 'full' },
-    subclassLevel: 1, subclass: { name: '生命領域', desc: '熟練重甲；治療法術額外恢復 2 + 法術環級生命。' },
+    subclassLevel: 1, subclasses: [
+      { id: 'life', name: '生命領域', desc: '熟練重甲；治療法術額外恢復 2 + 法術環級生命。' },
+      { id: 'light', name: '光明領域', desc: '以光耀之焰與焰閃保護盟友；引導神力釋放破曉光輝灼燒敵人。' },
+      { id: 'trickery', name: '詭術領域', desc: '賦予盟友隱匿祝福；引導神力製造幻影分身並在其位置施法。' },
+      { id: 'war', name: '戰爭領域', desc: '熟練軍用武器與重甲；可以附贈動作額外攻擊，引導神力讓攻擊 +10 命中。' },
+    ],
     features: [
       [1, '施法', '以感知施法，每日長休後準備法術。'],
       [1, '神聖領域', '選擇一個領域，獲得領域法術與能力。'],
@@ -258,7 +273,12 @@ export const CLASSES = [
     armor: '輕甲、中甲、盾牌（非金屬）', weapons: '木棍、匕首、飛鏢、標槍、錘矛、長棍、彎刀、鐮刀、投石索、矛', ac: { base: 11, dex: 99, shield: true },
     gear: '木盾、彎刀、皮甲、探險家套組、德魯伊法器', weapon: 'staff', outfit: 'druid', color: '#7dff9a',
     caster: { ab: 'wis', type: 'full', list: 'druid', cantrips: tiers(2, 3, 4), prepared: 'full' },
-    subclassLevel: 2, subclass: { name: '大地結社', desc: '額外戲法、自然恢復法術位，並依地形獲得結社法術。' },
+    subclassLevel: 2, subclasses: [
+      { id: 'land', name: '大地結社', desc: '額外戲法、自然恢復法術位，並依地形獲得結社法術。' },
+      { id: 'moon', name: '月亮結社', desc: '野性變身可化為更強大的野獸，變身時 AC 與臨時生命提升。' },
+      { id: 'sea', name: '海洋結社', desc: '以野性變身召喚海洋之怒，造成冷凍傷害並推開敵人；獲得游泳與水下呼吸。' },
+      { id: 'stars', name: '星辰結社', desc: '以星圖施法，野性變身轉為星辰形態（弓手、聖杯、巨龍）。' },
+    ],
     features: [
       [1, '德魯伊語', '知曉德魯伊的秘密語言。'],
       [1, '施法', '以感知施法，每日準備法術。'],
@@ -274,7 +294,12 @@ export const CLASSES = [
     armor: '所有護甲、盾牌', weapons: '簡易武器、軍用武器', ac: { base: 16, dex: 0, shield: true },
     gear: '鎖子甲、長劍與盾牌、輕弩與 20 支弩矢、地城探索者套組', weapon: 'sword', outfit: 'plate', color: '#9fb4ff',
     asiExtra: [6, 14],
-    subclassLevel: 3, subclass: { name: '勇士', desc: '重擊範圍擴大為 19–20，後續更提升至 18–20。' },
+    subclassLevel: 3, subclasses: [
+      { id: 'champion', name: '勇士', desc: '重擊範圍擴大為 19–20，後續更提升至 18–20。' },
+      { id: 'battlemaster', name: '戰鬥大師', desc: '以優越骰施展戰技：絆倒、繳械、佯攻、指揮攻擊等。' },
+      { id: 'eldritchknight', name: '奧法騎士', desc: '以智力施展防護與塑能法術；可與武器締結羈絆並在攻擊間施法。' },
+      { id: 'psiwarrior', name: '靈能武士', desc: '以心靈能量骰護盾減傷、念力打擊增傷，並能念力移動物體。' },
+    ],
     features: [
       [1, '戰鬥風格', '選擇一種戰鬥風格（防禦、決鬥、巨武器、箭術…）。'],
       [1, '回氣', '附贈動作恢復 1d10 + 戰士等級生命。'],
@@ -289,7 +314,12 @@ export const CLASSES = [
     skillCount: 2, skillList: ['acrobatics', 'athletics', 'history', 'insight', 'religion', 'stealth'],
     armor: '無', weapons: '簡易武器、短劍', ac: { kind: 'unarmored', bonus: 'wis' },
     gear: '短劍、地城探索者套組、10 支飛鏢', weapon: 'fists', outfit: 'monk', color: '#5ad1ff',
-    subclassLevel: 3, subclass: { name: '散手之道', desc: '疾風連擊命中時可推倒、推開或使敵人無法反應。' },
+    subclassLevel: 3, subclasses: [
+      { id: 'openhand', name: '散手之道', desc: '疾風連擊命中時可推倒、推開或使敵人無法反應。' },
+      { id: 'shadow', name: '暗影之道', desc: '消耗氣點施展黑暗術；在陰影間瞬移並獲得隱身般的優勢。' },
+      { id: 'elements', name: '元素之道', desc: '以氣點讓攻擊附上元素傷害並延長觸及，施放元素爆發。' },
+      { id: 'mercy', name: '慈悲之道', desc: '以醫療之手治療盟友、傷害之手追加黯蝕傷害並使目標中毒。' },
+    ],
     features: [
       [1, '無甲防禦', '未著甲時 AC = 10 + 敏捷 + 感知調整值。'],
       [1, '武術', '徒手攻擊使用武術骰，可以附贈動作再徒手攻擊。'],
@@ -307,7 +337,12 @@ export const CLASSES = [
     armor: '所有護甲、盾牌', weapons: '簡易武器、軍用武器', ac: { base: 16, dex: 0, shield: true },
     gear: '鎖子甲、軍用武器與盾牌、五支標槍、祭司套組、聖徽', weapon: 'warhammer', outfit: 'plate', color: '#ffd166',
     caster: { ab: 'cha', type: 'half', list: 'paladin', cantrips: null, prepared: 'half' },
-    subclassLevel: 3, subclass: { name: '奉獻之誓', desc: '以引導神力祝聖武器、驅散邪惡；神聖光環守護盟友。' },
+    subclassLevel: 3, subclasses: [
+      { id: 'devotion', name: '奉獻之誓', desc: '以引導神力祝聖武器、驅散邪惡；神聖光環守護盟友。' },
+      { id: 'ancients', name: '古老之誓', desc: '以自然之怒束縛敵人；光環使盟友抵抗法術傷害。' },
+      { id: 'glory', name: '榮耀之誓', desc: '以引導神力強化運動能力、激勵盟友獲得臨時生命；速度提升。' },
+      { id: 'vengeance', name: '復仇之誓', desc: '發誓敵意：對目標攻擊具優勢；追擊並報復傷害你的敵人。' },
+    ],
     features: [
       [1, '神聖感知', '感知 60 呎內的天界、邪魔與不死生物。'],
       [1, '聖療', '擁有 5 × 等級的治療池。'],
@@ -325,7 +360,12 @@ export const CLASSES = [
     armor: '輕甲、中甲、盾牌', weapons: '簡易武器、軍用武器', ac: { base: 14, dex: 2 },
     gear: '鱗甲、兩把短劍、長弓與 20 支箭、探險家套組', weapon: 'bow', outfit: 'ranger', color: '#9be36d',
     caster: { ab: 'wis', type: 'half', list: 'ranger', cantrips: null, known: [0, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11] },
-    subclassLevel: 3, subclass: { name: '獵人', desc: '選擇獵人技藝：巨像殺手、巨人剋星或群體破壞者。' },
+    subclassLevel: 3, subclasses: [
+      { id: 'hunter', name: '獵人', desc: '選擇獵人技藝：巨像殺手、巨人剋星或群體破壞者。' },
+      { id: 'beastmaster', name: '野獸主宰', desc: '與原初野獸（陸、海、空）締結羈絆，並肩作戰。' },
+      { id: 'feywanderer', name: '妖精漫遊者', desc: '攻擊附加精神傷害；魅力檢定加上感知，可召喚妖精並傳送。' },
+      { id: 'gloomstalker', name: '幽域追獵者', desc: '先攻加上感知，首回合額外攻擊並加傷；在黑暗中對黑暗視覺隱形。' },
+    ],
     features: [
       [1, '宿敵', '選擇宿敵類型，追蹤與回憶相關知識具優勢。'],
       [1, '自然探索者', '在偏好地形中旅行與探索更有效率。'],
@@ -341,7 +381,12 @@ export const CLASSES = [
     armor: '輕甲', weapons: '簡易武器、手弩、長劍、細劍、短劍', ac: { base: 11, dex: 99 },
     gear: '細劍、短弓與 20 支箭、竊賊套組、皮甲、兩把匕首、盜賊工具', weapon: 'daggers', outfit: 'rogue', color: '#b388ff',
     asiExtra: [10],
-    subclassLevel: 3, subclass: { name: '竊賊', desc: '以附贈動作使用物品或巧手；攀爬迅速。' },
+    subclassLevel: 3, subclasses: [
+      { id: 'thief', name: '竊賊', desc: '以附贈動作使用物品或巧手；攀爬迅速。' },
+      { id: 'assassin', name: '刺客', desc: '對尚未行動的敵人攻擊具優勢，奇襲命中更致命；精通偽裝與毒藥。' },
+      { id: 'arcanetrickster', name: '奧法詭術師', desc: '以智力施展幻術與惑控法術；隱形法師之手可施展巧手。' },
+      { id: 'soulknife', name: '魂刃', desc: '以心靈之刃作戰，心靈能量骰強化檢定並可心靈感應溝通。' },
+    ],
     features: [
       [1, '專精', '兩項熟練技能熟練加值加倍。'],
       [1, '偷襲', '具優勢或盟友在旁時，額外造成 1d6 傷害（逐級提升）。'],
@@ -358,7 +403,12 @@ export const CLASSES = [
     armor: '無', weapons: '匕首、飛鏢、投石索、長棍、輕弩', ac: { base: 10, dex: 99 },
     gear: '輕弩與 20 支弩矢、奧術法器、地城探索者套組、兩把匕首', weapon: 'orb', outfit: 'sorcerer', color: '#ff6a3d',
     caster: { ab: 'cha', type: 'full', list: 'sorcerer', cantrips: tiers(4, 5, 6), known: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12, 13, 13, 14, 14, 15, 15, 15, 15] },
-    subclassLevel: 1, subclass: { name: '龍族血脈', desc: '未著甲 AC = 13 + 敏捷；生命值每級 +1；對應元素法術增傷。' },
+    subclassLevel: 1, subclasses: [
+      { id: 'draconic', name: '龍族血脈', desc: '未著甲 AC = 13 + 敏捷；生命值每級 +1；對應元素法術增傷。' },
+      { id: 'wildmagic', name: '狂野魔法', desc: '施法時可能觸發狂野魔法湧動；以混沌之潮操控運氣。' },
+      { id: 'aberrant', name: '畸變心靈', desc: '獲得心靈法術與心靈感應，可用術法點以無聲無形的方式施展心靈法術。' },
+      { id: 'clockwork', name: '時械靈魂', desc: '秩序之力抵銷優劣勢；以秩序結界吸收傷害、恢復平衡。' },
+    ],
     features: [
       [1, '施法', '以魅力施法，魔力與生俱來。'],
       [1, '術法起源', '選擇魔力的來源。'],
@@ -373,7 +423,12 @@ export const CLASSES = [
     armor: '輕甲', weapons: '簡易武器', ac: { base: 11, dex: 99 },
     gear: '輕弩與 20 支弩矢、奧術法器、學者套組、皮甲、兩把匕首', weapon: 'tome', outfit: 'warlock', color: '#a46bff',
     caster: { ab: 'cha', type: 'pact', list: 'warlock', cantrips: tiers(2, 3, 4), known: [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15] },
-    subclassLevel: 1, subclass: { name: '邪魔宗主', desc: '擊倒敵人時獲得臨時生命；之後獲得黑暗的祝福。' },
+    subclassLevel: 1, subclasses: [
+      { id: 'fiend', name: '邪魔宗主', desc: '擊倒敵人時獲得臨時生命；之後獲得黑暗的祝福。' },
+      { id: 'archfey', name: '大妖精宗主', desc: '以妖精步傳送並附帶魅惑、隱形等效果；免疫魅惑。' },
+      { id: 'celestial', name: '天界宗主', desc: '以治療之光（d6 骰池）治療盟友；獲得光耀相關法術與抗性。' },
+      { id: 'greatoldone', name: '舊日支配者宗主', desc: '心靈感應交流；心靈法術可改為精神傷害，並能讀取思緒。' },
+    ],
     features: [
       [1, '異界宗主', '與強大存在締結契約。'],
       [1, '契約魔法', '法術位少但短休即恢復，且總以最高環施放。'],
@@ -389,7 +444,12 @@ export const CLASSES = [
     armor: '無', weapons: '匕首、飛鏢、投石索、長棍、輕弩', ac: { base: 10, dex: 99 },
     gear: '長棍、奧術法器、學者套組、法術書', weapon: 'staff', outfit: 'wizard', color: '#5ad1ff',
     caster: { ab: 'int', type: 'full', list: 'wizard', cantrips: tiers(3, 4, 5), prepared: 'full', spellbook: true },
-    subclassLevel: 2, subclass: { name: '塑能學派', desc: '塑形法術保護盟友；強化戲法與塑能法術傷害。' },
+    subclassLevel: 2, subclasses: [
+      { id: 'evoker', name: '塑能學派', desc: '塑形法術保護盟友；強化戲法與塑能法術傷害。' },
+      { id: 'abjurer', name: '防護學派', desc: '施展防護法術時產生奧術護盾吸收傷害；反制與破除法術更強。' },
+      { id: 'diviner', name: '預言學派', desc: '每日擲兩顆預兆骰，可替換任何人的 d20 結果。' },
+      { id: 'illusionist', name: '幻術學派', desc: '強化幻術戲法，幻影生物可具實體；之後可製造幻象分身。' },
+    ],
     features: [
       [1, '施法', '以智力施法，法術記錄於法術書。'],
       [1, '奧術恢復', '短休時恢復部分法術位。'],
@@ -405,7 +465,13 @@ export const CLASSES = [
     armor: '輕甲、中甲、盾牌', weapons: '簡易武器', ac: { base: 14, dex: 2, shield: true },
     gear: '兩把簡易武器、輕弩與 20 支弩矢、鱗甲、盜賊工具、地城探索者套組', weapon: 'gadget', outfit: 'artificer', color: '#ffa94d',
     caster: { ab: 'int', type: 'artificer', list: 'artificer', cantrips: Array.from({ length: 20 }, (_, i) => (i + 1 >= 14 ? 4 : i + 1 >= 10 ? 3 : 2)), prepared: 'artificer' },
-    subclassLevel: 3, subclass: { name: '鍊金師', desc: '以法術位製作實驗藥劑；治療與強酸、火焰、毒素法術額外加上智力調整值。' },
+    subclassLevel: 3, subclasses: [
+      { id: 'alchemist', name: '鍊金師', desc: '以法術位製作實驗藥劑；治療與強酸、火焰、毒素法術額外加上智力調整值。' },
+      { id: 'armorer', name: '裝甲師', desc: '將護甲改造為奧術盔甲：守護者型拉近並保護盟友，滲透者型隱匿並遠程雷擊。' },
+      { id: 'artillerist', name: '炮兵', desc: '召喚奧術炮台噴火、射擊或保護盟友；以奧術槍強化法術傷害。' },
+      { id: 'battlesmith', name: '戰鬥鐵匠', desc: '以智力進行武器攻擊，與鋼鐵衛士並肩作戰；6 級獲得額外攻擊。' },
+      { id: 'cartographer', name: '製圖師', desc: '以魔法地圖標記敵人、傳送盟友並引導攻擊。' },
+    ],
     features: [
       [1, '魔法巧匠', '以盜賊工具或工匠工具賦予微小物件發光、留言、氣味等小型魔法效果。'],
       [1, '施法', '以智力施法（向上取整的半施法者），必須以工具作為施法法器。'],
@@ -427,7 +493,12 @@ export const CLASSES = [
     armor: '無', weapons: '簡易武器', ac: { base: 10, dex: 99 },
     gear: '矛、兩把匕首、輕弩與 20 支弩矢、弩矢匣、地城探索者套組、6 金幣（或改拿 50 金幣）', weapon: 'psi', outfit: 'psion', color: '#ff5ca8',
     caster: { ab: 'int', type: 'full', list: 'psion', cantrips: tiers(2, 3, 4), preparedTable: [4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22] },
-    subclassLevel: 3, subclass: { name: '念動者', desc: '念力推拉可改擲 1d4 並附加擊倒、束縛或念力箭效果；法師之手射程與負重提升；永遠準備雲刃、浮空術、護盾術、雷鳴波等念動法術。' },
+    subclassLevel: 3, subclasses: [
+      { id: 'psykinetic', name: '念動者', desc: '念力推拉可改擲 1d4 並附加擊倒、束縛或念力箭效果；法師之手射程與負重提升；永遠準備雲刃、浮空術、護盾術、雷鳴波等念動法術。' },
+      { id: 'metamorph', name: '變形者', desc: '以心靈之力改造肉體：長出肢刃、強化身軀並治療自己。' },
+      { id: 'psiwarper', name: '念力扭曲者', desc: '扭曲空間，傳送自己與他人，並使敵人錯位。' },
+      { id: 'telepath', name: '心靈感應者', desc: '強化心靈感應與讀心，以精神攻擊干擾敵人心智。' },
+    ],
     features: [
       [1, '心靈能量', '獲得心靈能量骰（4d6，5 級 6d8、9 級 8d8、11 級 8d10、13 級 10d10、17 級 12d12），短休恢復一顆、長休全滿。附贈動作念力推拉生物，並擁有 30 呎心靈感應。'],
       [1, '施法', '以智力施法（全施法者）；心靈法術不需言語與一般材料成分。'],

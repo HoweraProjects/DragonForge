@@ -16,6 +16,8 @@ export const allRaces = () => [...RACES, ...custom.races.map((r) => ({ ...r, cus
 export const allSpells = () => [...SPELLS, ...custom.spells.map((s) => ({ ...s, custom: true }))];
 export const getRace = (id) => allRaces().find((r) => r.id === id) || RACES[0];
 export const getClass = (id) => CLASSES.find((c) => c.id === id) || CLASSES[0];
+// 未選或選到不屬於該職業的子職業時，退回第一個（舊存檔沒有 subclassId）
+export const getSubclass = (cls, id) => cls.subclasses.find((x) => x.id === id) || cls.subclasses[0];
 export const getBg = (id) => BACKGROUNDS.find((b) => b.id === id) || BACKGROUNDS[0];
 export const getSpell = (id) => allSpells().find((s) => s.id === id);
 
@@ -35,7 +37,7 @@ export function newCharacter() {
   return {
     name: '', player: '', level: 1, alignment: '中立善良',
     raceId: 'human', raceChoice: {}, raceAsi: [], raceSkills: [],
-    classId: 'fighter', bgId: 'soldier', bgSkills: [],
+    classId: 'fighter', subclassId: '', bgId: 'soldier', bgSkills: [],
     method: 'pointbuy',
     base: { str: 8, dex: 8, con: 8, int: 8, wis: 8, cha: 8 },
     pool: [...STANDARD_ARRAY], assign: {}, growth: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 },
@@ -160,12 +162,14 @@ export function derive(s = state) {
   }
 
   const features = cls.features.filter(([lv]) => lv <= s.level);
-  if (s.level >= cls.subclassLevel) features.push([cls.subclassLevel, cls.subclass.name, cls.subclass.desc]);
+  const subclass = getSubclass(cls, s.subclassId);
+  const sub = s.level >= cls.subclassLevel ? subclass : null;
+  if (sub) features.push([cls.subclassLevel, sub.name, sub.desc]);
   features.sort((x, y) => x[0] - y[0]);
 
   const perception = skills.find((x) => x.id === 'perception');
   return {
-    race, cls, bg, base, racial, scores, mods, pb, skills, saves, hp, ac, speed,
+    race, cls, subclass, sub, bg, base, racial, scores, mods, pb, skills, saves, hp, ac, speed,
     init: mods.dex, passive: 10 + perception.bonus, magic, features,
     asiTotal: asiPointsTotal(s), asiUsed: ABILITIES.reduce((t, x) => t + (s.growth[x.id] || 0), 0),
   };
